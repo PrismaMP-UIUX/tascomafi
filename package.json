@@ -1,0 +1,27 @@
+{
+  "name": "TASCOMAFI",
+  "version": "1.0.0",
+  "description": "Maqueta de prueba",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PrismaMP-UIUX/tascomafi.git"
+  },
+  "author": "Rodrigo Perrote",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.4.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-embedlr": "^0.5.2",
+    "gulp-file-include": "^1.1.0",
+    "gulp-html-tag-include": "^1.0.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-include-tag": "^1.1.2",
+    "gulp-main-npm-files": "^1.0.5",
+    "gulp-sass": "^3.1.0",
+    "gulp-tag-include-html": "^1.4.0"
+  }
+}
