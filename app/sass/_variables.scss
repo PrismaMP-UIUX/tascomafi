@@ -1,0 +1,38 @@
+// Variables de Branding
+// --------------------------------------------------
+
+// Colores
+
+$blanco: #fff;
+$verde-claro: #6A8810;
+$verde-oscuro: #4E6B00;
+$gris: #808080;
+$gris-mas-oscuro: #807f7d;
+$rojo: #BD222D;
+
+
+$tabla_de_colores: (
+  "blanco": $blanco,
+  "verde-claro": $verde-claro,
+  "verde-oscuro": $verde-oscuro,
+  "gris": $gris,
+  "gris-mas-oscuro": $gris-mas-oscuro,
+  "rojo": $rojo,
+) !default; 
+
+@each $color in $tabla_de_colores {
+  .#{nth($color,1)} {
+    background-color: #{nth($color,2)} !important;
+  }
+  .#{nth($color,1)}-text {
+    color: #{nth($color,2)} !important;
+  } 
+}
+
+// block
+.block {
+  display: block !important;
+}
+
+// breaks
+$break-mobile: 600px;

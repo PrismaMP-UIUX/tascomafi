@@ -1,0 +1,53 @@
+// Definición de los botones
+// --------------------------------------------------
+.btn {
+	border-radius: 3px;
+	position: relative;
+	color: $gris;
+	background-color: $blanco;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 60px;
+	padding: 0 5px;
+	font-size: 1.1em;
+	// p {
+	// 	margin: 0;
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -50%);
+	// }
+}
+
+.btn-salir {
+	width: 120px;
+	left: 0;
+	span > i {
+		color: $rojo;
+	}
+}
+
+.btn-home {
+	width: 240px;
+	left: 40px;
+	span > i {
+		color: $verde-claro;
+	}
+}
+
+.btn-anterior {
+	width: 180px;
+	left: 125px;
+	span > i {
+		color: $gris-mas-oscuro;
+	}
+}
+
+.btn-siguiente {
+	width: 180px;
+	left: 165px;
+	span > i {
+		color: $gris-mas-oscuro;
+	}
+}

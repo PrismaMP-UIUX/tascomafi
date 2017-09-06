@@ -1,0 +1,49 @@
+	
+// Definición de elementos del formulario
+// --------------------------------------------------
+.inputs {
+	position: relative;
+	margin: 10px 5px;
+	select {
+		outline: none;
+		-webkit-appearance: none;
+		display: block;
+		padding: 1em 4em 1em 1em;
+		margin: 0;
+		transition: border-color 0.2s;
+		border: 2px solid #ddd;
+		border-radius: 3px;
+		background: transparent;
+		color: $gris;
+		& * {
+			padding: 50px;
+		}
+	}
+	input {
+		outline: none;
+		display: block;
+		padding: 1em;
+		margin: 0;
+		transition: border-color 0.2s;
+		border: 2px solid #ddd;
+		border-radius: 3px;
+		background: transparent;
+		color: $gris;
+	}
+	label {
+		color: $gris;
+	}
+	.flecha {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: transparent;
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+		top: 5px;
+		width: 50px;
+		pointer-events: none;
+		color: grey;
+	}
+}

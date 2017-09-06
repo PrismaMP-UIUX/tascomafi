@@ -1,1 +1,57 @@
-<h1>HOLA!</h1>
+@@include('_partials/header.html')
+<body class="container">
+	<header>
+	<img src="img/isologo.png" alt="">
+	<img src="img/banelco.png" alt="">
+	</header>
+	<main>
+		<section class="encabezado">
+			<h1 class="titulo">Título</h1>
+		</section>
+		<section class="cuerpo">
+			<div class="cuerpo-container">
+				<div class="tab">
+					<button class="tablinks" onclick="openCity(event, 'clave')" id="defaultOpen">CLAVE COMAFI</button>
+					<button class="tablinks" onclick="openCity(event, 'tarjeta')">TARJETA Y PIN</button>
+				</div>
+				<div id="clave" class="tabcontent">
+					<div class="row centrado flex">
+						<div class="inputs">
+							<span class="flecha"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></span>
+							<select>
+								<option value="" disabled selected>Tipo de documento</option>
+								<option>DNI</option>
+								<option>Pasaporte</option>
+							</select>
+						</div>
+						<div class="inputs">
+							<input type="text" placeholder="Número de documento">
+						</div>
+					</div>
+					<div class="row">
+						<div class="inputs">
+						<label class="text-left">Clave Comafi (8 dígitos)</label>
+							<input type="password">
+						</div>
+					</div>
+				</div>
+				<div id="tarjeta" class="tabcontent">
+					<h3>Tarjeta y Pin</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quia magni, sapiente porro ipsum, cupiditate corporis adipisci provident modi, obcaecati illo dolores. Veritatis nulla natus aperiam, incidunt exercitationem architecto dolores!</p> 
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a href="#" class="btn btn-salir"><span><i class="fa fa-sign-out fa-1-5x" aria-hidden="true"></i></span>Salir</a>
+		<a href="#" class="btn btn-home"><span><i class="fa fa-home fa-1-5x" aria-hidden="true"></i></span>Volver al inicio</a>
+		<a href="#" class="btn btn-anterior"><span><i class="fa fa-chevron-left fa-1-5x" aria-hidden="true"></i></span>Anterior</a>
+		<a href="#" class="btn btn-siguiente">Siguiente<span><i class="fa fa-chevron-right fa-1-5x" aria-hidden="true"></i></span></a>
+	</footer>
+	
+	<script>
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+	</script>
+</body>
+</html>
