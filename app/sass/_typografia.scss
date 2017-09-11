@@ -1,11 +1,57 @@
 // Definición de tipografía
 // --------------------------------------------------
-.container {
+* {
+	font-family: "Muller-Regular";
 	font-size: 24px;
 }
 
-a {text-decoration: none;}
+
+// MULLER FONT
+@font-face {
+	font-family: 'Muller-Regular';
+	src: url('../fonts/muller/MULLERREGULAR_1.ttf');
+	src: url('../fonts/muller/MULLERREGULAR_1.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Muller-Light';
+	src: url('../fonts/muller/MULLERLIGHT_1.ttf');
+	src: url('../fonts/muller/MULLERLIGHT_1.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Muller-Bold';
+	src: url('../fonts/muller/MULLERBOLD_1.ttf');
+	src: url('../fonts/muller/MULLERBOLD_1.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Muller-ExtraBold';
+	src: url('../fonts/muller/MULLEREXTRABOLD_1.ttf');
+	src: url('../fonts/muller/MULLEREXTRABOLD_1.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.font-regular {font-family: $font-regular;}
+.font-light {font-family: $font-light;}
+.font-bold {font-family: $font-bold;}
+.font-extrabold {font-family: $font-extrabold;}
 
 .text-right {text-align: right;}
 
+.centrado {text-align: center;}
+
 .text-left {text-align: left;}
+
+.titulo {
+	font-family: $font-light;
+	font-size: 27px;
+	color: $blanco;
+}

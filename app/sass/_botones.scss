@@ -3,7 +3,7 @@
 .btn {
 	border-radius: 3px;
 	position: relative;
-	color: $gris;
+	color: $gris-oscuro;
 	background-color: $blanco;
 	display: flex;
 	justify-content: space-around;
@@ -22,7 +22,8 @@
 
 .btn-salir {
 	width: 120px;
-	left: 0;
+	position: absolute;
+	left: 50px;
 	span > i {
 		color: $rojo;
 	}
@@ -30,24 +31,48 @@
 
 .btn-home {
 	width: 240px;
-	left: 40px;
+	position: absolute;
+	left: 215px;
 	span > i {
-		color: $verde-claro;
+		color: $verde-comafi;
 	}
 }
 
 .btn-anterior {
 	width: 180px;
-	left: 125px;
+	position: absolute;
+	right: 275px;
 	span > i {
-		color: $gris-mas-oscuro;
+		color: $gris-oscuro;
 	}
 }
 
 .btn-siguiente {
 	width: 180px;
-	left: 165px;
+	position: absolute;
+	right: 50px;
 	span > i {
-		color: $gris-mas-oscuro;
+		color: $gris-oscuro;
 	}
+}
+
+.btn-menu {
+	padding: 0;	
+	width: 288px;
+	height: 230px;
+	margin: 0 15px 0 15px;
+	display: grid;
+	color: $gris;
+	& > span {
+		font-size: 3em;
+		text-align: center;
+    color: $verde-comafi;
+	}
+}
+
+.btn-importe {
+	width: 175px;
+	margin: 12px;
+	color: $blanco;
+	background-color: $verde-comafi;
 }

@@ -4,380 +4,60 @@
 // Solo con estas lineas puedo reemplazar font awesome completo por las versiones que quiera
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/awesome/fontawesome-webfont.eot');
-  src: url('../fonts/awesome/fontawesome-webfont.eot') format('embedded-opentype'), url('../fonts/awesome/fontawesome-webfont.woff2') format('woff2'), url('../fonts/awesome/fontawesome-webfont.woff') format('woff'), url('../fonts/awesome/fontawesome-webfont.ttf') format('truetype'), url('../fonts/awesome/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  src: url('../fonts/awesome/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/awesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/awesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/awesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/awesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/awesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* makes the font 33% larger relative to the icon container */
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+/* Medidas de Fontawesome*/
 .fa-1-5x {
   font-size: 1.5em;
 }
-
-// Font Awesome
-//.fa, .pmc-font {display:initial !important; font-size: $tamanio-iconos-fa; margin: 3px; }
-//&.fa, .pmc-font {display:inline-block !important; font-size: $tamanio-iconos-fa; }
-
-
-// Iconos Prisma
-@font-face {
-  font-family: 'Prisma';
-  src: url('../fonts/iconos-prisma/prisma.eot');
-  src: url('../fonts/iconos-prisma/prisma.eot') format('embedded-opentype'), 
-  		url('../fonts/iconos-prisma/prisma.woff') format('woff'), 
-  		url('../fonts/iconos-prisma/prisma.ttf') format('truetype'), 
-  		url('../fonts/iconos-prisma/prisma.svg#prisma') format('svg');
-  font-weight: normal;
-  font-style: normal;
+.fa-2x {
+  font-size: 2em;
+}
+.fa-3x {
+  font-size: 3em;
+}
+.fa-4x {
+  font-size: 4em;
+}
+.fa-5x {
+  font-size: 5em;
+}
+.fa-fw {
+  width: 1.28571429em;
+  text-align: center;
 }
 
-.prisma {
-  /* use !important to prevent issues with browser extensions that change font */
-  font-family: 'Prisma' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  vertical-align: baseline !important;
-  position: relative;
-  top: 2px;
-
-  &.cardhole-out:before {
-    content: "\e93f";
-  }
-  &.cardhole-in:before {
-    content: "\e952";
-  }
-  &.si-no:before {
-    content: "\e917";
-  }
-  &.cajero-touch:before {
-    content: "\e918";
-  }
-  &.accion-pagar:before {
-    content: "\e919";
-  }
-  &.tarjeta90:before {
-    content: "\e91d";
-  }
-  &.transaccion:before {
-    content: "\e95f";
-  }
-  &.ingrese-tarjeta:before {
-    content: "\e969";
-  }
-  &.retire-tarjeta:before {
-    content: "\e96a";
-  }
-  &.arriba:before {
-    content: "\e96b";
-  }
-  &.abajo:before {
-    content: "\e96c";
-  }
-  &.izquierda:before {
-    content: "\e907";
-  }
-  &.adelanto:before {
-    content: "\e900";
-  }
-  &.amigos:before {
-    content: "\e901";
-  }
-  &.consulta-cbu:before {
-    content: "\e902";
-  }
-  &.derecha:before {
-    content: "\e903";
-  }
-  &.cpp:before {
-    content: "\e904";
-  }
-  &.advertencia:before {
-    content: "\e905";
-  }
-  &.agregar:before {
-    content: "\e906";
-  }
-  &.archivar:before {
-    content: "\e908";
-  }
-  &.banco:before {
-    content: "\e909";
-  }
-  &.billetera:before {
-    content: "\e90a";
-  }
-  &.bloqueado:before {
-    content: "\e90b";
-  }
-  &.buscar:before {
-    content: "\e90c";
-  }
-  &.cajero-notouch:before {
-    content: "\e90d";
-  }
-  &.cambio-de-clave:before {
-    content: "\e90e";
-  }
-  &.cerrar:before {
-    content: "\e90f";
-  }
-  &.carro:before {
-    content: "\e910";
-  }
-  &.cbu:before {
-    content: "\e911";
-  }
-  &.no-videntes:before {
-    content: "\e912";
-  }
-  &.clave-mobile:before {
-    content: "\e913";
-  }
-  &.configuracion:before {
-    content: "\e914";
-  }
-  &.compras:before {
-    content: "\e915";
-  }
-  &.comprobante:before {
-    content: "\e916";
-  }
-  &.consulta-saldo:before {
-    content: "\e91a";
-  }
-  &.consulta-movimientos:before {
-    content: "\e91b";
-  }
-  &.consultas:before {
-    content: "\e91c";
-  }
-  &.cuenta:before {
-    content: "\e91e";
-  }
-  &.deposito:before {
-    content: "\e91f";
-  }
-  &.deposito-cta-propia:before {
-    content: "\e920";
-  }
-  &.deposito-cta-terceros:before {
-    content: "\e921";
-  }
-  &.deposito-efectivo:before {
-    content: "\e922";
-  }
-  &.desbloqueado:before {
-    content: "\e923";
-  }
-  &.borrar:before {
-    content: "\e924";
-  }
-  &.desplegable:before {
-    content: "\e925";
-  }
-  &.cuenta-destacada:before {
-    content: "\e926";
-  }
-  &.disponible:before {
-    content: "\e927";
-  }
-  &.dolares:before {
-    content: "\e928";
-  }
-  &.donacion:before {
-    content: "\e929";
-  }
-  &.editar:before {
-    content: "\e92a";
-  }
-  &.eliminar:before {
-    content: "\e92b";
-  }
-  &.empresa:before {
-    content: "\e92c";
-  }
-  &.en-auto:before {
-    content: "\e92d";
-  }
-  &.en-pie:before {
-    content: "\e92e";
-  }
-  &.entrar:before {
-    content: "\e92f";
-  }
-  &.envio-recepcion:before {
-    content: "\e930";
-  }
-  &.cancelar:before {
-    content: "\e931";
-  }
-  &.euros:before {
-    content: "\e932";
-  }
-  &.confirmar:before {
-    content: "\e933";
-  }
-  &.extraccion:before {
-    content: "\e934";
-  }
-  &.factura:before {
-    content: "\e935";
-  }
-  &.favorito:before {
-    content: "\e936";
-  }
-  &.fecha:before {
-    content: "\e937";
-  }
-  &.flujo:before {
-    content: "\e938";
-  }
-  &.giftcard:before {
-    content: "\e939";
-  }
-  &.giftcard2:before {
-    content: "\e93a";
-  }
-  &.guardar:before {
-    content: "\e93b";
-  }
-  &.hombre:before {
-    content: "\e93c";
-  }
-  &.imprimir:before {
-    content: "\e93d";
-  }
-  &.informacion:before {
-    content: "\e93e";
-  }
-  &.inicio:before {
-    content: "\e940";
-  }
-  &.internet:before {
-    content: "\e941";
-  }
-  &.limite-compra:before {
-    content: "\e942";
-  }
-  &.limite-extraccion:before {
-    content: "\e943";
-  }
-  &.limite-pagos:before {
-    content: "\e944";
-  }
-  &.mail:before {
-    content: "\e945";
-  }
-  &.mas-opciones:before {
-    content: "\e946";
-  }
-  &.mas:before {
-    content: "\e947";
-  }
-  &.menos:before {
-    content: "\e948";
-  }
-  &.mensaje:before {
-    content: "\e949";
-  }
-  &.mujer:before {
-    content: "\e94a";
-  }
-  &.negocio:before {
-    content: "\e94b";
-  }
-  &.pagos:before {
-    content: "\e94c";
-  }
-  &.pesos:before {
-    content: "\e94d";
-  }
-  &.clave:before {
-    content: "\e94e";
-  }
-  &.recarga-tel:before {
-    content: "\e94f";
-  }
-  &.reconocimiento-billete:before {
-    content: "\e950";
-  }
-  &.regalo:before {
-    content: "\e951";
-  }
-  &.saldo:before {
-    content: "\e953";
-  }
-  &.salir:before {
-    content: "\e954";
-  }
-  &.sin-tarjeta:before {
-    content: "\e955";
-  }
-  &.tarjeta:before {
-    content: "\e956";
-  }
-  &.tiempo:before {
-    content: "\e957";
-  }
-  &.total:before {
-    content: "\e958";
-  }
-  &.touch:before {
-    content: "\e959";
-  }
-  &.transferencia:before {
-    content: "\e95a";
-  }
-  &.transferencia-cta-propia:before {
-    content: "\e95b";
-  }
-  &.ubicacion:before {
-    content: "\e95c";
-  }
-  &.no-ubicacion:before {
-    content: "\e95d";
-  }
-  &.ultimos-movimientos:before {
-    content: "\e95e";
-  }
-  &.banelcomovil:before {
-    content: "\e960";
-  }
-  &.extracash:before {
-    content: "\e961";
-  }
-  &.facebook:before {
-    content: "\e962";
-  }
-  &.pagomiscuentas:before {
-    content: "\e963";
-  }
-  &.banelco:before {
-    content: "\e964";
-  }
-  &.redcirrus:before {
-    content: "\e965";
-  }
-  &.todopago:before {
-    content: "\e966";
-  }
-  &.twitter:before {
-    content: "\e967";
-  }
-  &.visa:before {
-    content: "\e968";
-  }
+//Iconos que se usan (para no cargar TODOS)
+.fa-angle-down:before {
+  content: "\f107";
 }
-
-.btn .prisma, .btn .prisma {
-  vertical-align: text-bottom;
+.fa-sign-out:before {
+  content: "\f08b";
 }
-  
+.fa-home:before {
+  content: "\f015";
+}
+.fa-chevron-left:before {
+  content: "\f053";
+}
+.fa-chevron-right:before {
+  content: "\f054";
+}

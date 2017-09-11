@@ -3,20 +3,29 @@
 
 // Colores
 
+$verde-comafi: #6B8012;
+$verde-comafi-claro: #6B8912;
+$gris-claro: #DCDDDE;
+$gris: #9D9FA2;
+$gris-oscuro: #636466;
+$gris-mas-oscuro: #414042;
 $blanco: #fff;
-$verde-claro: #6A8810;
-$verde-oscuro: #4E6B00;
-$gris: #808080;
-$gris-mas-oscuro: #807f7d;
+
+// $verde-claro: #6A8810;
+// $verde-oscuro: #4E6B00;
 $rojo: #BD222D;
 
 
 $tabla_de_colores: (
-  "blanco": $blanco,
-  "verde-claro": $verde-claro,
-  "verde-oscuro": $verde-oscuro,
+  "verde-comafi" : $verde-comafi,
+  "verde-comafi-claro" : $verde-comafi-claro,
+  "gris-claro" : $gris-claro,
   "gris": $gris,
-  "gris-mas-oscuro": $gris-mas-oscuro,
+  "gris-oscuro" : $gris-oscuro,
+  "gris-mas-oscuro" : $gris-mas-oscuro,
+  "blanco": $blanco,
+  // "verde-claro": $verde-claro,
+  // "verde-oscuro": $verde-oscuro,
   "rojo": $rojo,
 ) !default; 
 
@@ -29,10 +38,8 @@ $tabla_de_colores: (
   } 
 }
 
-// block
-.block {
-  display: block !important;
-}
-
-// breaks
-$break-mobile: 600px;
+//TIPOGRAFIAS
+$font-regular: "Muller-Regular";
+$font-light: "Muller-Light";
+$font-bold: "Muller-Bold";
+$font-extrabold: "Muller-ExtraBold";
