@@ -5,6 +5,7 @@
 
 $verde-comafi: #6B8012;
 $verde-comafi-claro: #6B8912;
+$gris-mas-claro: #EFEFEF;
 $gris-claro: #DCDDDE;
 $gris: #9D9FA2;
 $gris-oscuro: #636466;
@@ -19,15 +20,14 @@ $rojo: #BD222D;
 $tabla_de_colores: (
   "verde-comafi" : $verde-comafi,
   "verde-comafi-claro" : $verde-comafi-claro,
+  "gris-mas-claro" : $gris-mas-claro,
   "gris-claro" : $gris-claro,
   "gris": $gris,
   "gris-oscuro" : $gris-oscuro,
   "gris-mas-oscuro" : $gris-mas-oscuro,
   "blanco": $blanco,
-  // "verde-claro": $verde-claro,
-  // "verde-oscuro": $verde-oscuro,
   "rojo": $rojo,
-) !default; 
+) !default;
 
 @each $color in $tabla_de_colores {
   .#{nth($color,1)} {
@@ -35,7 +35,16 @@ $tabla_de_colores: (
   }
   .#{nth($color,1)}-text {
     color: #{nth($color,2)} !important;
-  } 
+  }
+}
+
+// TABLA DE MARGENES
+@for $mg from 0 through 300 {
+  .mg-#{$mg} {margin: #{$mg}px !important;}
+  .mg-l-#{$mg} {margin-left: #{$mg}px !important;}
+  .mg-r-#{$mg} {margin-right: #{$mg}px !important;}
+  .mg-t-#{$mg} {margin-top: #{$mg}px !important;}
+  .mg-b-#{$mg} {margin-bottom: #{$mg}px !important;}
 }
 
 //TIPOGRAFIAS
@@ -43,3 +52,35 @@ $font-regular: "Muller-Regular";
 $font-light: "Muller-Light";
 $font-bold: "Muller-Bold";
 $font-extrabold: "Muller-ExtraBold";
+
+
+.centrado {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.deshabilitado {
+  color: $gris !important;
+  background-color: $gris-claro !important;
+  span {
+    color: $gris !important;
+  }
+}
+
+.valign-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center
+}

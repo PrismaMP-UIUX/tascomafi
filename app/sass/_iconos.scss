@@ -10,6 +10,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'typicons';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/typicons/typicons.eot');
+  src: url('../fonts/typicons/typicons.eot?#iefix') format('embedded-opentype'), url('../fonts/typicons/typicons.woff') format('woff'), url('../fonts/typicons/typicons.ttf') format('truetype'), url('../fonts/typicons/typicons.svg#typicons') format('svg');
+}
+
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -46,11 +54,18 @@
 }
 
 //Iconos que se usan (para no cargar TODOS)
+
+.fa-exchange:before {
+  content: "\f0ec";
+}
 .fa-angle-down:before {
   content: "\f107";
 }
 .fa-sign-out:before {
   content: "\f08b";
+}
+.fa-sign-in:before {
+  content: "\f090";
 }
 .fa-home:before {
   content: "\f015";
@@ -60,4 +75,70 @@
 }
 .fa-chevron-right:before {
   content: "\f054";
+}
+.fa-arrow-down:before {
+  content: "\f063";
+}
+.fa-arrow-up:before {
+  content: "\f062";
+}
+.fa-question-circle:before {
+  content: "\f059";
+}
+.fa-usd:before {
+  content: "\f155";
+}
+.fa-key:before {
+  content: "\f084";
+}
+.fa-user:before {
+  content: "\f007";
+}
+.fa-credit-card:before {
+  content: "\f09d";
+}
+.fa-times:before {
+  content: "\f00d";
+}
+.fa-check:before {
+  content: "\f00c";
+}
+.fa-refresh:before {
+  content: "\f021";
+}
+.fa-arrow-circle-o-down:before {
+  content: "\f01a";
+}
+.fa-arrow-circle-o-up:before {
+  content: "\f01b";
+}
+.fa-money:before {
+  content: "\f0d6";
+}
+.fa-plus:before {
+  content: "\f067";
+}
+.fa-pencil:before {
+  content: "\f040";
+}
+
+
+.typcn:before {
+  font-family: 'typicons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.typcn-backspace:before {
+  content: '\e029'; /* '' */
 }

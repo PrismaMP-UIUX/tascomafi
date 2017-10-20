@@ -1,0 +1,135 @@
+@@include('_partials/header.html')
+<body class="container">
+<!-- 	<img src="img/depositar-seleccionar-cuenta-propia.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+	<img src="img/isologo.png" alt="">
+	<div class="logueado">
+		<div>
+			<span><i class="fa fa-user" aria-hidden="true"></i></span>
+		</div>
+		<div>
+			<p class="nombre-logueado espaciado-1 mg-r-50">José diaz</p>
+		</div>
+	</div>
+	</header>
+	<main class="gris-mas-claro">
+		<section class="encabezado">
+			<h1 class="titulo gris-oscuro-text">Seleccioná la cuenta para depositar en efectivo</h1>
+		</section>
+		<section class="cuerpo">
+			<div class="cuerpo-container">
+				<div class="tab gris">
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')" >Cuentas de terceros</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" id="defaultOpen" >Cuentas propias</button>
+				</div>
+				<div id="clave" class="tabcontent">
+					<div class="row">
+						<input type="radio" id="cbu" name="selector" checked="true">
+						<label class="radio espaciado-neg-2" for="cbu">CBU</label>
+						<div class="check"></div>
+						<div class="inputs numCbu">
+							<input type="text" class="numCbu" placeholder="Número" onclick="location.href = '#modal-teclado';" >
+						</div>
+					</div>
+					<div class="row">
+						<input type="radio" id="cta" name="selector">
+						<label class="radio espaciado-neg-2 mg-t-20" for="cta">Número de cuenta</label>
+						<div class="check"></div>
+						<div class="inputs tipoCta">
+							<span class="flecha"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></span>
+							<select class="tipoCta">
+								<option value="0" disabled selected>Tipo</option>
+								<option value="1">Cuenta Corriente</option>
+								<option value="2">Caja de Ahorro</option>
+							</select>
+						</div>
+						<div class="inputs numCta">
+							<input class="numCta" type="text" placeholder="Número"  onclick="location.href = '#modal-teclado';">
+						</div>
+					</div>
+				</div>
+				<div id="tarjeta" class="tabcontent">
+					<div class="slider">
+						<div>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+							<a href="#" class="btn btn-cuenta-propia">
+								<p><b>Cuenta corriente en pesos</b><br><span>000-1 6985632-0</span></p>
+							</a>
+						</div>
+					</div>
+					<a href="#"><span><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true"></i></span></a>
+					<a href="#"><span><i class="fa fa-arrow-circle-o-down fa-2x" aria-hidden="true"></i></span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- The Modal -->
+	<div id="modal-teclado" class="modal">
+		<div class="center-align">
+			<a href="#close" title="Close" class="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
+			<div class="inputs">
+				<input class="modal-teclado" type="text">
+				<a href="#!" class="btn"><span class="typcn typcn-backspace"></span></a>
+			</div>
+			<div class="numeros mg-t-35">
+				<a href="#" class="btn btn-numerico">1</a>
+				<a href="#" class="btn btn-numerico">2</a>
+				<a href="#" class="btn btn-numerico">3</a>
+				<a href="#" class="btn btn-numerico">4</a>
+				<a href="#" class="btn btn-numerico">5</a>
+				<a href="#" class="btn btn-numerico">6</a>
+				<a href="#" class="btn btn-numerico">7</a>
+				<a href="#" class="btn btn-numerico">8</a>
+				<a href="#" class="btn btn-numerico">9</a>
+				<a href="#" class="btn btn-numerico">00</a>
+				<a href="#" class="btn btn-numerico">0</a>
+				<a href="#" class="btn btn-numerico">000</a>
+				<a href="#" class="btn btn-teclado-aplicar"><i class="fa fa-check mg-r-10" aria-hidden="true"></i>Aplicar</a>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<a href="#" class="btn btn-salir primero"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>Salir</a>
+		<a href="#" class="btn btn-home segundo"><span><i class="fa fa-home" aria-hidden="true"></i></span>Ir a inicio</a>
+		<a href="#" class="btn btn-siguiente tercero">Siguiente<span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></a>
+	</footer>
+
+	<script>
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+
+	</script>
+</body>
+</html>

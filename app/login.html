@@ -1,53 +1,56 @@
 @@include('_partials/header.html')
 <body class="container">
+	<img src="img/login.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;">
 	<header>
 	<img src="img/isologo.png" alt="">
 	</header>
 	<main>
 		<section class="encabezado">
-			<h1 class="titulo">Ingresá tu clave para comenzar a operar.</h1>
+			<h1 class="titulo">Elegí una forma de ingresar</h1>
 		</section>
 		<section class="cuerpo">
 			<div class="cuerpo-container">
-				<div class="tab">
-					<button class="tablinks" onclick="openTab(event, 'clave')" id="defaultOpen">CLAVE COMAFI</button>
-					<button class="tablinks" onclick="openTab(event, 'tarjeta')">TARJETA Y PIN</button>
+				<div class="tab login">
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')" id="defaultOpen"  >CLAVE TERMINAL COMAFI</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')"  >TARJETA Y CLAVE</button>
 				</div>
 				<div id="clave" class="tabcontent">
-					<div class="row centrado flex">
-						<div class="inputs">
+					<div class="row mg-b-30">
+						<label class="espaciado-neg-2">Documento</label>
+						<div class="inputs tipoDoc">
 							<span class="flecha"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></span>
-							<select>
-								<option value="" disabled selected>Tipo de documento</option>
-								<option>DNI</option>
-								<option>Pasaporte</option>
+							<select class="tipoDoc">
+								<option value="0" disabled selected>Tipo</option>
+								<option value="1">DNI</option>
+								<option value="2">LE</option>
+								<option value="3">LC</option>
+								<option value="4">CI</option>
+								<option value="5">PASAPORTE</option>
 							</select>
 						</div>
-						<div class="inputs">
-							<input type="text" placeholder="Número de documento">
+						<div class="inputs numDoc">
+							<input class="numDoc" type="text" placeholder="Número">
 						</div>
 					</div>
 					<div class="row">
-						<div class="inputs">
-						<label class="text-left">Clave Comafi (8 dígitos)</label>
-							<input type="password">
+						<label class="mg-10 espaciado-neg-1">Clave Comafi <span class="espaciado-neg-2"><i>(Usá el teclado de la terminal)</i></span></label>
+						<div class="inputs clave">
+							<input class="clave" type="password" placeholder="4 dígitos">
+							<a href="#!" class="btn"><span class="typcn typcn-backspace"></span></a>
 						</div>
 					</div>
 				</div>
 				<div id="tarjeta" class="tabcontent">
-					<h3>Tarjeta y Pin</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quia magni, sapiente porro ipsum, cupiditate corporis adipisci provident modi, obcaecati illo dolores. Veritatis nulla natus aperiam, incidunt exercitationem architecto dolores!</p> 
+					<span class="centrado"><i class="fa fa-credit-card fa-4x" aria-hidden="true"></i></span>
+					<p class="center-align espaciado-1 mg-t-170">Ingresá la tarjeta de débito</p>
 				</div>
 			</div>
 		</section>
 	</main>
 	<footer>
-		<a href="#" class="btn btn-salir"><span><i class="fa fa-sign-out fa-1-5x" aria-hidden="true"></i></span>Salir</a>
-		<a href="#" class="btn btn-home"><span><i class="fa fa-home fa-1-5x" aria-hidden="true"></i></span>Volver al inicio</a>
-		<a href="#" class="btn btn-anterior"><span><i class="fa fa-chevron-left fa-1-5x" aria-hidden="true"></i></span>Anterior</a>
-		<a href="#" class="btn btn-siguiente">Siguiente<span><i class="fa fa-chevron-right fa-1-5x" aria-hidden="true"></i></span></a>
+		<a href="#" class="btn btn-ingresar tercero">Ingresar<span><i class="fa fa-sign-in" aria-hidden="true"></i></span></a>
 	</footer>
-	
+
 	<script>
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();

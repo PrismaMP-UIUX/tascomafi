@@ -44,14 +44,53 @@
 .font-bold {font-family: $font-bold;}
 .font-extrabold {font-family: $font-extrabold;}
 
-.text-right {text-align: right;}
+.right-align {
+  text-align: right;
+}
 
-.centrado {text-align: center;}
+.center-align {
+  text-align: center;
+}
 
-.text-left {text-align: left;}
+.left-align {
+  text-align: left;
+}
+
+.interlineado {
+	line-height: 1.5;
+}
+
+.mayus {
+	text-transform: uppercase;
+}
 
 .titulo {
 	font-family: $font-light;
 	font-size: 27px;
 	color: $blanco;
+}
+
+.titulo-grande {
+	font-size: 33px;
+	font-weight: bold;
+}
+
+.espaciado-1 {
+	letter-spacing: 1px;
+}
+
+.espaciado-2 {
+	letter-spacing: 2px;
+}
+
+.espaciado-neg-2 {
+	letter-spacing: -2px;
+}
+
+.espaciado-neg-1 {
+	letter-spacing: -1px;
+}
+
+.espaciado-neg-05 {
+	letter-spacing: -0.5px;
 }

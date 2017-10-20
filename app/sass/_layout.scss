@@ -19,8 +19,39 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	& > img {
-		width: 245px;
-		margin-left: 50px;
+		width: 235px;
+		margin-left: 70px;
+	}
+	& > .logueado {
+		position: relative;
+		right: 40px;
+		width: 600px;
+		height: 100px;
+		color: $gris-oscuro;
+		div:last-of-type {
+			position: relative;
+			top: 15px;
+			right: -40px;
+			float: right;
+			.nombre-logueado {
+				text-transform: uppercase;
+				font-family: "Muller-Bold";
+			}
+		}
+		div:first-of-type {
+			position: relative;
+			top: 31px;
+			float: right;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: $gris-claro;
+			span i.fa-user {
+				position: relative;
+				top: 6px;
+				left: 11px;
+			}
+		}
 	}
 }
 
@@ -30,54 +61,90 @@ main {
 	height: 568px;
 	background-color: $verde-comafi-claro;
 	section {
-		position: absolute;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		&.encabezado {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			top: 0;
-			height: 100px;
+			height: 90px;
 			width: 100%;
 		}
 		&.menu {
-			width: 100%;
-			height: 90%;
-			margin-top: 30px;
+			position: absolute;
 			display: flex;
-			align-items: center;
 			justify-content: center;
+			align-items: center;
 			flex-wrap: wrap;
+			width: 934px;
+			height: 500px;
+			padding: 34px 45px 34px 45px;
+		}
+		&.submenu {
+			position: absolute;
+			top: 135px;
+			width: 824px;
+			height: 100%;
+			padding: 0 100px;
+			flex-wrap: wrap;
+			& > p.encabezado {
+				position: absolute;
+				top: -25px;
+				font-family: $font-regular;
+				// letter-spacing: 2px;
+					& > span.prisma {
+					font-size: 3em;
+				}
+			}
+			& > .botonera-submenu {
+				position: relative;
+				top: 30px;
+				width: 100%;
+				height: auto;
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
 		}
 		&.cuerpo {
-			top: 100px;
-			// width: 100%;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 85px;
 			background-color: transparent;
 			.cuerpo-container {
-				margin: 0 50px;
-				width: 924px;
-				height: 443px;
+				margin: 0 70px;
+				width: 884px;
+				height: 430px;
 				background-color: $blanco;
 				.tab {
+					height: 75px;
 					overflow: hidden;
 					border: none;
-					background-color: $gris-claro;
+					// background-color: $gris-claro;
 					& > button {
-						font-family: "Muller-Regular";
+						font-family: "Muller-Bold";
+						text-transform: uppercase;
 						width: 50%;
-						background-color: inherit;
+						height: 75px;
+						background-color: $gris-claro;
 						float: left;
 						border: none;
 						outline: none;
 						cursor: pointer;
 						padding: 14px 16px;
 						transition: 0.3s;
-						color: $gris-oscuro;
-						&:first-child {
-							border-right: 3px solid $verde-comafi;
+						color: $blanco;
+						&.active {
+							background-color: $blanco;
+							color: $verde-comafi;
 						}
-						&:hover {
-							background-color: $gris;
-						}
+					}
+				}
+				.tab.login {
+					& > button {
+						background-color: $verde-comafi;
 						&.active {
 							background-color: $blanco;
 							color: $verde-comafi;
@@ -87,9 +154,35 @@ main {
 				.tabcontent {
 					display: none;
 					color: $gris-oscuro;
-					padding: 75px 100px 0 100px;
-					border: 1px solid $blanco;
+					padding: 35px 100px 0 100px;
+					// border: 1px solid $blanco;
 					border-top: none;
+					.slider {
+						position: relative;
+						top: -25px;
+						height: 345px;
+						width: 600px;
+						margin: 0 auto;
+						overflow: hidden;
+						& > div {
+							position:absolute;
+							width:inherit;
+							height:inherit;
+							top:0px;
+						}
+						&~a {
+							position: absolute;
+							bottom: 234px;
+							right: 134px;
+							color: $verde-comafi;
+						}
+						&~a+a {
+							position: absolute;
+							bottom: 90px;
+							right: 134px;
+							color: $verde-comafi;
+						}
+					}
 				}
 				.col-left {
 					float: left;
@@ -112,6 +205,46 @@ main {
 					padding: 20px;
 					height: calc(100% - 40px);
 					width: calc(50% - 40px);
+					& > .teclado-numerico {
+						height: 400px;
+						& > .numeros {
+							height: 340px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							flex-wrap: wrap;
+						}
+						& > .inputs {
+							margin: 8px;
+							& > input {
+								width: 370px;
+								padding: 0.6em;
+							}
+						}
+					}
+				}
+				.lista-deposito {
+					.col-left {
+						p {
+							color: $gris;
+							font-size: 20px;
+							span b {
+								letter-spacing: -1.5px;
+							}
+						}
+					}
+					.col-right {
+						p {
+							font-size: 20px;
+							font-weight: bold;
+							span {
+								font-size: 20px;
+								b {
+									font-size: 20px;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -123,7 +256,293 @@ footer {
 	top: 0;
 	height: 100px;
 	background-color: $verde-comafi;
-	padding: 0 50px;
+	padding: 0 70px;
 	display: flex;
 	align-items: center;
+}
+
+/* MODAL TECLADO*/
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+	&:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+	& > div {
+		width: 550px;
+		height: 570px;
+		position: relative;
+		margin: 100px auto;
+		padding: 20px;
+		background: $blanco;
+	}
+	.close {
+		color: $blanco;
+		position: absolute;
+		right: -200px;
+		top: -95px;
+	}
+	.numeros {
+		margin: 0 auto;
+		width: 400px;
+		height: 340px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		.btn-numerico {
+			justify-content: center;
+		}
+	}
+}
+
+// TECLADO NUMERICO //
+.teclado-numerico {
+	width: 430px;
+	height: 460px;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	.inputs {
+		input.teclado {
+			position: relative;
+			top: 10px;
+			width: 405px;
+			height: 64px;
+			font-size: 30px;
+			color: #636466;
+			background-color: $blanco;
+			border-color: $gris;
+			&:focus {
+				border-color: $verde-comafi;
+				&~.btn-borrar-teclado {
+					background-color: $verde-comafi;
+				}
+			}
+			&::-webkit-input-placeholder {
+				letter-spacing: -2px;
+				font-size: 28px;
+				color: $gris-claro;
+			}
+		}
+		.btn-borrar-teclado {
+			width: 74px;
+			height: 58px;
+			position: absolute;
+			top: 16px;
+			right: 8px;
+			color: #fff;
+			background-color: $gris;
+			display: flex;
+			align-items: center;
+			span.typcn {
+				font-size: 40px;
+				position: relative;
+				left: 15px;
+				bottom: 2px;
+			}
+		}
+	}
+	.numeros {
+		padding: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		background-color: white;
+		justify-content: center;
+		.btn-numerico {
+			font-size: 35px;
+			width: 95px;
+			height: 58px;
+			margin: 9px 8px 8px 8px;
+			color: #fff;
+			background-color: #9D9FA2;
+			justify-content: center;
+		}
+	}
+}
+
+
+
+// SPINNER //
+#circularG {
+	position: absolute;
+	top: 180px;
+	width:128px;
+	height:128px;
+	&~.spinner {
+		position: absolute;
+		top: 315px;
+		left: 256px;
+		font-size: 30px;
+		letter-spacing: 0.2px;
+	}
+}
+
+.circularG{
+position:absolute;
+background-color: $verde-comafi;
+width:29px;
+height:29px;
+-moz-border-radius:19px;
+-moz-animation-name:bounce_circularG;
+-moz-animation-duration:0.56s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-direction:linear;
+-webkit-border-radius:19px;
+-webkit-animation-name:bounce_circularG;
+-webkit-animation-duration:0.56s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:linear;
+-ms-border-radius:19px;
+-ms-animation-name:bounce_circularG;
+-ms-animation-duration:0.56s;
+-ms-animation-iteration-count:infinite;
+-ms-animation-direction:linear;
+-o-border-radius:19px;
+-o-animation-name:bounce_circularG;
+-o-animation-duration:0.56s;
+-o-animation-iteration-count:infinite;
+-o-animation-direction:linear;
+border-radius:19px;
+animation-name:bounce_circularG;
+animation-duration:0.56s;
+animation-iteration-count:infinite;
+animation-direction:linear;
+}
+
+#circularG_1{
+left:0;
+top:50px;
+-moz-animation-delay:0.21s;
+-webkit-animation-delay:0.21s;
+-ms-animation-delay:0.21s;
+-o-animation-delay:0.21s;
+animation-delay:0.21s;
+}
+
+#circularG_2{
+left:14px;
+top:14px;
+-moz-animation-delay:0.28s;
+-webkit-animation-delay:0.28s;
+-ms-animation-delay:0.28s;
+-o-animation-delay:0.28s;
+animation-delay:0.28s;
+}
+
+#circularG_3{
+top:0;
+left:50px;
+-moz-animation-delay:0.35s;
+-webkit-animation-delay:0.35s;
+-ms-animation-delay:0.35s;
+-o-animation-delay:0.35s;
+animation-delay:0.35s;
+}
+
+#circularG_4{
+right:14px;
+top:14px;
+-moz-animation-delay:0.42s;
+-webkit-animation-delay:0.42s;
+-ms-animation-delay:0.42s;
+-o-animation-delay:0.42s;
+animation-delay:0.42s;
+}
+
+#circularG_5{
+right:0;
+top:50px;
+-moz-animation-delay:0.49s;
+-webkit-animation-delay:0.49s;
+-ms-animation-delay:0.49s;
+-o-animation-delay:0.49s;
+animation-delay:0.49s;
+}
+
+#circularG_6{
+right:14px;
+bottom:14px;
+-moz-animation-delay:0.56s;
+-webkit-animation-delay:0.56s;
+-ms-animation-delay:0.56s;
+-o-animation-delay:0.56s;
+animation-delay:0.56s;
+}
+
+#circularG_7{
+left:50px;
+bottom:0;
+-moz-animation-delay:0.63s;
+-webkit-animation-delay:0.63s;
+-ms-animation-delay:0.63s;
+-o-animation-delay:0.63s;
+animation-delay:0.63s;
+}
+
+#circularG_8{
+left:14px;
+bottom:14px;
+-moz-animation-delay:0.7s;
+-webkit-animation-delay:0.7s;
+-ms-animation-delay:0.7s;
+-o-animation-delay:0.7s;
+animation-delay:0.7s;
+}
+
+@-moz-keyframes bounce_circularG{
+0%{
+-moz-transform:scale(1)}
+
+100%{
+-moz-transform:scale(.3)}
+
+}
+
+@-webkit-keyframes bounce_circularG{
+0%{
+-webkit-transform:scale(1)}
+
+100%{
+-webkit-transform:scale(.3)}
+
+}
+
+@-ms-keyframes bounce_circularG{
+0%{
+-ms-transform:scale(1)}
+
+100%{
+-ms-transform:scale(.3)}
+
+}
+
+@-o-keyframes bounce_circularG{
+0%{
+-o-transform:scale(1)}
+
+100%{
+-o-transform:scale(.3)}
+
+}
+
+@keyframes bounce_circularG{
+0%{
+transform:scale(1)}
+
+100%{
+transform:scale(.3)}
+
 }

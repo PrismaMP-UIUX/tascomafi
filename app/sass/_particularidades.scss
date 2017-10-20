@@ -2,13 +2,14 @@
 	& > .row.centrado.flex {
 		justify-content: space-between;
 	}
-	& > .row:nth-child(2) {
-		margin-top: 20px;
-		& > .inputs {
-			input[type="password"] {
-				margin-top: 10px;
-			    width: -webkit-fill-available;
-			}
-		}
-	}
+}
+
+.msj-tutorial-efectivo {
+  position: relative;
+  top: 33px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -1.1px;
+  color: $gris;
 }
