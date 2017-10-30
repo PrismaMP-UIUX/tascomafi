@@ -1,15 +1,29 @@
 .tabcontent {
 	& > .row.centrado.flex {
 		justify-content: space-between;
+    -webkit-justify-content: space-between;
 	}
 }
 
-.msj-tutorial-efectivo {
+.msj-tutorial {
   position: relative;
-  top: 33px;
+  top: 39px;
   text-align: center;
-  font-size: 20px;
+  font-size: 19px;
+  line-height: 0.9;
   font-weight: bold;
-  letter-spacing: -1.1px;
   color: $gris;
+}
+
+/* Depósito Efectivo */
+input[type=radio]:checked ~ .inputs.numCbu > input.numCbu {
+  border-color: $verde-comafi;
+}
+
+input[type=radio]:checked ~ .inputs.tipoCta > select.tipoCta {
+  border-color: $verde-comafi;
+}
+
+input[type=radio]:checked ~ .inputs.numCta > input.numCta {
+  border-color: $verde-comafi;
 }

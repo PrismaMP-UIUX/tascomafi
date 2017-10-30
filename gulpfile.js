@@ -7,7 +7,6 @@ var embedlr = require('gulp-embedlr');
 var imagemin = require('gulp-imagemin');
 var clean = require('gulp-clean');
 var config = require('./config.json');
-var browserSync = require('browser-sync');
 var mainNpmFiles = require('gulp-main-npm-files');
 var include = require('gulp-file-include');
 
@@ -15,17 +14,15 @@ gulp.task('scripts', function() {
     return gulp.src(['app/**/*.js'], {base: 'app/js'})
         // .pipe(browserify())
         // .pipe(concat('dest.js'))
-        .pipe(gulp.dest('../server/dist/'+config.name+'/js/'))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest('../server/dist/'+config.name+'/js/'));
 });
- 
+
 gulp.task('styles', function() {
     return gulp.src(['app/**/*.scss', 'app/**/*.css'],{base:'app/sass'})
         .pipe(sass())
         .on('error', console.log)
         // .pipe(minifyCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest('../server/dist/'+config.name+'/css'))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest('../server/dist/'+config.name+'/css'));
 });
 
 gulp.task('clean', function(){
@@ -36,10 +33,9 @@ gulp.task('clean', function(){
 gulp.task('html', function() {
     return gulp.src(['app/**/*.html', '!app/{_*,_**}'])
     //return gulp.src(['app/**/*.html'])
-        .pipe(embedlr())
+       // .pipe(embedlr())
         .pipe(include({prefix: '@@', basepath: '@file'}))
-        .pipe(gulp.dest('../server/dist/'+config.name))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest('../server/dist/'+config.name));
 })
 
 gulp.task('assets', ['images', 'fonts', 'videos']);
@@ -47,21 +43,18 @@ gulp.task('assets', ['images', 'fonts', 'videos']);
 gulp.task('images', function() {
     return gulp.src(config.images+'**/*')
         .pipe(imagemin({optimizationLevel: 5}))
-        .pipe(gulp.dest('../server/dist/'+config.name))
-        .pipe(browserSync.stream());    
+        .pipe(gulp.dest('../server/dist/'+config.name));
 });
 
 gulp.task('videos', function() {
     return gulp.src(config.videos+'**/*')
         .pipe(imagemin({optimizationLevel: 5}))
-        .pipe(gulp.dest('../server/dist/'+config.name))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest('../server/dist/'+config.name));
 });
 
 gulp.task('fonts', function() {
     return gulp.src('app/fonts/**/*', {base: 'app'})
-        .pipe(gulp.dest('../server/dist/'+config.name))
-        .pipe(browserSync.stream());
+        .pipe(gulp.dest('../server/dist/'+config.name));
 });
 
 // gulp.task('libs', function() {

@@ -11,8 +11,8 @@
 		<section class="cuerpo">
 			<div class="cuerpo-container">
 				<div class="tab login">
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')" id="defaultOpen"  >CLAVE TERMINAL COMAFI</button>
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')"  >TARJETA Y CLAVE</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')"   >CLAVE TERMINAL COMAFI</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" id="defaultOpen" >TARJETA Y CLAVE</button>
 				</div>
 				<div id="clave" class="tabcontent">
 					<div class="row mg-b-25">
@@ -41,10 +41,13 @@
 					</div>
 				</div>
 				<div id="tarjeta" class="tabcontent">
-					<a class="link" href="login2.html">
-						<span class="centrado"><i class="fa fa-credit-card fa-4x" aria-hidden="true"></i></span>
-						<p class="center-align espaciado-1 mg-t-170">Ingresá la tarjeta de débito</p>
-					</a>
+					<div class="centrado">
+						<p class="label espaciado-2 mg-10 mg-t-95">Clave</p>
+						<div class="inputs clave mg-t-5">
+							<input class="clave" type="password" placeholder="4 dígitos">
+							<a href="#!" class="btn"><span class="typcn typcn-backspace"></span></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

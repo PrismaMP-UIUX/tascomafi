@@ -10,14 +10,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'typicons';
-  font-weight: normal;
-  font-style: normal;
-  src: url('../fonts/typicons/typicons.eot');
-  src: url('../fonts/typicons/typicons.eot?#iefix') format('embedded-opentype'), url('../fonts/typicons/typicons.woff') format('woff'), url('../fonts/typicons/typicons.ttf') format('truetype'), url('../fonts/typicons/typicons.svg#typicons') format('svg');
-}
-
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -26,12 +18,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 /* makes the font 33% larger relative to the icon container */
 .fa-lg {
   font-size: 1.33333333em;
   line-height: 0.75em;
   vertical-align: -15%;
 }
+
 /* Medidas de Fontawesome*/
 .fa-1-5x {
   font-size: 1.5em;
@@ -54,7 +48,6 @@
 }
 
 //Iconos que se usan (para no cargar TODOS)
-
 .fa-exchange:before {
   content: "\f0ec";
 }
@@ -122,6 +115,13 @@
   content: "\f040";
 }
 
+@font-face {
+  font-family: 'typicons';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/typicons/typicons.eot');
+  src: url('../fonts/typicons/typicons.eot?#iefix') format('embedded-opentype'), url('../fonts/typicons/typicons.woff') format('woff'), url('../fonts/typicons/typicons.ttf') format('truetype'), url('../fonts/typicons/typicons.svg#typicons') format('svg');
+}
 
 .typcn:before {
   font-family: 'typicons';
@@ -139,6 +139,7 @@
   text-rendering: optimizeLegibility;
 }
 
+/* Iconos que se usan, para no cargar todos */
 .typcn-backspace:before {
   content: '\e029'; /* '' */
 }

@@ -1,23 +1,23 @@
 @@include('_partials/header.html')
 <body class="container">
-	<img src="img/deposito-efectivo2.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;">
+	<!-- <img src="img/deposito-efectivo.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 	<img src="img/isologo.png" alt="">
 	</header>
 	<main class="gris-mas-claro">
 		<section class="encabezado">
-			<h1 class="titulo gris-oscuro-text">Seleccioná la cuenta para depositar en efectivo</h1>
+			<h1 class="titulo gris-oscuro-text">Seleccioná la cuenta para depositar cheques</h1>
 		</section>
 		<section class="cuerpo">
 			<div class="cuerpo-container">
 				<div class="tab gris">
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')" >Cuentas de terceros</button>
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" id="defaultOpen" >Cuentas propias</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')"  id="defaultOpen" >Cuentas de terceros</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" >Cuentas propias</button>
 				</div>
 				<div id="clave" class="tabcontent">
 					<div class="row">
 						<input type="radio" id="cbu" name="selector" checked="true">
-						<label class="radio espaciado-neg-2" for="cbu">CBU</label>
+						<label class="radio" for="cbu">CBU</label>
 						<div class="check"></div>
 						<div class="inputs numCbu">
 							<input type="text" class="numCbu" placeholder="Número" onclick="location.href = '#modal-teclado';" >
@@ -25,7 +25,7 @@
 					</div>
 					<div class="row">
 						<input type="radio" id="cta" name="selector">
-						<label class="radio espaciado-neg-2 mg-t-20" for="cta">Número de cuenta</label>
+						<label class="radio mg-t-15" for="cta">Número de cuenta</label>
 						<div class="check"></div>
 						<div class="inputs tipoCta">
 							<span class="flecha"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></span>
@@ -42,7 +42,7 @@
 				</div>
 				<div id="tarjeta" class="tabcontent">
 					<p class=" mg-t-60 interlineado center-align espaciado-1">Para poder seleccionar una cuenta propia<br>es necesario que inicies sesión.</p>
-					<a href="#" class="btn btn-iniciar-sesion mg-t-45">Iniciar Sesión</a>
+					<a href="depositar-seleccionar-cuenta-propia.html" class="btn btn-iniciar-sesion mg-t-50">Iniciar Sesión</a>
 				</div>
 			</div>
 		</section>
@@ -73,8 +73,8 @@
 		</div>
 	</div>
 	<footer>
-		<a href="#" class="btn btn-home primero"><span><i class="fa fa-home" aria-hidden="true"></i></span>Ir a inicio</a>
-		<a href="#" class="btn btn-siguiente tercero">Siguiente<span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></a>
+		<a href="menu-principal.html" class="btn btn-home primero"><span><i class="fa fa-home" aria-hidden="true"></i></span>Ir a inicio</a>
+		<a href="depositar-confirmar-datos-cheques.html" class="btn btn-siguiente tercero deshabilitado">Siguiente<span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></a>
 	</footer>
 
 	<script>

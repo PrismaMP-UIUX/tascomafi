@@ -3,8 +3,8 @@
 
 // Colores
 
-$verde-comafi: #6B8012;
-$verde-comafi-claro: #6B8912;
+$verde-comafi: #596B19;
+$verde-comafi-claro: #748327;
 $gris-mas-claro: #EFEFEF;
 $gris-claro: #DCDDDE;
 $gris: #9D9FA2;
@@ -48,10 +48,10 @@ $tabla_de_colores: (
 }
 
 //TIPOGRAFIAS
-$font-regular: "Muller-Regular";
-$font-light: "Muller-Light";
-$font-bold: "Muller-Bold";
-$font-extrabold: "Muller-ExtraBold";
+$font-regular: "Lato-Regular";
+$font-light: "Lato-Light";
+$font-bold: "Lato-Bold";
+$font-black: "Lato-Black";
 
 
 .centrado {
@@ -82,5 +82,5 @@ $font-extrabold: "Muller-ExtraBold";
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
 }

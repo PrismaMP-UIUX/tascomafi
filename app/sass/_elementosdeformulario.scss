@@ -4,7 +4,7 @@
 .inputs {
 	display: inline-block;
 	&.tipoDoc {
-		margin: 6px 4px 0 8px;
+		margin: 9px 4px 0 8px;
 		.flecha {
 			background: transparent;
 			position: absolute;
@@ -16,22 +16,35 @@
 		}
 	}
 	&.tipoCta {
+    position: relative;
+    left: 7px;
+    bottom: 24px;
 		.flecha {
 			background: transparent;
 			position: absolute;
-			bottom: 63px;
-			left: 423px;
+			bottom: 20px;
+			left: 245px;
 			font-size: 12px;
 			pointer-events: none;
 			color: $gris-oscuro;
 		}
 	}
+  &.numCta {
+    position: relative;
+    bottom: 24px;
+    left: 13px;
+  }
 	&.numDoc {
 		// margin: 3px 4px 0 8px;
 	}
+  &.numCbu {
+    position: relative;
+    bottom: 28px;
+    left: 8px;
+  }
 	//input CLAVE COMAFI
 	&.clave {
-		margin: 4px 4px 0 8px;
+		margin: -4px 4px 0 8px;
 		a.btn {
 			position: relative;
 			bottom: 60px;
@@ -55,13 +68,16 @@
 		&.tipoDoc {
 			width: 190px;
 			height: 70px;
+      &:focus {
+        border-color: #6B8012;
+      }
 		}
 		&.tipoCta {
 			height: 65px;
 			width: 287px;
-			position: relative;
-			left: 7px;
-			bottom: 23px;
+			// position: relative;
+			// left: 7px;
+			// bottom: 23px;
 			&:focus {
 				border-color: $verde-comafi;
 			}
@@ -98,15 +114,19 @@
 			&::-webkit-input-placeholder {
 				color: $gris;
 			}
+      &:focus {
+        border-color: #6B8012;
+      }
 		}
 		&.clave {
 			width: 260px;
 			height: 64px;
-			font-size: 125px;
+			font-size: 65px;
 			color: $gris-oscuro;
 			&::-webkit-input-placeholder {
 				position: relative;
-				bottom: 30px;
+        left: -5px;
+				bottom: 17px;
 				color: $gris;
 				font-size: 26px;
 			}
@@ -121,19 +141,16 @@
 		&.numCbu {
 			width: 645px;
 			height: 64px;
-			position: relative;
-			bottom: 27px;
-			left: 7px;
 			&:focus {
 				border-color: $verde-comafi;
 			}
 		}
 		&.numCta {
 			width: 345px;
-			height: 60px;
-			position: relative;
-			bottom: 24px;
-			left: 13px;
+			height: 59px;
+			// position: relative;
+			// bottom: 24px;
+			// left: 13px;
 			&:focus {
 				border-color: $verde-comafi;
 			}
@@ -155,13 +172,15 @@
 				color: $blanco;
 				background-color: $verde-comafi;
 				display: flex;
+        display: -webkit-flex;
 				align-items: center;
+        -webkit-align-items: center;
 				font-size: 1.1em;
 				span.typcn {
 					font-size: 40px;
 					position: relative;
 					left: 15px;
-					bottom: 2px;
+					bottom: 5px;
 				}
 			}
 		}
@@ -181,12 +200,15 @@ label {
   display: block;
   position: relative;
   font-weight: 300;
-  font-size: 1.25em;
-  margin: 6px;
-  height: 30px;
+  font-size: 1.2em;
+  margin: 5px;
+  // height: 30px;
   z-index: 9;
   cursor: pointer;
   -webkit-transition: all 0.25s linear;
+  span i {
+    font-size: 21px;
+  }
   &.radio {
   	padding-left: 50px;
   }
@@ -195,7 +217,7 @@ label {
 .check {
   display: block;
   position: relative;
-  border: 5px solid $gris-claro;
+  border: 5px solid $gris-oscuro;
   border-radius: 100%;
   height: 25px;
   width: 25px;
@@ -232,6 +254,8 @@ input[type=radio]:checked ~ label {
 }
 
 
+
+/* Estilos de forms de materialize, para salir del default del browser. */
 /* Forms
    ========================================================================== */
 /**
