@@ -4,12 +4,15 @@
 .inputs {
 	display: inline-block;
 	&.tipoDoc {
+    position: relative;
+    bottom: 30px;
+    height: 70px;
 		margin: 9px 4px 0 8px;
 		.flecha {
 			background: transparent;
-			position: absolute;
-			top: 185px;
-			left: 325px;
+			position: relative;
+			top: 20px;
+			left: 147px;
 			font-size: 12px;
 			pointer-events: none;
 			color: $gris-oscuro;
@@ -18,7 +21,7 @@
 	&.tipoCta {
     position: relative;
     left: 7px;
-    bottom: 24px;
+    bottom: 85px;
 		.flecha {
 			background: transparent;
 			position: absolute;
@@ -30,21 +33,82 @@
 		}
 	}
   &.numCta {
+    height: 70px;
     position: relative;
-    bottom: 24px;
+    bottom: 25px;
     left: 13px;
+    a.btn {
+      position: relative;
+      bottom: 58px;
+      left: 285px;
+      height: 50px;
+      width: 75px;
+      background: $verde-comafi;
+      color: $blanco;
+      border: 0;
+      justify-content: center;
+      -webkit-justify-content: center;
+      // font-size: 19px;
+      // text-transform: uppercase;
+      // -webkit-appearance: none;
+      span i {
+        font-size: 35px;
+      }
+    }
   }
 	&.numDoc {
-		// margin: 3px 4px 0 8px;
+    position: relative;
+    top: 5px;
+    height: 70px;
+  	a.btn {
+      position: relative;
+      bottom: 60px;
+      left: 260px;
+      height: 50px;
+      width: 75px;
+      background: $verde-comafi;
+      color: $blanco;
+      border: 0;
+      justify-content: center;
+      -webkit-justify-content: center;
+      // font-size: 19px;
+      // text-transform: uppercase;
+      // -webkit-appearance: none;
+      span i {
+        font-size: 35px;
+      }
+    }
 	}
   &.numCbu {
+    height: 70px;
     position: relative;
     bottom: 28px;
     left: 8px;
+    a.btn {
+      position: relative;
+      bottom: 60px;
+      left: 585px;
+      height: 50px;
+      width: 75px;
+      background: $verde-comafi;
+      color: $blanco;
+      border: 0;
+      justify-content: center;
+      -webkit-justify-content: center;
+      // font-size: 19px;
+      // text-transform: uppercase;
+      // -webkit-appearance: none;
+      span i {
+        font-size: 35px;
+      }
+    }
   }
 	//input CLAVE COMAFI
 	&.clave {
-		margin: -4px 4px 0 8px;
+    position: relative;
+    top: 5px;
+    height: 70px;
+		margin: 0px 4px 0 8px;
 		a.btn {
 			position: relative;
 			bottom: 60px;
@@ -65,7 +129,23 @@
 		}
 	}
 	select {
+    padding-left: 20px;
+    outline: none;
+    -webkit-appearance: none;
+    display: block;
+    // padding: 1em 4em 1em 1em;
+    margin: 0;
+    transition: border-color 0.2s;
+    border: 2px solid $gris-oscuro;
+    border-radius: 5px;
+    background: transparent;
+    color: $gris;
+    & * {
+      padding: 50px;
+    }
 		&.tipoDoc {
+      position: relative;
+      bottom: 28px;
 			width: 190px;
 			height: 70px;
       &:focus {
@@ -82,20 +162,6 @@
 				border-color: $verde-comafi;
 			}
 		}
-		padding-left: 20px;
-		outline: none;
-		-webkit-appearance: none;
-		display: block;
-		// padding: 1em 4em 1em 1em;
-		margin: 0;
-		transition: border-color 0.2s;
-		border: 2px solid #ddd;
-		border-radius: 5px;
-		background: transparent;
-		color: $gris;
-		& * {
-			padding: 50px;
-		}
 	}
 	input {
 		outline: none;
@@ -104,12 +170,12 @@
 		padding-left: 20px;
 		margin: 0;
 		transition: border-color 0.2s;
-		border: 2px solid #ddd;
+		border: 2px solid $gris-oscuro;
 		border-radius: 5px;
 		background: transparent;
 		color: $gris;
 		&.numDoc {
-			width: 275px;
+			width: 320px;
 			height: 64px;
 			&::-webkit-input-placeholder {
 				color: $gris;

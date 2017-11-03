@@ -2,7 +2,7 @@
 <body class="container">
 	<!-- <img src="img/deposito-efectivo.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
-	<img src="img/isologo.png" alt="">
+	<img src="img/logo.svg" alt="">
 	</header>
 	<main class="gris-mas-claro">
 		<section class="encabezado">
@@ -11,8 +11,12 @@
 		<section class="cuerpo">
 			<div class="cuerpo-container">
 				<div class="tab gris">
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')"  id="defaultOpen" >Cuentas de terceros</button>
 					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" >Cuentas propias</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')"  id="defaultOpen" >Cuentas de terceros</button>
+				</div>
+				<div id="tarjeta" class="tabcontent">
+					<p class=" mg-t-60 interlineado center-align espaciado-1">Para poder seleccionar una cuenta propia<br>es necesario que inicies sesión.</p>
+					<a href="depositar-seleccionar-cuenta-propia.html" class="btn btn-iniciar-sesion mg-t-50">Iniciar Sesión</a>
 				</div>
 				<div id="clave" class="tabcontent">
 					<div class="row">
@@ -40,16 +44,12 @@
 						</div>
 					</div>
 				</div>
-				<div id="tarjeta" class="tabcontent">
-					<p class=" mg-t-60 interlineado center-align espaciado-1">Para poder seleccionar una cuenta propia<br>es necesario que inicies sesión.</p>
-					<a href="depositar-seleccionar-cuenta-propia.html" class="btn btn-iniciar-sesion mg-t-50">Iniciar Sesión</a>
-				</div>
 			</div>
 		</section>
 	</main>
 	<!-- The Modal -->
 	<div id="modal-teclado" class="modal">
-		<div class="center-align">
+		<div class="modal-teclado center-align">
 			<a href="#close" title="Close" class="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
 			<div class="inputs">
 				<input class="modal-teclado" type="text">

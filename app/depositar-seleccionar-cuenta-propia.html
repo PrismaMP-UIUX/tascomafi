@@ -2,13 +2,15 @@
 <body class="container">
 <!-- 	<img src="img/depositar-seleccionar-cuenta-propia.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
-	<img src="img/isologo.png" alt="">
+	<img src="img/logo.svg" alt="">
 	<div class="logueado">
 		<div>
 			<span><i class="fa fa-user" aria-hidden="true"></i></span>
 		</div>
 		<div>
-			<p class="nombre-logueado mg-r-50">José diaz</p>
+			<p class="nombre-logueado">José Diaz</p>
+			<p class="conexion">Tu última conexión fue el: 5/11/2016</p>
+			<p class="vto-clave">Tu clave vence el: 5/12/2017</p>
 		</div>
 	</div>
 	</header>
@@ -19,34 +21,8 @@
 		<section class="cuerpo">
 			<div class="cuerpo-container">
 				<div class="tab gris">
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')" >Cuentas de terceros</button>
 					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" id="defaultOpen" >Cuentas propias</button>
-				</div>
-				<div id="clave" class="tabcontent">
-					<div class="row">
-						<input type="radio" id="cbu" name="selector" checked="true">
-						<label class="radio espaciado-neg-2" for="cbu">CBU</label>
-						<div class="check"></div>
-						<div class="inputs numCbu">
-							<input type="text" class="numCbu" placeholder="Número" onclick="location.href = '#modal-teclado';" >
-						</div>
-					</div>
-					<div class="row">
-						<input type="radio" id="cta" name="selector">
-						<label class="radio espaciado-neg-2 mg-t-20" for="cta">Número de cuenta</label>
-						<div class="check"></div>
-						<div class="inputs tipoCta">
-							<span class="flecha"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></span>
-							<select class="tipoCta">
-								<option value="0" disabled selected>Tipo</option>
-								<option value="1">Cuenta Corriente</option>
-								<option value="2">Caja de Ahorro</option>
-							</select>
-						</div>
-						<div class="inputs numCta">
-							<input class="numCta" type="text" placeholder="Número"  onclick="location.href = '#modal-teclado';">
-						</div>
-					</div>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')" >Cuentas de terceros</button>
 				</div>
 				<div id="tarjeta" class="tabcontent">
 					<div class="cuerpo-slider">
@@ -116,12 +92,40 @@
 						<a href="#" class="abajo"><span><i class="fa fa-arrow-circle-o-down fa-2x" aria-hidden="true"></i></span></a>
 					</div>
 				</div>
+				<div id="clave" class="tabcontent">
+					<div class="row">
+						<input type="radio" id="cta" name="selector">
+						<label class="radio espaciado-neg-2 mg-t-20" for="cta">Número de cuenta</label>
+						<div class="check"></div>
+						<div class="inputs tipoCta">
+							<span class="flecha"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></span>
+							<select class="tipoCta">
+								<option value="0" disabled selected>Tipo</option>
+								<option value="1">Cuenta Corriente</option>
+								<option value="2">Caja de Ahorro</option>
+							</select>
+						</div>
+						<div class="inputs numCta">
+							<input class="numCta" type="text" placeholder="Número">
+							<a href="#modal-teclado" class="btn"><span><i class="fa fa-keyboard-o" aria-hidden="true"></i></span></a>
+						</div>
+					</div>
+					<div class="row">
+						<input type="radio" id="cbu" name="selector">
+						<label class="radio espaciado-neg-2" for="cbu">CBU</label>
+						<div class="check"></div>
+						<div class="inputs numCbu">
+							<input type="text" class="numCbu" placeholder="Número">
+							<a href="#modal-teclado" class="btn"><span><i class="fa fa-keyboard-o" aria-hidden="true"></i></span></a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>
 	<!-- The Modal -->
 	<div id="modal-teclado" class="modal">
-		<div class="center-align">
+		<div class="modal-teclado center-align">
 			<a href="#close" title="Close" class="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
 			<div class="inputs">
 				<input class="modal-teclado" type="text">

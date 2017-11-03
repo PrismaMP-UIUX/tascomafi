@@ -1,0 +1,104 @@
+@@include('_partials/header.html')
+<body class="container">
+	<img src="img/21-Depositos ctapropia-3.jpg" alt="" style="opacity: 0.5; position: absolute; z-index: 999;">
+	<header>
+	<img src="img/logo.svg" alt="">
+<!-- 	<div class="logueado">
+		<div>
+			<span><i class="fa fa-user" aria-hidden="true"></i></span>
+		</div>
+		<div>
+			<p class="nombre-logueado">José Diaz</p>
+			<p class="conexion">Tu última conexión fue el: 5/11/2016</p>
+			<p class="vto-clave">Tu clave vence el: 5/12/2017</p>
+		</div>
+	</div> -->
+	</header>
+	<main class="gris-mas-claro">
+		<section class="encabezado">
+			<h1 class="titulo gris-oscuro-text">Seleccioná la cuenta para depositar en efectivo</h1>
+		</section>
+		<section class="cuerpo">
+			<div class="cuerpo-container">
+				<div class="tab gris">
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')" >Cuentas de terceros</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" id="defaultOpen" >Cuentas propias</button>
+				</div>
+				<div id="clave" class="tabcontent">
+					<div class="row">
+						<input type="radio" id="cbu" name="selector" checked="true">
+						<label class="radio espaciado-neg-2" for="cbu">CBU</label>
+						<div class="check"></div>
+						<div class="inputs numCbu">
+							<input type="text" class="numCbu" placeholder="Número" onclick="location.href = '#modal-teclado';" >
+						</div>
+					</div>
+					<div class="row">
+						<input type="radio" id="cta" name="selector">
+						<label class="radio espaciado-neg-2 mg-t-20" for="cta">Número de cuenta</label>
+						<div class="check"></div>
+						<div class="inputs tipoCta">
+							<span class="flecha"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></span>
+							<select class="tipoCta">
+								<option value="0" disabled selected>Tipo</option>
+								<option value="1">Cuenta Corriente</option>
+								<option value="2">Caja de Ahorro</option>
+							</select>
+						</div>
+						<div class="inputs numCta">
+							<input class="numCta" type="text" placeholder="Número"  onclick="location.href = '#modal-teclado';">
+						</div>
+					</div>
+				</div>
+				<div id="tarjeta" class="tabcontent">
+					<p class="center-align gris-oscuro-text espaciado-1 mg-t-10">Para poder seleccionar una cuenta propia es<br>necesario que ingreses</p>
+					<a href="#modal-clave-tas" class="btn btn-login">ingresar con clave terminal autoservicio</a>
+					<a href="#modal-tarjeta" class="btn btn-login">ingresar con tarjeta y clave</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- The Modal -->
+	<div id="modal-clave-tas" class="modal">
+		<div class="modal-clave-tas">
+			<a href="#close" title="Close" class="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
+			<p class="mg-t-10">Ingresar con clave terminal autoservicio</p>
+			<div class="row">
+				<label class="espaciado-neg-1 mg-l-10">Documento</label>
+				<div class="inputs tipoDoc">
+					<span class="flecha"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></span>
+					<select class="tipoDoc">
+						<option value="0" disabled selected>Tipo</option>
+						<option value="1">DNI</option>
+						<option value="2">LE</option>
+						<option value="3">LC</option>
+						<option value="4">CI</option>
+						<option value="5">PASAPORTE</option>
+					</select>
+				</div>
+				<div class="inputs numDoc">
+					<input class="numDoc" type="text" placeholder="Número">
+					<a href="#modal-teclado" class="btn">Ingresar</a>
+				</div>
+			</div>
+			<div class="row">
+				<label class="mg-l-10 mg-t-0">Clave Comafi <span class="espaciado-neg-1 mg-l-10"><i>(Usá el teclado de la terminal)</i></span></label>
+				<div class="inputs clave">
+					<input class="clave" type="password" placeholder="4 dígitos">
+					<!-- <a href="#!" class="btn"><span class="typcn typcn-backspace"></span></a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<a href="menu-principal.html" class="btn btn-home primero"><span><i class="fa fa-home" aria-hidden="true"></i></span>Ir a inicio</a>
+		<a href="depositar-tutorial-efectivo.html" class="btn btn-siguiente tercero deshabilitado">Siguiente<span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></a>
+	</footer>
+
+	<script>
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+
+	</script>
+</body>
+</html>

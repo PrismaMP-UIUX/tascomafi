@@ -1,8 +1,8 @@
 @@include('_partials/header.html')
 <body class="container">
-<!-- 	<img src="img/login2.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<img src="img/10-Login con clave-1.jpg" alt="" style="opacity: 0.5; position: absolute; z-index: 999;">
 	<header>
-	<img src="img/isologo.png" alt="">
+		<img src="img/logo.svg" alt="">
 	</header>
 	<main>
 		<section class="encabezado">
@@ -11,11 +11,11 @@
 		<section class="cuerpo">
 			<div class="cuerpo-container">
 				<div class="tab login">
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')" id="defaultOpen"  >CLAVE TERMINAL COMAFI</button>
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')"  >TARJETA Y CLAVE</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')" id="defaultOpen" >CLAVE TERMINAL AUTOSERVICIO</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')"   >TARJETA Y CLAVE</button>
 				</div>
 				<div id="clave" class="tabcontent">
-					<div class="row mg-b-25">
+					<div class="row">
 						<label class="espaciado-neg-1 mg-l-10">Documento</label>
 						<div class="inputs tipoDoc">
 							<span class="flecha"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></span>
@@ -29,20 +29,21 @@
 							</select>
 						</div>
 						<div class="inputs numDoc">
-							<input class="numDoc" type="text" placeholder="Número"  onclick="location.href = '#modal-teclado';">
+							<input class="numDoc" type="text" placeholder="Número">
+							<a href="#modal-teclado" class="btn"><span><i class="fa fa-keyboard-o" aria-hidden="true"></i></span></a>
 						</div>
 					</div>
 					<div class="row">
-						<label class="mg-l-10">Clave Comafi <span class="espaciado-neg-1 mg-l-10"><i>(Usá el teclado de la terminal)</i></span></label>
+						<label class="mg-l-10 mg-t-0">Clave Comafi <span class="espaciado-neg-1 mg-l-10"><i>(Usá el teclado de la terminal)</i></span></label>
 						<div class="inputs clave">
-							<input class="clave mg-t-10" type="password" placeholder="4 dígitos">
-							<a href="#!" class="btn"><span class="typcn typcn-backspace"></span></a>
+							<input class="clave" type="password" placeholder="4 dígitos">
+							<!-- <a href="#!" class="btn"><span class="typcn typcn-backspace"></span></a> -->
 						</div>
 					</div>
 				</div>
 				<div id="tarjeta" class="tabcontent">
 					<a class="link" href="login2.html">
-						<span class="centrado"><i class="fa fa-credit-card fa-4x" aria-hidden="true"></i></span>
+						<img src="img/ingresetarjeta.svg" alt="" class="centrado ingreseTarjeta">
 						<p class="center-align espaciado-1 mg-t-170">Ingresá la tarjeta de débito</p>
 					</a>
 				</div>
@@ -51,7 +52,7 @@
 	</main>
 	<!-- The Modal -->
 	<div id="modal-teclado" class="modal">
-		<div class="center-align">
+		<div class="modal-teclado center-align">
 			<a href="#close" title="Close" class="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
 			<div class="inputs">
 				<input class="modal-teclado" type="text">
@@ -70,7 +71,7 @@
 				<a href="#" class="btn btn-numerico">00</a>
 				<a href="#" class="btn btn-numerico">0</a>
 				<a href="#" class="btn btn-numerico">000</a>
-				<a href="#" class="btn btn-teclado-aplicar"><i class="fa fa-check mg-r-10" aria-hidden="true"></i>Aplicar</a>
+				<a href="#" class="btn btn-teclado-aplicar"><i class="fa fa-check mg-r-20" aria-hidden="true"></i>Ingresar</a>
 			</div>
 		</div>
 	</div>
@@ -81,6 +82,6 @@
 	<script>
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();
-	</script>
+</script>
 </body>
 </html>

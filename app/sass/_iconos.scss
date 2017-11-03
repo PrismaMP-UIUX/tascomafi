@@ -48,9 +48,6 @@
 }
 
 //Iconos que se usan (para no cargar TODOS)
-.fa-exchange:before {
-  content: "\f0ec";
-}
 .fa-angle-down:before {
   content: "\f107";
 }
@@ -68,21 +65,6 @@
 }
 .fa-chevron-right:before {
   content: "\f054";
-}
-.fa-arrow-down:before {
-  content: "\f063";
-}
-.fa-arrow-up:before {
-  content: "\f062";
-}
-.fa-question-circle:before {
-  content: "\f059";
-}
-.fa-usd:before {
-  content: "\f155";
-}
-.fa-key:before {
-  content: "\f084";
 }
 .fa-user:before {
   content: "\f007";
@@ -113,6 +95,9 @@
 }
 .fa-pencil:before {
   content: "\f040";
+}
+.fa-keyboard-o:before {
+  content: "\f11c";
 }
 
 @font-face {

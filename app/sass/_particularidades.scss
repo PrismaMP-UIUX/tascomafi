@@ -2,7 +2,12 @@
 	& > .row.centrado.flex {
 		justify-content: space-between;
     -webkit-justify-content: space-between;
-	}
+  }
+  .ingreseTarjeta {
+    width: 105px;
+    position: absolute;
+    top: 200px;
+  }
 }
 
 .msj-tutorial {

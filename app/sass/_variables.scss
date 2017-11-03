@@ -15,6 +15,7 @@ $blanco: #fff;
 // $verde-claro: #6A8810;
 // $verde-oscuro: #4E6B00;
 $rojo: #BD222D;
+$verde: #55d555;
 
 
 $tabla_de_colores: (
@@ -27,6 +28,7 @@ $tabla_de_colores: (
   "gris-mas-oscuro" : $gris-mas-oscuro,
   "blanco": $blanco,
   "rojo": $rojo,
+  "verde": $verde,
 ) !default;
 
 @each $color in $tabla_de_colores {

@@ -29,10 +29,9 @@
 //BOTONES DEL FOOTER //
 .btn-salir {
 	width: 135px;
-	// position: absolute;
-	// left: 70px;
 	text-transform: uppercase;
 	font-size: 1em;
+	transform: translateY(27%);
 	span > i {
 		color: $rojo;
 		margin: 0 10px 0 20px;
@@ -41,13 +40,12 @@
 
 .btn-home {
 	width: 195px;
-	// position: absolute;
-	// left: 247px;
 	text-transform: uppercase;
 	font-size: 1em;
+	transform: translateY(27%);
 	span {
 		color: $verde-comafi;
-		margin: 0 10px 0 20px;
+		margin: 0 10px 0 23px;
 	}
 }
 
@@ -55,6 +53,7 @@
 	width: 265px;
 	font-size: 1em;
 	text-transform: uppercase;
+	transform: translateY(27%);
 	span {
 		font-size: 0.6em;
 		color: $gris-oscuro;
@@ -64,9 +63,8 @@
 
 .btn-anterior {
 	width: 180px;
-	// position: absolute;
-	// right: 275px;
 	font-size: 1em;
+	transform: translateY(27%);
 	span {
 		color: $gris-oscuro;
 		margin: 0 10px 0 20px;
@@ -79,6 +77,7 @@
 	line-height: 1em;
 	text-transform: uppercase;
 	padding-left: 15px;
+	transform: translateY(27%);
 	span {
 		color: $gris-oscuro;
 		margin: 0 10px 5px 20px;
@@ -90,11 +89,10 @@
 
 .btn-ingresar {
 	width: 175px;
-	// position: absolute;
-	// right: 70px;
 	font-size: 1em;
 	text-transform: uppercase;
 	padding-left: 15px;
+	transform: translateY(27%);
 	span {
 		color: $gris-oscuro;
 		margin: 0 0 0 15px;
@@ -103,11 +101,10 @@
 
 .btn-ingresar-billetes {
 	width: 285px;
-	// position: absolute;
-	// right: 70px;
 	font-size: 1em;
 	text-transform: uppercase;
 	padding-left: 15px;
+	transform: translateY(27%);
 	span {
 		color: $gris-oscuro;
 		margin: 0 0 0 15px;
@@ -116,12 +113,11 @@
 
 .btn-cancelar {
 	width: 185px;
-	// position: absolute;
-	// right: 70px;
 	font-size: 1em;
 	text-transform: uppercase;
 	padding-left: 15px;
 	color: $rojo;
+	transform: translateY(27%);
 	span {
 		color: $rojo;
 		margin: 0 10px 0 10px;
@@ -130,14 +126,13 @@
 
 .btn-confirmar {
 	width: 200px;
-	// position: absolute;
-	// right: 70px;
 	font-size: 1em;
 	text-transform: uppercase;
 	padding-left: 15px;
-	color: $verde-comafi;
+	color: $verde;
+	transform: translateY(27%);
 	span {
-		color: $verde-comafi;
+		color: $verde;
 		margin: 0 10px 0 0;
 	}
 }
@@ -149,7 +144,8 @@
 	width: 280px;
 	justify-content: space-evenly;
 	-webkit-justify-content: space-evenly;
-	border: $gris 1px solid;
+	border: $verde-comafi 1px solid;
+	color: $verde-comafi;
 	height: 55px;
 	margin: 0 auto;
 	text-transform: uppercase;
@@ -232,31 +228,53 @@
 	width: 269px;
 	height: 210px;
 	margin: 18px;
-	display: grid;
+	display: initial;
 	color: #9D9FA2;
-	& > span {
-		font-size: 3.2em;
-		text-align: center;
-		color: $verde-comafi;
-		padding-top: 25px;
+	& > img {
+		width: 90px;
+		margin: 30px 88px 0px 88px;
 	}
 	& > p {
 		font-size: 24px;
-		padding-bottom: 10px;
+		margin: 20px 0px 0px 0px;
+	}
+	&.pagos {
+		img {
+			margin: 32px 88px 0px 88px;
+		}
+		p {
+			margin: 15px 0 0 0;
+		}
+	}
+	&.claves {
+		img {
+			width: 100px;
+			margin: 32px 85px 5px 85px;
+		}
+		p {
+			margin: 11px 0px 0px 0px;
+		}
+	}
+	&.transferencias {
+		img {
+			width: 110px;
+			margin: 33px 80px 5px 80px;
+		}
+		p {
+			margin: 10px 0px 0px 0px;
+		}
 	}
 }
 
 // BOTONES DEL SUBMENU //
 .btn-submenu {
-	width: 250px;
+	justify-content: center;
+	-webkit-justify-content: center;
+	text-transform: uppercase;
+	width: 325px;
 	height: 80px;
-	margin: 10px;
-	display: grid;
-	color: #9D9FA2;
-	padding-left: 35px;
-	& > p {
-		font-size: 26px;
-	}
+	margin: 8px 0px 16px 0px;
+	background-color: $verde-comafi;
 }
 
 // BOTONES DE IMPORTES SUGERIDOS //
