@@ -1,0 +1,24 @@
+@@include('../../_partials/header.html')
+<body class="container">
+	<!-- <img src="../../img/clave-incorrecta-tarjeta-inhabilitada.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+	<img src="../../img/logo.svg" alt="">
+	</header>
+	<main class="gris-mas-claro center-align">
+		<img src="../../img/cruzroja.svg" alt="" class="cruzroja">
+		<h1 class="mensaje">Tu clave no ha sido confirmada.<br>La operación fue cancelada.</h1>
+		<!-- El div aquí abajo solo si se identifica CON tarjeta -->
+		<div class="accion mg-t-40">
+			<p class="">Por favor, retirá la tarjeta.</p>
+		</div>
+		<section class="cuerpo">
+		</section>
+	</main>
+	<footer class="gris-mas-claro">
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+	<a href="../../menu-principal.html" class="link"># Inicio</a>
+	<a href="javascript:history.go(-1)" class="link"># Volver</a>
+</body>
+</html>

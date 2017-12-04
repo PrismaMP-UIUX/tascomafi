@@ -1,0 +1,51 @@
+@@include('../../_partials/header.html')
+<body class="container">
+	<!-- <img src="../../img/id-numerica-seleccion.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+		<img src="../../img/logo.svg" alt="">
+		<div class="logueado valign-wrapper">
+		<div>
+			<p class="nombre-logueado">José Diaz</p>
+			<p class="conexion">Tu última conexión fue el: 5/11/2016</p>
+			<p class="vto-clave">Tu clave vence el: 5/12/2017</p>
+		</div>
+		<div>
+			<i class="material-icons">person</i>
+		</div>
+	</div>
+	</header>
+	<main class="gris-mas-claro">
+		<section class="encabezado">
+			<h1 class="titulo gris-oscuro-text">Seleccioná tres letras diferentes para generar tu clave alfabética.</h1>
+		</section>
+		<section class="cuerpo">
+			<div class="cuerpo-container transparente">
+				<div class="id-alfa">
+					<div class="alfa valign-wrapper">
+						<div class="input-id">
+							<span class="flash">__</span>
+							<span>__</span>
+							<span>__</span>
+						</div>
+					</div>
+					<div class="botonera-id">
+						<a href="#" class="btn btn-id"><p>A</p></a>
+						<a href="#" class="btn btn-id"><p>Ñ</p></a>
+						<a href="#" class="btn btn-id"><p>K</p></a>
+						<a href="#" class="btn btn-id"><p>F</p></a>
+						<a href="#" class="btn btn-id"><p>D</p></a>
+						<a href="#" class="btn btn-id"><p>M</p></a>
+						<a href="#" class="btn btn-id"><p>G</p></a>
+						<a href="#" class="btn btn-id"><p>L</p></a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+</body>
+</html>

@@ -1,0 +1,79 @@
+@@include('../../_partials/header.html')
+<body class="container">
+	<!-- <img src="../../img/depositar-efectivo.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+	<img src="../../img/logo.svg" alt="">
+	</header>
+	<main class="gris-mas-claro">
+		<section class="encabezado">
+			<div class="breadcrumb">
+				<img src="../../img/deposito.svg" alt="">
+				<p><span class="verde-comafi-text">depósitos /</span> elegir destino</p>
+			</div>
+			<h1 class="titulo gris-oscuro-text">Seleccioná la cuenta para depositar en efectivo</h1>
+		</section>
+		<section class="cuerpo">
+			<div class="cuerpo-container">
+				<div class="tab gris">
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" id="defaultOpen" >Cuentas propias</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')"  >Cuentas de terceros</button>
+				</div>
+				<div id="tarjeta" class="tabcontent">
+					<p class="interlineado center-align espaciado-1 mg-t-50">Para poder seleccionar una cuenta propia<br>es necesario que inicies sesión.</p>
+					<a href="../identificacion/login-tarjeta.html" class="btn btn-cuerpo verde-comafi mg-t-50"><p class="blanco-text bigger-font mayus">Iniciar Sesión</p></a>
+				</div>
+				<div id="clave" class="tabcontent">
+
+						<div class="row">
+							<input type="radio" id="cta" name="selector">
+							<div class="check cta"></div>
+							<label class="radio espaciado-neg-2" for="cta">Número de cuenta</label>
+						</div>
+						<div class="row">
+							<div class="inputs tipoCta mg-l-10">
+								<span class="flecha"><i class="material-icons">keyboard_arrow_down</i></span>
+								<ul class="select list-unstyled">
+									<li class="init">Tipo</li>
+									<li data-value="value 0">Cuenta Corriente</li>
+									<li data-value="value 1">Caja de Ahorro</li>
+								</ul>
+							</div>
+							<div class="inputs numCta mg-l-5">
+								<input class="numCta" type="text" placeholder="Número">
+								<a href="#modal-teclado" class="btn"><i class="material-icons">keyboard</i></a>
+							</div>
+						</div>
+						<div class="row mg-t-20">
+							<input type="radio" id="cbu" name="selector">
+							<div class="check cbu"></div>
+							<label class="radio espaciado-neg-2" for="cbu">CBU</label>
+						</div>
+						<div class="row">
+							<div class="inputs numCbu mg-l-10">
+								<input type="text" class="numCbu" placeholder="Número">
+								<a href="#modal-teclado" class="btn"><i class="material-icons">keyboard</i></a>
+							</div>
+						</div>
+
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a href="../../menu-principal.html" class="btn btn-footer primero"><i class="material-icons left">home</i><p>Ir a inicio</p></a>
+		<a href="depositar-confirmar-datos-efectivo.html" class="btn btn-footer tercero"><p>Siguiente</p><i class="material-icons right">keyboard_arrow_right</i></a>
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+	<a href="../mensajes-error/loading-deposito-en-curso.html" class="link"># Depósito en curso</a>
+	<a href="../mensajes-error/loading-esperar-validacion.html" class="link"># Esperar validación</a>
+	<a href="../mensajes-error/mensaje-billetes-cheques-no-reconocidos.html" class="link"># Billetes/Cheques no reconocidos</a>
+	<a href="../mensajes-error/mensaje-muchos-billetes-cheques-no-reconocidos.html" class="link"># Muchos billetes/cheques no reconocidos</a>
+	<a href="../mensajes-error/mensaje-operacion-cancelada-retirar-billetes.html" class="link"># Operación cancelada</a>
+	<a href="../mensajes-error/mensaje-retirar-billetes.html" class="link"># Retirar billetes</a>
+	<script>
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+	</script>
+</body>
+</html>

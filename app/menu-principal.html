@@ -1,33 +1,45 @@
-@@include('_partials/header.html')
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>COMAFI</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" media="all">
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
 <body class="container">
-	<img src="img/00-Inicio.jpg" alt="" style="opacity: 0.5; position: absolute; z-index: 999;">
+	<!-- <img src="../../img/menuprincipal.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 		<img src="img/logo.svg" alt="">
 		<!-- El div de acá abajo solo se muestra si esta logueado -->
-		<!-- <div class="logueado">
-			<div>
-				<span><i class="fa fa-user" aria-hidden="true"></i></span>
-			</div>
-			<div>
-				<p class="nombre-logueado">José Diaz</p>
-				<p class="conexion">Tu última conexión fue el: 5/11/2016</p>
-				<p class="vto-clave">Tu clave vence el: 5/12/2017</p>
-			</div>
-		</div> -->
+		<!-- <div class="logueado valign-wrapper">
+		<div>
+			<p class="nombre-logueado">José Diaz</p>
+			<p class="conexion">Tu última conexión fue el: 5/11/2016</p>
+			<p class="vto-clave">Tu clave vence el: 5/12/2017</p>
+		</div>
+		<div>
+			<i class="material-icons">person</i>
+		</div>
+	</div> -->
 	</header>
 	<main>
 		<section class="menu">
-			<a href="#" class="btn btn-menu center-align"><img src="img/extraccion.svg" alt=""><p class="espaciado-neg-05">EXTRACCIONES</p></a>
-			<a href="menu-depositos.html" class="btn btn-menu center-align"><img src="img/deposito.svg" alt=""><p class="espaciado-neg-05">DEPÓSITOS</p></a>
+			<a href="transacciones/extraer/extraer.html" class="btn btn-menu center-align"><img src="img/extraccion.svg" alt=""><p class="espaciado-neg-05">EXTRACCIONES</p></a>
+			<a href="transacciones/depositar/menu-depositos.html" class="btn btn-menu center-align"><img src="img/deposito.svg" alt=""><p class="espaciado-neg-05">DEPÓSITOS</p></a>
 			<a href="#" class="btn btn-menu center-align"><img src="img/consultas.svg" alt=""><p class="espaciado-neg-05">CONSULTAS</p></a>
 			<a href="#" class="btn btn-menu pagos center-align"><img src="img/pesos.svg" alt=""><p class="espaciado-neg-05">PAGOS</p></a>
-			<a href="#" class="btn btn-menu claves center-align"><img src="img/claves.svg" alt=""><p class="espaciado-neg-05">CLAVES</p></a>
+			<a href="transacciones/identificacion/menu-claves.html" class="btn btn-menu claves center-align"><img src="img/claves.svg" alt=""><p class="espaciado-neg-05">CLAVES</p></a>
 			<a href="#" class="btn btn-menu transferencias center-align"><img src="img/transferencias.svg" alt=""><p class="espaciado-neg-05">TRANSFERENCIAS</p></a>
 		</section>
 	</main>
 	<footer>
 		<!-- El botón de acá abajo solo se muestra si esta logueado -->
-		<!-- <a href="#" class="btn btn-salir"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>Salir</a> -->
+		<!-- <a href="#" class="btn btn-footer primero rojo-text"><i class="material-icons left">exit_to_app</i><p>Salir</p></a> -->
 	</footer>
+	@@include('_partials/modals.html')
+	@@include('_partials/script.html')
 </body>
 </html>

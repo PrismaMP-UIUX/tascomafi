@@ -1,0 +1,64 @@
+@@include('../../_partials/header.html')
+<body class="container">
+	<!-- <img src="../../img/depositar-importe-a-depositar.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+		<img src="../../img/logo.svg" alt="">
+	<!-- solo si está logueado -->
+	<!--<div class="logueado valign-wrapper">
+		<div>
+			<p class="nombre-logueado">José Diaz</p>
+			<p class="conexion">Tu última conexión fue el: 5/11/2016</p>
+			<p class="vto-clave">Tu clave vence el: 5/12/2017</p>
+		</div>
+		<div>
+			<i class="material-icons">person</i>
+		</div>
+	</div> -->
+	</header>
+	<main class="gris-mas-claro">
+		<section class="encabezado">
+			<div class="breadcrumb">
+				<img src="../../img/deposito.svg" alt="">
+				<p><span class="verde-comafi-text">depósitos /</span> elegir destino / ingresar cheques / ingresar importe</p>
+			</div>
+			<h1 class="titulo gris-oscuro-text">Ingresá el importe a depositar</h1>
+		</section>
+		<section class="cuerpo">
+			<div class="gris-mas-claro cuerpo-container">
+				<div class="teclado-numerico">
+					<div class="inputs mg-t-15">
+						<input class="teclado" type="text" placeholder="Importe total">
+						<a href="#!" class="btn btn-borrar-teclado"><i class="material-icons">backspace</i></a>
+					</div>
+					<div class="numeros mg-t-15">
+						<a href="#" class="btn btn-numerico"><p>1</p></a>
+						<a href="#" class="btn btn-numerico"><p>2</p></a>
+						<a href="#" class="btn btn-numerico"><p>3</p></a>
+						<a href="#" class="btn btn-numerico"><p>4</p></a>
+						<a href="#" class="btn btn-numerico"><p>5</p></a>
+						<a href="#" class="btn btn-numerico"><p>6</p></a>
+						<a href="#" class="btn btn-numerico"><p>7</p></a>
+						<a href="#" class="btn btn-numerico"><p>8</p></a>
+						<a href="#" class="btn btn-numerico"><p>9</p></a>
+						<a href="#" class="btn btn-numerico"><p>00</p></a>
+						<a href="#" class="btn btn-numerico"><p>0</p></a>
+						<a href="#" class="btn btn-numerico"><p>000</p></a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
+		<a href="depositar-confirmar-deposito-cheques.html" class="btn btn-footer tercero"><p>Siguiente</p><i class="material-icons right">keyboard_arrow_right</i></a>
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+	<a href="../mensajes-error/loading-deposito-en-curso.html" class="link"># Depósito en curso</a>
+	<a href="../mensajes-error/loading-esperar-validacion.html" class="link"># Esperar validación</a>
+	<a href="../mensajes-error/mensaje-billetes-cheques-no-reconocidos.html" class="link"># Billetes/Cheques no reconocidos</a>
+	<a href="../mensajes-error/mensaje-muchos-billetes-cheques-no-reconocidos.html" class="link"># Muchos billetes/cheques no reconocidos</a>
+	<a href="../mensajes-error/mensaje-operacion-cancelada-retirar-billetes.html" class="link"># Operación cancelada</a>
+	<a href="../mensajes-error/mensaje-retirar-billetes.html" class="link"># Retirar billetes</a>
+</body>
+</html>

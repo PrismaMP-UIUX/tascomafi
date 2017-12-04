@@ -1,0 +1,25 @@
+@@include('../../_partials/header.html')
+<body class="container">
+	<!-- <img src="../../img/cambiar-clave.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+	<img src="../../img/logo.svg" alt="">
+	</header>
+	<main class="gris-mas-claro center-align">
+		<img src="../../img/claves.svg" alt="" class="claves mg-t-80">
+		<h1 class="mensaje">Por tu seguridad, es necesario que generes una<br>clave alfabética.</h1>
+		<h1 class="mensaje">Puede ser solicitada en algunas operaciones.</h1>
+		<h1 class="mensaje">¿Querés generarla ahora?</h1>
+		<section class="cuerpo">
+		</section>
+	</main>
+	<footer>
+		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text rojo-border"><i class="material-icons left">exit_to_app</i><p>Salir</p></a>
+		<a href="../../menu-principal.html" class="btn btn-footer segundo"><i class="material-icons left">home</i><p>Ir a inicio</p></a>
+		<a href="id-alfa-generacion.html" class="btn btn-footer tercero"><i class="material-icons left">vpn_key</i><p>Generar clave</p></a>
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+	<a href="../../menu-principal.html" class="link"># Inicio</a>
+	<a href="javascript:history.go(-1)" class="link"># Volver</a>
+</body>
+</html>

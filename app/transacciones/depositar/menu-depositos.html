@@ -1,0 +1,34 @@
+@@include('../../_partials/header.html')
+<body class="container">
+	<!-- <img src="../../img/menu-depositos.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+		<img src="../../img/logo.svg" alt="">
+		<div class="logueado valign-wrapper">
+		<div>
+			<p class="nombre-logueado">José Diaz</p>
+			<p class="conexion">Tu última conexión fue el: 5/11/2016</p>
+			<p class="vto-clave">Tu clave vence el: 5/12/2017</p>
+		</div>
+		<div>
+			<i class="material-icons">person</i>
+		</div>
+	</div>
+	</header>
+	<main class="gris-mas-claro">
+		<section class="submenu-deposito centrado">
+			<p class="centrado encabezado valign-wrapper verde-comafi-text espaciado-1"><img src="../../img/deposito.svg" alt="" class="deposito">DEPÓSITOS</p>
+			<div class="botonera">
+				<a href="depositar-efectivo.html" class="btn btn-submenu blanco-text"><p>Efectivo en pesos</p></a>
+				<a href="depositar-efectivo.html" class="btn btn-submenu blanco-text"><p>Efectivo en dólares</p></a>
+				<a href="depositar-cheques.html" class="btn btn-submenu blanco-text"><p>Cheques</p></a>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a href="../general/salir-CT.html" class="btn btn-footer primero rojo-text"><i class="material-icons left">exit_to_app</i><p>Salir</p></a>
+		<a href="../../menu-principal.html" class="btn btn-footer segundo"><i class="material-icons left">home</i><p>Ir a inicio</p></a>
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+</body>
+</html>

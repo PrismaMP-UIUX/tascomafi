@@ -1,6 +1,7 @@
 // Definición de los botones
 // --------------------------------------------------
 .btn {
+	width: auto;
 	border-radius: 3px;
 	position: relative;
 	color: $gris-oscuro;
@@ -11,218 +12,68 @@
 	-webkit-align-items: center;
 	height: 65px;
 	font-size: 1.1em;
-	&.primero {
-		position: relative;
-		left: 0;
-	}
-	&.segundo {
-		position: relative;
-		margin-left: 40px;
-	}
-	&.tercero {
-		position: absolute;
-		right: 70px;
-	}
-
-}
-
-//BOTONES DEL FOOTER //
-.btn-salir {
-	width: 135px;
-	text-transform: uppercase;
-	font-size: 1em;
-	transform: translateY(27%);
-	span > i {
-		color: $rojo;
-		margin: 0 10px 0 20px;
-	}
-}
-
-.btn-home {
-	width: 195px;
-	text-transform: uppercase;
-	font-size: 1em;
-	transform: translateY(27%);
-	span {
-		color: $verde-comafi;
-		margin: 0 10px 0 23px;
-	}
-}
-
-.btn-volver {
-	width: 265px;
-	font-size: 1em;
-	text-transform: uppercase;
-	transform: translateY(27%);
-	span {
-		font-size: 0.6em;
-		color: $gris-oscuro;
-		margin: 0 13px 0 20px;
-	}
-}
-
-.btn-anterior {
-	width: 180px;
-	font-size: 1em;
-	transform: translateY(27%);
-	span {
-		color: $gris-oscuro;
-		margin: 0 10px 0 20px;
-	}
-}
-
-.btn-siguiente {
-	width: 180px;
-	font-size: 1em;
-	line-height: 1em;
-	text-transform: uppercase;
-	padding-left: 15px;
-	transform: translateY(27%);
-	span {
-		color: $gris-oscuro;
-		margin: 0 10px 5px 20px;
-		i {
-			font-size: 0.7em;
+	//BOTONES DEL FOOTER //
+	&.btn-footer {
+		transform: translateY(27%);
+		text-transform: uppercase;
+		font-size: 1em;
+		&.primero {
+			position: relative;
+			left: 0;
+		}
+		&.segundo {
+			position: relative;
+			margin-left: 40px;
+		}
+		&.tercero {
+			position: absolute;
+			right: 70px;
+		}
+		& > p {
+			margin: 0;
+			font-size: 24px;
+			padding: 0 15px;
+		}
+		& > i.left {
+			padding-left: 15px;
+		}
+		& > i.right {
+			padding-right: 15px;
 		}
 	}
-}
-
-.btn-ingresar {
-	width: 175px;
-	font-size: 1em;
-	text-transform: uppercase;
-	padding-left: 15px;
-	transform: translateY(27%);
-	span {
-		color: $gris-oscuro;
-		margin: 0 0 0 15px;
-	}
-}
-
-.btn-ingresar-billetes {
-	width: 285px;
-	font-size: 1em;
-	text-transform: uppercase;
-	padding-left: 15px;
-	transform: translateY(27%);
-	span {
-		color: $gris-oscuro;
-		margin: 0 0 0 15px;
-	}
-}
-
-.btn-cancelar {
-	width: 185px;
-	font-size: 1em;
-	text-transform: uppercase;
-	padding-left: 15px;
-	color: $rojo;
-	transform: translateY(27%);
-	span {
-		color: $rojo;
-		margin: 0 10px 0 10px;
-	}
-}
-
-.btn-confirmar {
-	width: 200px;
-	font-size: 1em;
-	text-transform: uppercase;
-	padding-left: 15px;
-	color: $verde;
-	transform: translateY(27%);
-	span {
-		color: $verde;
-		margin: 0 10px 0 0;
-	}
-}
-
-// BOTONES DEL BODY //
-.btn-otra-cuenta {
-	top: 15px;
-	left: 10px;
-	width: 280px;
-	justify-content: space-evenly;
-	-webkit-justify-content: space-evenly;
-	border: $verde-comafi 1px solid;
-	color: $verde-comafi;
-	height: 55px;
-	margin: 0 auto;
-	text-transform: uppercase;
-	font-size: 21px;
-}
-
-.btn-iniciar-sesion {
-	background-color: $verde-comafi;
-	color: white;
-	width: 220px;
-	font-size: 24px;
-	justify-content: center;
-	-webkit-justify-content: center;
-	margin: 0 auto;
-	text-transform: uppercase;
-}
-
-.btn-cuenta-propia {
-	width: 275px;
-	height: 80px;
-	border: $gris 1px solid;
-	display: inline-flex;
-	display: -webkit-inline-flex;
-	margin: 9px 10px 10px 10px;
-	line-height: 0.9;
-	p {
-		margin: 5px 0 0 20px;
-		letter-spacing: -1px;
-		b {
-			font-size: 20px;
+	//BOTONES DEL CUERPO
+	&.btn-cuerpo {
+		height: 55px;
+		width: max-content;
+		width: -webkit-max-content;
+		font-size: 1em;
+		border: $gris-oscuro 1px solid;
+		margin: 0 auto;
+		& > p {
+			padding: 0 15px;
+			margin: 0;
+			font-size: 21px;
 		}
-		span {
-			font-size: 17px;
+		& > i.left {
+			padding-left: 15px;
 		}
-	}
-	&.seleccionado {
-		background-color: $verde-comafi;
-		color: $blanco;
-	}
-}
-
-.btn-mas-billetes {
-	top: 25px;
-	left: 65px;
-	font-size: 22px;
-	letter-spacing: -1px;
-	width: 255px;
-	height: 55px;
-	border: $gris 1px solid;
-	display: inline-flex;
-	display: -webkit-inline-flex;
-	margin: 10px;
-	i {
-		margin: 0 15px 0 20px;
-	}
-}
-
-.btn-modificar {
-	top: 150px;
-	left: 55px;
-	font-size: 22px;
-	letter-spacing: -1px;
-	width: 160px;
-	height: 55px;
-	border: $gris 1px solid;
-	display: inline-flex;
-	display: -webkit-inline-flex;
-	margin: 10px;
-	i {
-		margin: 0 15px 0 15px;
+		& > i.right {
+			padding-right: 15px;
+		}
+		// &.verde {
+		// 	border: $verde-comafi 1px solid;
+		// 	color: $verde-comafi;
+		// }
+		// &.rojo {
+		// 	border: $rojo 1px solid;
+		// 	color: $rojo;
+		// }
 	}
 }
 
 
-
-
-// BOTONES DEL MENU //
+// BOTONES DE MENÚES //
+// BOTON MENÚ PRINCIPAL //
 .btn-menu {
 	padding: 0;
 	width: 269px;
@@ -277,12 +128,46 @@
 	background-color: $verde-comafi;
 }
 
+// BOTON DE CUENTAS PROPIAS //
+.btn-cuenta-propia {
+	width: 275px;
+	height: 80px;
+	border: $gris 1px solid;
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	margin: 10px;
+	line-height: 0.9;
+	p {
+		margin: 5px 0 0 20px;
+		letter-spacing: -1px;
+		b {
+			font-size: 20px;
+		}
+		span {
+			font-size: 17px;
+		}
+	}
+	&.seleccionado {
+		background-color: $verde-comafi;
+		color: $blanco;
+	}
+}
+
 // BOTONES DE IMPORTES SUGERIDOS //
 .btn-importe {
+	align-items: center;
+	-webkit-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	font-size: 36px;
 	width: 175px;
-	margin: 12px;
+	height: 70px;
+	margin: 5px 8px 10px 8px;
 	color: $blanco;
 	background-color: $verde-comafi;
+	p {
+		font-size: 36px;
+	}
 }
 
 // BOTONES DEL TECLADO //
@@ -295,14 +180,42 @@
 	&:last-of-type {
 		width: 390px;
 	}
+	p {
+		font-size: 32px;
+	}
 }
 
-.btn-teclado-aplicar {
+.modal .modal-teclado .numeros .btn-teclado-aplicar {
 	width: 390px;
 	margin: 10px;
-	color: #fff;
+	color: $blanco;
 	background-color: #589C2A;
 	justify-content: center;
 	-webkit-justify-content: center;
 	text-transform: uppercase;
+	p {
+		color: $blanco;
+	}
+}
+
+
+
+
+
+
+
+
+// Botón para activar modal, SOLO PARA MAQUETA NAVEGABLE!
+.btn-prueba {
+	height: 50px;
+	display: inline-flex;
+	border: 1px solid $gris-mas-oscuro;
+	text-transform: none;
+	margin: 10px;
+	background-color: $transparente;
+	p {
+		font-size: 21px;
+		margin: 0;
+		padding: 0 10px;
+	}
 }

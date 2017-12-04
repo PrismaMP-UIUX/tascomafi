@@ -1,0 +1,22 @@
+/* FLASH */
+.flash {
+  -webkit-animation: flash 0.5s linear infinite both;
+          animation: flash 0.5s linear infinite both;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,3 +1,29 @@
+///// FUNCION UTILIZADA PARA DINAMIZAR EL FLUJO /////
+///// No tener en cuenta para el desarrollo /////
+
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'g'), replacement);
+}
+
+function searchToObject() {
+  var pairs = window.location.search.substring(1).split("&"),
+    obj = {},
+    pair,
+    i;
+
+  for ( i in pairs ) {
+    if ( pairs[i] === "" ) continue;
+
+    pair = pairs[i].split("=");
+    obj[ decodeURIComponent( pair[0] ) ] = decodeURIComponent( pair[1] );
+  }
+
+  return obj;
+}
+////////////////////////////////////////////////////////
+
+
 /* FUNCIÓN PARA LAS TABS */
 function openTab(evt, tabName) {
     // Declare all variables
@@ -94,7 +120,44 @@ $(document).ready(function(){
     $('.btn-cuenta-propia').on('click', function() {
         $('.btn-cuenta-propia').removeClass('seleccionado');
         $(this).addClass('seleccionado');
-        $('.btn-siguiente').removeClass('deshabilitado');
+        $('.btn-footer.tercero').removeClass('deshabilitado');
+    });
+
+
+    //SELECT NUEVO//
+    $("ul").on("click", ".init", function(evt) {
+        console.log("primerisimoooo");
+        $(this).closest("ul").children('li:not(.init)').toggle();
+        evt.stopPropagation();
+    });
+
+    var allOptions = $("ul").children('li:not(.init)');
+    $("ul").on("click", "li:not(.init)", function(evt) {
+        console.log("primero");
+        allOptions.removeClass('selected');
+        $(this).addClass('selected');
+        $("ul").children('.init').html($(this).html());
+        allOptions.toggle();
+        evt.stopPropagation();
+    });
+
+    $(".cuerpo-container").on("click", function() {
+        console.log("segundo");
+        if ($('li[style="display: list-item;"]').length > 0) {
+            allOptions.hide();
+        }
+    });
+
+    $('#modal-elegir-cuenta a.abajo').on('click', function(evt){
+        console.log('abajo');
+         $(".slide").animate({top: '-305px'});
+        evt.preventDefault(); //para que no se cierre el modal
+    });
+
+    $('#modal-elegir-cuenta a.arriba').on('click', function(evt){
+        console.log('arriba');
+         $(".slide").animate({top: '0px'});
+        evt.preventDefault(); //para que no se cierre el modal
     });
 
 });

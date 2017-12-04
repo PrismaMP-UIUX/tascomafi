@@ -1,0 +1,23 @@
+<!--
+NO ES NECESARIO PARA DESARROLLO.
+
+Este script es para poder navegar el flujo "dinamicamente" sin necesidad de crear pantallas repetidas por cada rama del flujo, como por ejemplo Con Tarjeta, Sin Tarjeta, por Numero de Tarjeta o por Numero de Cuenta de Resumen, etc. así como también para reemplazar los nombres de empresas de servicios, tarjetas y demás.
+-->
+<script>
+	var query = searchToObject();
+	$("a").each(function(){
+		for(var arg in query){
+			var $a = $(this);
+			var href_compilado = $a.attr("href").replaceAll("{"+arg+"}",query[arg]);
+			$a.attr("href",href_compilado);
+		}
+	});
+
+	$(".dinamico").each(function(){
+		for(var arg in query){
+			var $el = $(this);
+			var html_compilado = $el.html().replace("{"+arg+"}",query[arg]);
+			$el.html(html_compilado);
+		}
+	});
+</script>

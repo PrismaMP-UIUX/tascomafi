@@ -1,0 +1,22 @@
+@@include('../../_partials/header.html')
+<body class="container">
+	<!-- <img src="../../img/cambiar-clave.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+	<img src="../../img/logo.svg" alt="">
+	</header>
+	<main class="gris-mas-claro center-align">
+		<img src="../../img/claves.svg" alt="" class="claves">
+		<h1 class="mensaje">Tu clave expiró.<br>Es necesario que generes una nueva.</h1>
+		<section class="cuerpo">
+		</section>
+	</main>
+	<footer>
+		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">exit_to_app</i><p>Salir</p></a>
+		<a href="../identificacion/id-alfa-generacion.html" class="btn btn-footer tercero"><i class="material-icons left">vpn_key</i><p>Cambiar clave</p></a>
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+	<a href="../../menu-principal.html" class="link"># Inicio</a>
+	<a href="javascript:history.go(-1)" class="link"># Volver</a>
+</body>
+</html>

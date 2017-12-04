@@ -1,0 +1,36 @@
+@@include('../../_partials/header.html')
+<body class="container">
+	<header>
+	<img src="../../img/logo.svg" alt="">
+	<!-- Si está logueado va, sino no -->
+<!-- 	<div class="logueado valign-wrapper">
+		<div>
+			<p class="nombre-logueado">José Diaz</p>
+			<p class="conexion">Tu última conexión fue el: 5/11/2016</p>
+			<p class="vto-clave">Tu clave vence el: 5/12/2017</p>
+		</div>
+		<div>
+			<i class="material-icons">person</i>
+		</div>
+	</div> -->
+	</header>
+	<main class="gris-mas-claro">
+		<section class="cuerpo">
+			<div class="cuerpo-container transparente">
+				<div class="center-align loader">
+					<svg class="circular" viewBox="25 25 50 50">
+						<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+					</svg>
+				</div>
+				<h1 class="spinner">Esperá mientras se realiza la extracción.</h1>
+			</div>
+		</section>
+	</main>
+	<footer class="gris-mas-claro">
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+	<a href="../../menu-principal.html" class="link"># Inicio</a>
+	<a href="javascript:history.go(-1)" class="link"># Volver</a>
+</body>
+</html>

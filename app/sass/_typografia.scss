@@ -72,10 +72,10 @@
 	font-style: normal;
 }
 
-.font-regular {font-family: $font-regular;}
-.font-light {font-family: $font-light;}
-.font-bold {font-family: $font-bold;}
-.font-black {font-family: $font-black;}
+.font-regular {font-family: $font-regular !important;}
+.font-light {font-family: $font-light !important;}
+.font-bold {font-family: $font-bold !important;}
+.font-black {font-family: $font-black !important;}
 
 .right-align {
   text-align: right;
@@ -97,16 +97,39 @@
 	text-transform: uppercase;
 }
 
+.bigger-font {
+	font-size: 100% !important;
+}
+
 .titulo {
+	margin-top: 32px;
 	font-family: $font-light;
 	font-size: 27px;
 	color: $blanco;
 	letter-spacing: 1px;
+	span {
+		font-size: 27px;
+	}
+	img {
+		position: relative;
+		top: 3px;
+		right: 10px;
+	}
 }
 
 .titulo-grande {
 	font-size: 33px;
 	font-weight: bold;
+}
+
+.mensaje {
+	font-family: "Lato-Light";
+	font-size: 35px;
+	margin-top: 0;
+	text-align: center;
+	letter-spacing: 0.8px;
+	line-height: 1.2;
+	color: $gris-mas-oscuro;
 }
 
 p {font-size: 26px;}
@@ -131,9 +154,29 @@ p {font-size: 26px;}
 	letter-spacing: -0.5px;
 }
 
+.accion {
+	margin: 0 auto;
+	width: 770px;
+	height: auto;
+	background-color: $blanco;
+	p {
+		font-size: 24px;
+		padding: 15px 0;
+	}
+}
 
 
+
+
+
+
+
+/* Esto es solo para hacer navegable la maqueta */
 a.link {
+	font-size: 15px;
+	margin-right: 15px;
+	letter-spacing: 1px;
 	color: inherit;
 	text-decoration: none;
+	font-weight: bold;
 }

@@ -16,6 +16,7 @@ $blanco: #fff;
 // $verde-oscuro: #4E6B00;
 $rojo: #BD222D;
 $verde: #55d555;
+$transparente: transparent;
 
 
 $tabla_de_colores: (
@@ -29,6 +30,8 @@ $tabla_de_colores: (
   "blanco": $blanco,
   "rojo": $rojo,
   "verde": $verde,
+  "transparente": $transparente,
+
 ) !default;
 
 @each $color in $tabla_de_colores {
@@ -37,6 +40,9 @@ $tabla_de_colores: (
   }
   .#{nth($color,1)}-text {
     color: #{nth($color,2)} !important;
+  }
+  .#{nth($color,1)}-border {
+    border-color: #{nth($color,2)} !important;
   }
 }
 
@@ -69,11 +75,16 @@ $font-black: "Lato-Black";
 }
 
 .deshabilitado {
+  pointer-events: none;
   color: $gris !important;
   background-color: $gris-claro !important;
   span {
     color: $gris !important;
   }
+}
+
+.no-click {
+  pointer-events: none;
 }
 
 .valign-wrapper {

@@ -1,0 +1,52 @@
+@@include('../../_partials/header.html')
+<body class="container">
+	<!-- <img src="../../img/id-numerica-seleccion.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+		<img src="../../img/logo.svg" alt="">
+		<div class="logueado valign-wrapper">
+		<div>
+			<p class="nombre-logueado">José Diaz</p>
+			<p class="conexion">Tu última conexión fue el: 5/11/2016</p>
+			<p class="vto-clave">Tu clave vence el: 5/12/2017</p>
+		</div>
+		<div>
+			<i class="material-icons">person</i>
+		</div>
+	</div>
+	</header>
+	<main class="gris-mas-claro">
+		<section class="encabezado">
+			<img src="../../img/cruzroja.svg" alt="" class="mg-t-15 mg-r-5" width="25px">
+			<h1 class="titulo rojo-text">Seleccionaste una opción incorrecta<span class="gris-oscuro-text font-light">, intentalo nuevamente.</span></h1>
+		</section>
+		<section class="cuerpo">
+			<div class="cuerpo-container transparente">
+				<div class="id-alfa">
+					<div class="alfa valign-wrapper">
+						<div class="input-id">
+							<span class="flash">__</span>
+							<span>__</span>
+							<span>__</span>
+						</div>
+					</div>
+					<div class="botonera-id">
+						<a href="#" class="btn btn-id"><p>AKD</p></a>
+						<a href="#" class="btn btn-id"><p>ÑUI</p></a>
+						<a href="#" class="btn btn-id"><p>KOT</p></a>
+						<a href="#" class="btn btn-id"><p>FEQ</p></a>
+						<a href="#" class="btn btn-id"><p>GNH</p></a>
+						<a href="#" class="btn btn-id"><p>MVC</p></a>
+						<a href="#" class="btn btn-id"><p>GLZ</p></a>
+						<a href="#" class="btn btn-id"><p>PBJ</p></a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+</body>
+</html>

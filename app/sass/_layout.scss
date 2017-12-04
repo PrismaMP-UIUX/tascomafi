@@ -9,12 +9,25 @@
 	display: -webkit-flex;
 }
 
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+
 a {text-decoration: none;}
 
 header {
 	position: relative;
 	top: 0;
-	height: 100px;
+	height: 82px;
 	background-color: $blanco;
 	display: flex;
 	display: -webkit-flex;
@@ -23,26 +36,28 @@ header {
 	align-items: center;
 	-webkit-align-items: center;
 	& > img {
-		width: 235px;
-		margin-left: 70px;
+		width: 305px;
+		margin-left: 35px;
 	}
 	& > .logueado {
+		justify-content: flex-end;
+		-webkit-justify-content: flex-end;
 		position: relative;
 		right: 20px;
 		width: 600px;
-		height: 100px;
+		height: 85px;
 		color: $gris-oscuro;
-		div:last-of-type {
+		div:first-of-type {
 			position: relative;
-			top: 20px;
-			right: 10px;
+			//top: 20px;
+			right: 15px;
 			float: right;
 			.nombre-logueado {
 				margin: 0;
 				text-transform: uppercase;
 				font-family: "Lato-Bold";
 				text-align: right;
-				color: $gris-oscuro;
+				color: $verde-comafi-claro;
 			}
 			.conexion, .vto-clave {
 				margin: 0;
@@ -51,20 +66,20 @@ header {
 				color: $gris;
 			}
 		}
-		div:first-of-type {
+		div:last-of-type {
 			position: relative;
-			top: 20px;
-			right: 0;
+			//top: 20px;
+			right: 7px;
 			float: right;
 			width: 60px;
 			height: 60px;
 			border-radius: 50%;
 			background-color: $gris-claro;
-			span i.fa-user {
+			i.material-icons {
 				position: relative;
-				top: 12px;
-				left: 16px;
-				font-size: 35px;
+				top: 10px;
+				left: 10px;
+				font-size: 40px;
 			}
 		}
 	}
@@ -73,7 +88,7 @@ header {
 main {
 	position: relative;
 	top: 0;
-	height: 568px;
+	height: 585px;
 	background-color: $verde-comafi-claro;
 	section {
 		&.encabezado {
@@ -84,9 +99,39 @@ main {
 			-webkit-justify-content: center;
 			align-items: center;
 			-webkit-align-items: center;
+			flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
 			top: 0;
-			height: 90px;
+			height: 115px;
 			width: 100%;
+			.breadcrumb {
+				margin-top: 18px;
+				width: 100%;
+				display: flex;
+				display: -webkit-flex;
+				align-items: center;
+				-webkit-align-items: center;
+				padding-left: 75px;
+				img {
+					width: 20px;
+				}
+				p {
+					margin: 0;
+					font-size: 15px;
+					align-items: center;
+					-webkit-align-items: center;
+					display: inline;
+					letter-spacing: 0.8px;
+					text-transform: uppercase;
+					span {
+						color: $verde-comafi;
+						font-size: 16px;
+						margin-left: 7px;
+						margin-right: 7px;
+						letter-spacing: 0px;
+					}
+				}
+			}
 		}
 		&.menu {
 			position: absolute;
@@ -99,8 +144,8 @@ main {
 			flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
 			width: 934px;
-			height: 500px;
-			padding: 34px 45px 34px 45px;
+			height: 495px;
+			padding: 53px 45px 38px 45px;
 		}
 		&.submenu {
 			position: absolute;
@@ -123,22 +168,24 @@ main {
 					right: 27px;
 				}
 			}
-			& > .botonera-depositos {
-				position: relative;
-				top: 30px;
-				width: 100%;
-				height: auto;
-				display: flex;
-				display: -webkit-flex;
-				justify-content: center;
-				flex-wrap: wrap;
-				-webkit-flex-wrap: wrap;
-			}
+			// & > .botonera-depositos {
+			// 	position: relative;
+			// 	top: 30px;
+			// 	width: 100%;
+			// 	height: auto;
+			// 	display: flex;
+			// 	display: -webkit-flex;
+			// 	justify-content: center;
+			// 	-webkit-justify-content: center;
+			// 	flex-wrap: wrap;
+			// 	-webkit-flex-wrap: wrap;
+			// }
 		}
-		&.submenu-deposito {
+		&.submenu-deposito,
+		&.submenu-claves {
 			background-color: $blanco;
 			position: relative;
-			top: 284px;
+			top: 300px;
 			width: 400px;
 			height: 480px;
 			flex-wrap: wrap;
@@ -156,7 +203,7 @@ main {
 					right: 27px;
 				}
 			}
-			& > .botonera-depositos {
+			& > .botonera {
 				position: relative;
 				top: 60px;
 				width: 100%;
@@ -164,11 +211,34 @@ main {
 				display: flex;
 				display: -webkit-flex;
 				justify-content: center;
+				-webkit-justify-content: center;
 				flex-wrap: wrap;
 				-webkit-flex-wrap: wrap;
+				& > .btn-submenu p {
+					margin: 0;
+					text-align: center;
+				}
+			}
+		}
+		&.submenu-claves {
+			top: 310px;
+			height: 370px;
+			& > p.encabezado {
+				left: 310px;
+				top: 60px;
+				& > img.clave {
+					width: 90px;
+					position: relative;
+					top: 0px;
+					right: 27px;
+				}
+			}
+			& > .botonera {
+				top: 45px;
 			}
 		}
 		&.cuerpo {
+			height: 450px;
 			position: absolute;
 			display: flex;
 			display: -webkit-flex;
@@ -176,12 +246,12 @@ main {
 			-webkit-justify-content: center;
 			align-items: center;
 			-webkit-align-items: center;
-			top: 85px;
+			top: 115px;
 			background-color: transparent;
 			.cuerpo-container {
 				margin: 0 70px;
 				width: 884px;
-				height: 430px;
+				height: 450px;
 				background-color: $blanco;
 				.tab {
 					height: 75px;
@@ -223,13 +293,13 @@ main {
 					// border: 1px solid $blanco;
 					border-top: none;
 					.row {
-						height: 140px;
+						height: 70px;
 					}
 					.cuerpo-slider {
 						position: relative;
-						top: -25px;
+						top: -15px;
 						width: 725px;
-						height: 345px;
+						height: 355px;
 						overflow: hidden;
 						.slider {
 							position: relative;
@@ -243,6 +313,10 @@ main {
 								width: inherit;
 								height: 300px;
 								top: 0px;
+								//opacity: 0.5;
+								&.active {
+									opacity: 1;
+								}
 							}
 							&~a {
 								position: absolute;
@@ -261,11 +335,12 @@ main {
 				.col-left {
 					float: left;
 					padding: 20px;
-					height: calc(100% - 40px);
+					height: 412px;
 					width: calc(50% - 40px);
 					& > .sugeridos {
-						height: 400px;
+						height: 405px;
 						& > .importes {
+							margin-top: 25px;
 							height: 340px;
 							display: flex;
 							display: -webkit-flex;
@@ -277,32 +352,60 @@ main {
 							-webkit-flex-wrap: wrap;
 						}
 					}
+					.row {
+						height: 65px;
+					}
 				}
 				.col-right {
 					float: right;
 					padding: 20px;
-					height: calc(100% - 40px);
-					width: calc(50% - 40px);
+					height: 412px;
+					width: calc(50% - 41px);
+					border-left: $gris-mas-claro 1px solid;
 					& > .teclado-numerico {
-						height: 400px;
-						& > .numeros {
-							height: 340px;
-							display: flex;
-							display: -webkit-flex;
-							align-items: center;
-							-webkit-align-items: center;
-							justify-content: center;
-							-webkit-justify-content: center;
-							flex-wrap: wrap;
-							-webkit-flex-wrap: wrap;
-						}
-						& > .inputs {
-							margin: 8px;
-							& > input {
-								width: 370px;
-								padding: 0.6em;
+						width: 400px;
+						height: 405px;
+						.inputs {
+							width: 340px;
+							margin: 15px auto;
+							input.teclado {
+								position: relative;
+								top: 0;
+								width: 300px;
+								height: 60px;
+								padding-left: 20px;
+							}
+							.btn-borrar-teclado {
+								width: 70px;
+								height: 54px;
+								position: relative;
+								bottom: 60px;
+								left: 248px;
+								span.typcn.typcn-backspace {
+									left: 15px;
+									bottom: 4px;
+								}
 							}
 						}
+						.numeros {
+							padding: 14px 30px 15px 15px;
+							.btn-numerico {
+								background-color: $verde-comafi;
+							}
+						}
+					}
+					.recordatorio-claves {
+						border-radius: 5px;
+						border: 1px solid $rojo;
+						text-align: center;
+						padding: 25px;
+						transform: translate(50%, 50%);
+						position: relative;
+						bottom: 90px;
+						left: -50%;
+					}
+					.row {
+						height: 65px;
 					}
 				}
 				.lista-deposito {
@@ -312,6 +415,27 @@ main {
 							font-size: 20px;
 							span b {
 								letter-spacing: -1.5px;
+							}
+						}
+						& > .col-1 {
+							position: relative;
+							width: 25%;
+							margin-left: 65px;
+							p {
+								margin: 0;
+								i {
+									font-size: 1.80em;
+								}
+							}
+						}
+						& > .col-2 {
+							position: relative;
+							margin-left: 25px;
+							width: auto;
+							p {
+								font-size: 22px;
+								font-weight: bold;
+								margin: 5px 0 11px 0;
 							}
 						}
 					}
@@ -328,8 +452,178 @@ main {
 						}
 					}
 				}
+				.id-numerica, .id-alfa {
+					width: 480px;
+					height: 430px;
+					margin: 15px 200px 0 200px;
+					background-color: $blanco;
+					.dni, .alfa {
+						padding-top: 30px;
+						justify-content: center;
+						-webkit-justify-content: center;
+						p {
+							color: $gris;
+							font-size: 39px;
+							margin: 0;
+						}
+					}
+					.input-id {
+						margin: 10px;
+						border: 2px solid $verde-comafi;
+						border-radius: 3px;
+						padding: 25px 30px 10px 30px;
+						span {
+							letter-spacing: -1px;
+						}
+						&.incorrecta {
+							border-color: $rojo;
+						}
+					}
+					.botonera-id {
+						height: 315px;
+						.btn-id {
+							color: $blanco;
+							font-size: 38px;
+							width: 170px;
+							height: 64px;
+							background: $gris;
+							margin: 15px -10px -5px 50px;
+							display: inline-flex;
+							display: -webkit-inline-flex;
+							flex-wrap: wrap;
+							-webkit-flex-wrap: wrap;
+							justify-content: center;
+							-webkit-justify-content: center;
+							p {
+								font-size: 38px;
+							}
+						}
+					}
+				}
+			}
+			.extraccion {
+				width: 590px;
+				height: 350px;
+				margin: 60px auto;
+				& > .extraer {
+					& > p {
+						text-transform: uppercase;
+						font-size: 24px;
+						font-family: "Lato-Bold";
+						color: $verde-comafi-claro;
+						letter-spacing: 1px;
+					}
+					& > span {
+						margin-left: 100px;
+						font-size: 47px;
+						font-family: "Lato-Bold";
+						color: $gris-mas-oscuro;
+					}
+				}
+				& > .cuenta {
+					margin-top: 55px;
+					& > .flecha {
+						z-index: 1;
+						color: $blanco;
+						background: transparent;
+						position: relative;
+						top: 0;
+						left: 375px;
+						font-size: 12px;
+						pointer-events: none;
+					}
+					& > p {
+						text-transform: uppercase;
+						font-size: 24px;
+						font-family: "Lato-Bold";
+						color: $verde-comafi-claro;
+						letter-spacing: 1px;
+					}
+					& > .inputs.elegirCuenta {
+						position: relative;
+						bottom: 5px;
+						left: 30px;
+						height: 70px;
+						width: 375px;
+						margin: 0 0 0 10px;
+						background-color: $verde-comafi;
+						& > .flecha {
+							z-index: 1;
+							color: $blanco;
+							background: transparent;
+							position: relative;
+							top: 20px;
+							left: 335px;
+							font-size: 12px;
+							pointer-events: none;
+						}
+						& > select.elegirCuenta {
+							position: relative;
+							bottom: 28px;
+							width: 375px;
+							height: 70px;
+							color: $blanco;
+							background-color: $verde-comafi;
+						}
+					}
+				}
+				.comprobante {
+					margin-top: 55px;
+					p {
+						font-size: 29px;
+					}
+					.check {
+						&.si {
+							position: absolute;
+							top: 375px;
+							left: 580px;
+						}
+						&.no {
+							position: absolute;
+							left: 715px;
+							top: 375px;
+						}
+					}
+					label.radio {
+						position: relative;
+						top: 0px;
+						padding-left: 45px;
+						margin: 0;
+						font-size: 35px;
+					}
+				}
 			}
 		}
+	}
+	img.tilde {
+		margin-top: 100px;
+		margin-bottom: 40px;
+		width: 130px;
+	}
+	img.caritafeliz {
+		margin-top: 100px;
+		margin-bottom: 40px;
+		width: 100px;
+	}
+	img.retiredinero {
+		margin-top: 100px;
+		margin-bottom: 30px;
+		width: 130px;
+	}
+	img.cruzroja {
+		margin-top: 100px;
+		margin-bottom: 40px;
+		width: 100px;
+	}
+	img.claves {
+		margin-top: 100px;
+		margin-bottom: 30px;
+		width: 120px;
+	}
+	img.logo { //Creo que esta no va mas
+		margin-top: 100px;
+		margin-bottom: 40px;
+		width: 500px;
 	}
 }
 
@@ -366,6 +660,11 @@ footer {
 	.close {
 		color: $blanco;
 		position: absolute;
+		top: 25px;
+		right: 40px;
+		i {
+			font-size: 3em;
+		}
 	}
 	& > div {
 		position: relative;
@@ -378,6 +677,9 @@ footer {
 			.close {
 				right: -175px;
 				top: -75px;
+				i {
+					font-size: 3em;
+				}
 			}
 			.numeros {
 				margin: 0 auto;
@@ -394,19 +696,172 @@ footer {
 				.btn-numerico {
 					justify-content: center;
 					-webkit-justify-content: center;
+					p {
+						color: $blanco;
+						font-size: 32px;
+					}
 				}
 			}
 		}
-		&.modal-clave-tas {
-			width: 840px;
-			height: 385px;
-			margin: 185px auto;
-			p {
-				text-align: center;
-				font-family: "Lato-Bold";
-				text-transform: uppercase;
-				color: $verde-comafi;
+		&.modal-elegir-cuenta {
+			width: 700px !important;
+			.modal-action {
+				height: 120px;
+				width: 100%;
+				bottom: -30px;
 			}
+		}
+		& img {
+			position: relative;
+			margin-top: 25px;
+			&.warning {
+				left: calc(50% - 55px);
+				width: 110px;
+			}
+			&.cruzroja,
+			&.reloj,
+			&.deposito {
+				left: calc(50% - 50px);
+				width: 100px;
+			}
+		}
+		& > p {
+			font-size: 30px;
+			color: $gris-mas-oscuro;
+			text-align: center;
+			margin-top: 15px;
+			margin-bottom: 20px;
+			letter-spacing: -1px;
+			&.monto-maximo {
+				font-size: 48px;
+				margin: 20px 0 20px 0;
+			}
+		}
+		.cuenta-no-habilitada p,
+		.cuenta-no-habilitada span {
+			font-size: 22px;
+		}
+		.cuenta-no-habilitada p:first-of-type {
+			margin-top: 35px;
+			font-size: 25px;
+		}
+		.montos-sugeridos {
+			margin: 40px 0 30px 0;
+			display: flex;
+			display: -webkit-flex;
+			justify-content: center;
+			-webkit-justify-content: center;
+			& > .btn {
+				width: 170px;
+				height: 65px;
+				font-size: 36px;
+				margin: 10px 10px 0;
+				justify-content: center;
+				-webkit-justify-content: center;
+				background-color: $verde-comafi;
+				color: $blanco;
+			}
+		}
+		.modal-action {
+			position: relative;
+			width: 840px;
+			height: 90px;
+			bottom: -20px;
+			margin-bottom: 10px;
+			display: flex;
+			display: -webkit-flex;
+			justify-content: center;
+			-webkit-justify-content: center;
+			align-items: center;
+			-webkit-align-items: center;
+			.btn-modal {
+				height: 60px;
+				display: inline-flex;
+				display: -webkit-inline-flex;
+				border: $gris-oscuro 1px solid;
+				&:nth-of-type(1) {
+					margin-right: 15px;
+				}
+				&:nth-of-type(2) {
+					margin-left: 15px;
+				}
+				p {
+					padding: 0 15px;
+					margin: 0;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					font-size: 22px;
+				}
+				i.left {
+					padding-left: 10px;
+				}
+				i.right {
+					padding-right: 10px;
+				}
+			}
+		}
+		/* TAMAÑO DE MODALES Y SU UBICACIÓN */
+		&.chico{
+			width: 840px;
+			height: auto;
+			margin: 215px auto;
+		}
+		&.mediano {
+			width: 840px;
+			height: auto;
+			margin: 190px auto;
+		}
+		&.grande {
+			width: 840px;
+			height: auto;
+			margin: 110px auto;
+		}
+	}
+	.cuerpo-slider {
+		position: relative;
+		width: 100%;
+		height: auto;
+		min-height: 150px;
+		max-height: 315px;
+		overflow: hidden;
+		top: 40px;
+		.slider {
+			position: relative;
+			//width: 640px;
+			height: fit-content;
+			margin: 0 auto;
+			overflow: hidden;
+			.slide {
+				position: relative;
+				width: 545px;
+				//height: 600px;
+				height: fit-content;
+				top: 0px;
+				display: flex;
+				display: -webkit-flex;
+				flex-flow: wrap;
+				-webkit-flex-flow: wrap;
+				margin: 0 auto;
+				.btn-cuenta-propia{
+					width: 250px;
+					p {
+						margin: 0 auto;
+						padding: 0 15px;
+					}
+				}
+			}
+		}
+		.arriba {
+			position: absolute;
+			top: 25px;
+			right: 15px;
+			color: $verde-comafi;
+		}
+		.abajo {
+			position: absolute;
+			top: 230px;
+			right: 15px;
+			color: $verde-comafi;
 		}
 	}
 }
@@ -414,7 +869,7 @@ footer {
 // TECLADO NUMERICO //
 .teclado-numerico {
 	width: 430px;
-	height: 460px;
+	height: 450px;
 	margin: 0 auto;
 	position: relative;
 	display: flex;
@@ -422,9 +877,10 @@ footer {
 	flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
 	.inputs {
+		height: 70px;
 		input.teclado {
 			position: relative;
-			top: 10px;
+			top: 0;
 			width: 405px;
 			height: 64px;
 			font-size: 30px;
@@ -446,25 +902,24 @@ footer {
 		.btn-borrar-teclado {
 			width: 74px;
 			height: 58px;
-			position: absolute;
-			top: 16px;
-			right: 8px;
+			position: relative;
+			bottom: 64px;
+			left: 348px;
 			color: #fff;
 			background-color: $gris;
 			display: flex;
 			display: -webkit-flex;
 			align-items: center;
 			-webkit-align-items: center;
-			span.typcn {
+			i.material-icons {
 				font-size: 40px;
 				position: relative;
 				left: 15px;
-				bottom: 2px;
 			}
 		}
 	}
 	.numeros {
-		padding: 30px;
+		padding: 20px;
 		display: flex;
 		display: -webkit-flex;
 		flex-wrap: wrap;
@@ -487,8 +942,9 @@ footer {
 
 /* SPINNER */
 .loader {
-	position: absolute;
-	top: 115px;
+	position: relative;
+	top: 20px;
+	left: calc(442px - 55px);
 	width: 110px;
 	&:before {
 		content: '';
@@ -498,9 +954,13 @@ footer {
 }
 
 h1.spinner {
+	text-align: center;
+	line-height: 1.3;
 	letter-spacing: 1px;
-	margin-top: 500px;
-	font-size: 31px;
+	margin-top: 50px;
+	font-size: 35px;
+	color: #414042;
+	font-family: "Lato-Light";
 }
 
 .circular {
@@ -583,3 +1043,210 @@ h1.spinner {
 		stroke: $verde-comafi;
 	}
 }
+
+
+
+		//BORRAR DE ACA PARA ABAJO //
+		/* Modales Mensajes/Errores */
+		/* &.modal-cancelar-operacion,
+		&.modal-clave-incorrecta,
+		&.modal-clave-incorrecta-segundo-error,
+		&.modal-mas-tiempo,
+		&.modal-sin-comprobante,
+		&.modal-cuenta-no-habilitada-depositos,
+		&.modal-cuenta-cbu-incorrecto,
+		&.modal-cancelar-deposito,
+		&.modal-continuar-deposito,
+		&.modal-monto-no-permitido,
+		&.modal-monto-no-permitido2,
+		&.modal-limite-superado,
+		&.modal-montos-sugeridos,
+		&.modal-monto-maximo,
+		&.modal-operacion-incompleta {
+			width: 840px;
+			height: 300px;
+			margin: 215px auto;
+			img {
+				width: 110px;
+				position: relative;
+				left: calc(50% - 55px);
+				margin-top: 25px;
+			}
+			p {
+				font-size: 30px;
+				color: $gris-mas-oscuro;
+				text-align: center;
+				margin-top: 15px;
+				letter-spacing: -1px;
+			}
+			.btn {
+				text-transform: uppercase;
+				font-size: 23px;
+				height: 60px;
+				display: inline-flex;
+				display: -webkit-inline-flex;
+				margin: 10px;
+				i {
+					margin: 0 15px 5px 15px;
+				}
+			}
+			.btn-modal-cancelar-operacion {
+				width: 320px;
+				color: $rojo;
+				border: $rojo 1px solid;
+			}
+			.btn-modal-continuar-operando {
+				width: 325px;
+				padding-left: 15px;
+				color: $gris-oscuro;
+				border: $gris-oscuro 1px solid;
+			}
+		}
+		&.modal-clave-incorrecta,
+		&.modal-clave-incorrecta-segundo-error,
+		&.modal-cuenta-no-habilitada-depositos,
+		&.modal-cuenta-cbu-incorrecto,
+		&.modal-monto-no-permitido,
+		&.modal-monto-no-permitido2,
+		&.modal-operacion-incompleta {
+			img.cruzroja {
+				width: 100px;
+				position: relative;
+				left: calc(50% - 50px);
+				margin-top: 25px;
+			}
+			.btn-modal-cancelar-ingreso {
+				width: 285px;
+				color: $rojo;
+				border: $rojo 1px solid;
+			}
+			.btn-modal-volver-intentar {
+				width: 285px;
+				color: $gris-oscuro;
+				border: $gris-oscuro 1px solid;
+			}
+		}
+		&.modal-clave-incorrecta-segundo-error,
+		&.modal-sin-comprobante {
+			height: 360px;
+			margin: 185px auto;
+		}
+		&.modal-mas-tiempo {
+			img.reloj {
+				width: 100px;
+				left: calc(50% - 50px);
+				margin-top: 25px;
+			}
+			.btn-modal-mas-tiempo {
+				width: 325px;
+				color: $gris-oscuro;
+				border: $gris-oscuro 1px solid;
+			}
+		}
+		&.modal-cuenta-no-habilitada-depositos {
+			height: 490px;
+			margin: 120px auto;
+			.btn-modal-otra-cuenta {
+				width: 320px;
+				color: $gris-oscuro;
+				border: $gris-oscuro 1px solid;
+			}
+			.cuenta-no-habilitada p,
+			.cuenta-no-habilitada span {
+				font-size: 22px;
+			}
+			.cuenta-no-habilitada p:first-of-type {
+				font-size: 26px;
+			}
+		}
+		&.modal-cuenta-cbu-incorrecto {
+			height: 325px;
+			margin: 200px auto;
+		}
+		&.modal-cancelar-deposito {
+			.btn-modal-continuar-operando {
+				width: 310px;
+			}
+		}
+		&.modal-continuar-deposito {
+			.btn-modal-continuar-operando {
+				width: 310px;
+			}
+		}
+		&.modal-monto-no-permitido,
+		&.modal-limite-superado {
+			height: 400px;
+			margin: 200px auto;
+			.btn-modal-modificar-monto {
+				width: 290px;
+				color: $gris-oscuro;
+				border: $gris-oscuro 1px solid;
+			}
+			.btn-modal-continuar-operando {
+				width: 370px;
+			}
+		}
+		&.modal-monto-no-permitido2 {
+			height: 350px;
+		}
+		&.modal-limite-superado {
+			img {
+				width: 100px;
+				position: relative;
+				left: calc(50% - 50px);
+			}
+		}
+		&.modal-montos-sugeridos {
+			height: 515px;
+			margin: 105px auto;
+			img {
+				width: 100px;
+				position: relative;
+				left: calc(50% - 50px);
+			}
+			.montos-sugeridos {
+				margin-top: 40px;
+				.btn-monto-sugerido {
+					width: 170px;
+					height: 65px;
+					font-size: 36px;
+					margin: 10px 10px 0;
+					justify-content: center;
+					-webkit-justify-content: center;
+					background-color: $verde-comafi;
+					color: $blanco;
+				}
+			}
+			.btn-modal-cancelar-operacion {
+				width: 340px;
+			}
+		}
+		&.modal-monto-maximo {
+			height: 470px;
+			margin: 105px auto;
+			img {
+				width: 100px;
+				position: relative;
+				left: calc(50% - 50px);
+			}
+			p.monto-maximo {
+				font-size: 48px;
+				margin: 0 0 0 0;
+			}
+			.btn-modal-cancelar-operacion {
+				width: 185px;
+			}
+			.btn-modal-modificar-monto {
+				width: 290px;
+				color: $gris-oscuro;
+				border: $gris-oscuro 1px solid;
+			}
+		}
+		&.modal-operacion-incompleta {
+			height: 350px;
+			.btn-modal-salir {
+				width: 130px;
+				color: $gris-oscuro;
+				border: $gris-oscuro 1px solid;
+			}
+		} */

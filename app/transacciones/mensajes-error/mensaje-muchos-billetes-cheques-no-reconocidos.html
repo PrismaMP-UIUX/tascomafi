@@ -1,0 +1,23 @@
+@@include('../../_partials/header.html')
+<body class="container">
+	<!-- <img src="../../img/muchos-billetes-no-reconocidos.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+	<img src="../../img/logo.svg" alt="">
+	</header>
+	<main class="gris-mas-claro center-align">
+		<img src="../../img/cruzroja.svg" alt="" class="cruzroja">
+		<h1 class="mensaje">La transacción fue cancelada porque ingresaste<br>demasiados billetes/cheques que no fueron reconocidos.</h1>
+		<h1 class="mensaje mg-t-40">¿Querés realizar otra operación?</h1>
+		<section class="cuerpo">
+		</section>
+	</main>
+	<footer>
+		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">exit_to_app</i><p>Salir</p></a>
+		<a href="../../menu-principal.html" class="btn btn-footer tercero"><i class="material-icons left">undo</i><p>Realizar otra operación</p></a>
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+	<a href="../../menu-principal.html" class="link"># Inicio</a>
+	<a href="javascript:history.go(-1)" class="link"># Volver</a>
+</body>
+</html>
