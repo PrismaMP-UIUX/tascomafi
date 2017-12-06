@@ -500,6 +500,15 @@ main {
 						}
 					}
 				}
+				.img-contenedor {
+					width: 550px;
+					height: 310px;
+					position: relative;
+					top: 190px;
+					& > img {
+						width: 470px;
+					}
+				}
 			}
 			.extraccion {
 				width: 590px;
