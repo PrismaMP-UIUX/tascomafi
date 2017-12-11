@@ -324,9 +324,15 @@ main {
 								color: $verde-comafi;
 								&.arriba {
 									bottom: 234px;
+									img {
+										width: 50px;
+									}
 								}
 								&.abajo {
 									bottom: 90px;
+									img {
+										width: 50px;
+									}
 								}
 							}
 						}
@@ -720,7 +726,7 @@ footer {
 				bottom: -30px;
 			}
 		}
-		& img {
+		& > img {
 			position: relative;
 			margin-top: 25px;
 			&.warning {
@@ -865,12 +871,18 @@ footer {
 			top: 25px;
 			right: 15px;
 			color: $verde-comafi;
+			img {
+				width: 50px;
+			}
 		}
 		.abajo {
 			position: absolute;
 			top: 230px;
 			right: 15px;
 			color: $verde-comafi;
+			img {
+				width: 50px;
+			}
 		}
 	}
 }
