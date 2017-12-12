@@ -685,6 +685,12 @@ footer {
 		position: relative;
 		padding: 20px;
 		background: $blanco;
+		// & > .row {
+		// 	margin: 15px 50px;
+		// 	label {
+		// 		top: 0;
+		// 	}
+		// }
 		&.modal-teclado {
 			width: 550px;
 			height: 570px;
@@ -726,6 +732,15 @@ footer {
 				bottom: -30px;
 			}
 		}
+		&.modal-login {
+			& > .row {
+				max-height: 70px;
+				margin-left: 120px;
+				label {
+					top: 0;
+				}
+			}
+		}
 		& > img {
 			position: relative;
 			margin-top: 25px;
@@ -750,6 +765,12 @@ footer {
 			&.monto-maximo {
 				font-size: 48px;
 				margin: 20px 0 20px 0;
+			}
+			&.titulo {
+				font-size: 25px;
+				color: $verde-comafi-claro;
+				letter-spacing: 1px;
+				text-transform: uppercase;
 			}
 		}
 		.cuenta-no-habilitada p,
@@ -1064,210 +1085,3 @@ h1.spinner {
 		stroke: $verde-comafi;
 	}
 }
-
-
-
-		//BORRAR DE ACA PARA ABAJO //
-		/* Modales Mensajes/Errores */
-		/* &.modal-cancelar-operacion,
-		&.modal-clave-incorrecta,
-		&.modal-clave-incorrecta-segundo-error,
-		&.modal-mas-tiempo,
-		&.modal-sin-comprobante,
-		&.modal-cuenta-no-habilitada-depositos,
-		&.modal-cuenta-cbu-incorrecto,
-		&.modal-cancelar-deposito,
-		&.modal-continuar-deposito,
-		&.modal-monto-no-permitido,
-		&.modal-monto-no-permitido2,
-		&.modal-limite-superado,
-		&.modal-montos-sugeridos,
-		&.modal-monto-maximo,
-		&.modal-operacion-incompleta {
-			width: 840px;
-			height: 300px;
-			margin: 215px auto;
-			img {
-				width: 110px;
-				position: relative;
-				left: calc(50% - 55px);
-				margin-top: 25px;
-			}
-			p {
-				font-size: 30px;
-				color: $gris-mas-oscuro;
-				text-align: center;
-				margin-top: 15px;
-				letter-spacing: -1px;
-			}
-			.btn {
-				text-transform: uppercase;
-				font-size: 23px;
-				height: 60px;
-				display: inline-flex;
-				display: -webkit-inline-flex;
-				margin: 10px;
-				i {
-					margin: 0 15px 5px 15px;
-				}
-			}
-			.btn-modal-cancelar-operacion {
-				width: 320px;
-				color: $rojo;
-				border: $rojo 1px solid;
-			}
-			.btn-modal-continuar-operando {
-				width: 325px;
-				padding-left: 15px;
-				color: $gris-oscuro;
-				border: $gris-oscuro 1px solid;
-			}
-		}
-		&.modal-clave-incorrecta,
-		&.modal-clave-incorrecta-segundo-error,
-		&.modal-cuenta-no-habilitada-depositos,
-		&.modal-cuenta-cbu-incorrecto,
-		&.modal-monto-no-permitido,
-		&.modal-monto-no-permitido2,
-		&.modal-operacion-incompleta {
-			img.cruzroja {
-				width: 100px;
-				position: relative;
-				left: calc(50% - 50px);
-				margin-top: 25px;
-			}
-			.btn-modal-cancelar-ingreso {
-				width: 285px;
-				color: $rojo;
-				border: $rojo 1px solid;
-			}
-			.btn-modal-volver-intentar {
-				width: 285px;
-				color: $gris-oscuro;
-				border: $gris-oscuro 1px solid;
-			}
-		}
-		&.modal-clave-incorrecta-segundo-error,
-		&.modal-sin-comprobante {
-			height: 360px;
-			margin: 185px auto;
-		}
-		&.modal-mas-tiempo {
-			img.reloj {
-				width: 100px;
-				left: calc(50% - 50px);
-				margin-top: 25px;
-			}
-			.btn-modal-mas-tiempo {
-				width: 325px;
-				color: $gris-oscuro;
-				border: $gris-oscuro 1px solid;
-			}
-		}
-		&.modal-cuenta-no-habilitada-depositos {
-			height: 490px;
-			margin: 120px auto;
-			.btn-modal-otra-cuenta {
-				width: 320px;
-				color: $gris-oscuro;
-				border: $gris-oscuro 1px solid;
-			}
-			.cuenta-no-habilitada p,
-			.cuenta-no-habilitada span {
-				font-size: 22px;
-			}
-			.cuenta-no-habilitada p:first-of-type {
-				font-size: 26px;
-			}
-		}
-		&.modal-cuenta-cbu-incorrecto {
-			height: 325px;
-			margin: 200px auto;
-		}
-		&.modal-cancelar-deposito {
-			.btn-modal-continuar-operando {
-				width: 310px;
-			}
-		}
-		&.modal-continuar-deposito {
-			.btn-modal-continuar-operando {
-				width: 310px;
-			}
-		}
-		&.modal-monto-no-permitido,
-		&.modal-limite-superado {
-			height: 400px;
-			margin: 200px auto;
-			.btn-modal-modificar-monto {
-				width: 290px;
-				color: $gris-oscuro;
-				border: $gris-oscuro 1px solid;
-			}
-			.btn-modal-continuar-operando {
-				width: 370px;
-			}
-		}
-		&.modal-monto-no-permitido2 {
-			height: 350px;
-		}
-		&.modal-limite-superado {
-			img {
-				width: 100px;
-				position: relative;
-				left: calc(50% - 50px);
-			}
-		}
-		&.modal-montos-sugeridos {
-			height: 515px;
-			margin: 105px auto;
-			img {
-				width: 100px;
-				position: relative;
-				left: calc(50% - 50px);
-			}
-			.montos-sugeridos {
-				margin-top: 40px;
-				.btn-monto-sugerido {
-					width: 170px;
-					height: 65px;
-					font-size: 36px;
-					margin: 10px 10px 0;
-					justify-content: center;
-					-webkit-justify-content: center;
-					background-color: $verde-comafi;
-					color: $blanco;
-				}
-			}
-			.btn-modal-cancelar-operacion {
-				width: 340px;
-			}
-		}
-		&.modal-monto-maximo {
-			height: 470px;
-			margin: 105px auto;
-			img {
-				width: 100px;
-				position: relative;
-				left: calc(50% - 50px);
-			}
-			p.monto-maximo {
-				font-size: 48px;
-				margin: 0 0 0 0;
-			}
-			.btn-modal-cancelar-operacion {
-				width: 185px;
-			}
-			.btn-modal-modificar-monto {
-				width: 290px;
-				color: $gris-oscuro;
-				border: $gris-oscuro 1px solid;
-			}
-		}
-		&.modal-operacion-incompleta {
-			height: 350px;
-			.btn-modal-salir {
-				width: 130px;
-				color: $gris-oscuro;
-				border: $gris-oscuro 1px solid;
-			}
-		} */
