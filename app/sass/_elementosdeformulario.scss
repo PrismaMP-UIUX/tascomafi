@@ -28,7 +28,7 @@
 			background: transparent;
 			position: absolute;
 			//bottom: 20px;
-			left: 245px;
+			left: 330px;
       top: 5px;
 			font-size: 12px;
 			pointer-events: none;
@@ -43,7 +43,7 @@
     a.btn {
       position: absolute;
       bottom: -12px;
-      left: 300px;
+      left: 220px;
       height: 54px;
       width: 60px;
       background: $verde-comafi;
@@ -215,7 +215,7 @@
 			}
 		}
 		&.numCta {
-			width: 345px;
+			width: 265px;
 			height: 64px;
 			// position: relative;
 			// bottom: 24px;
@@ -377,9 +377,11 @@ input[type=radio]:checked + label {
         color: $blanco;
         width: -webkit-fill-available;
         display: inline-flex;
+        display: -webkit-inline-flex;
         cursor: pointer;
         height: 50px;
         align-items: center;
+        -webkit-align-items: center;
       }
     }
   }
@@ -399,7 +401,9 @@ input[type=radio]:checked + label {
     top: -3px;
     left: -20px;
     display: inline-flex;
+    display: -webkit-inline-flex;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     &::-webkit-scrollbar {
       width: 0px;
       background: transparent; /* make scrollbar transparent */
@@ -428,9 +432,11 @@ input[type=radio]:checked + label {
         color: $gris;
         width: 200px;
         display: inline-flex;
+        display: -webkit-inline-flex;
         cursor: pointer;
         height: 50px;
         align-items: center;
+        -webkit-align-items: center;
       }
     }
   }
@@ -442,7 +448,7 @@ input[type=radio]:checked + label {
     min-height: 66px;
     max-height: 361px;
     overflow: auto;
-    width: 285px;
+    width: 365px;
     border: 2px solid $gris-oscuro;
     border-radius: 5px;
     margin: 0;
@@ -450,7 +456,9 @@ input[type=radio]:checked + label {
     top: -3px;
     left: 0px;
     display: inline-flex;
+    display: -webkit-inline-flex;
     flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     &::-webkit-scrollbar {
       width: 0px;
       background: transparent; /* make scrollbar transparent */
@@ -466,7 +474,7 @@ input[type=radio]:checked + label {
         position: relative;
         //float: left;
         color: $gris;
-        width: 285px;
+        width: 365px;
         display: none;
         background: $blanco;
         border: 0.1px solid $blanco;
@@ -477,11 +485,13 @@ input[type=radio]:checked + label {
       }
       &.init {
         color: $gris;
-        width: 285px;
+        width: 365px;
         display: inline-flex;
+        display: -webkit-inline-flex;
         cursor: pointer;
         height: 50px;
         align-items: center;
+        -webkit-align-items: center;
       }
     }
   }

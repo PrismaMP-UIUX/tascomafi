@@ -32,3 +32,21 @@ input[type=radio]:checked ~ .inputs.tipoCta > select.tipoCta {
 input[type=radio]:checked ~ .inputs.numCta > input.numCta {
   border-color: $verde-comafi;
 }
+
+// SOLO COMO PRUEBA!!
+.lista-deposito {
+  .col-left {
+    .col-1.left {
+        p {
+          i.material-icons.diezpe {color: #ef7a40 !important;}
+          i.material-icons.veintepe {color: #ec5d30 !important;}
+          i.material-icons.cincuentape {color: #4b57f9 !important;}
+          i.material-icons.cienpe {color: #bb51d4 !important;}
+          i.material-icons.doscientospe {color: #4b4be8 !important;}
+          i.material-icons.quinientospe {color: #3ca936 !important;}
+          i.material-icons.milpe {color: #d89c2f !important;}
+      }
+    }
+  }
+}
+

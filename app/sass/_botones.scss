@@ -209,6 +209,7 @@
 .btn-prueba {
 	height: 50px;
 	display: inline-flex;
+	display: -webkit-inline-flex;
 	border: 1px solid $gris-mas-oscuro;
 	text-transform: none;
 	margin: 10px;

@@ -324,14 +324,16 @@ main {
 								color: $verde-comafi;
 								&.arriba {
 									bottom: 234px;
+									right: -5px;
 									img {
-										width: 50px;
+										width: 60px;
 									}
 								}
 								&.abajo {
 									bottom: 90px;
+									right: -5px;
 									img {
-										width: 50px;
+										width: 60px;
 									}
 								}
 							}
@@ -889,20 +891,20 @@ footer {
 		}
 		.arriba {
 			position: absolute;
-			top: 25px;
+			top: 20px;
 			right: 15px;
 			color: $verde-comafi;
 			img {
-				width: 50px;
+				width: 60px;
 			}
 		}
 		.abajo {
 			position: absolute;
-			top: 230px;
+			top: 225px;
 			right: 15px;
 			color: $verde-comafi;
 			img {
-				width: 50px;
+				width: 60px;
 			}
 		}
 	}
