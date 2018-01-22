@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container">
+<body class="container" id="login">
 	<!-- <img src="../../img/login-tarjeta2.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 	<img src="../../img/logo.svg" alt="">
@@ -20,7 +20,7 @@
 					<div class="row center-align">
 						<div class="inputs clave">
 							<input class="clave" type="password" placeholder="4 dígitos">
-							<!-- <a href="#!" class="btn"><span class="typcn typcn-backspace"></span></a> -->
+
 						</div>
 					</div>
 				</div>
@@ -28,13 +28,17 @@
 		</section>
 	</main>
 	<footer>
-		<a href="../depositar/depositar-seleccionar-cuenta-propia.html" class="btn btn-footer tercero"><p>Ingresar</p><i class="material-icons right">arrow_forward</i></a>
+		<a href="../depositar/depositar-seleccionar-cuenta-propia.html?menu={menu}" class="btn btn-footer tercero login2"><p>Ingresar</p><i class="material-icons right">arrow_forward</i></a>
 	</footer>
 	@@include('../../_partials/modals.html')
 	@@include('../../_partials/script.html')
 	<script>
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();
+
+	if (menu == "extraccion"){
+		console.log("hola gato");
+	}
 	</script>
 </body>
 </html>

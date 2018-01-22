@@ -21,6 +21,44 @@
 	clear: both;
 }
 
+.absolute {
+	position: absolute !important;
+}
+
+// Position Absolute
+@for $posi from 0 through 100 {
+  // Del 0 al 50
+  .top-#{$posi} {top: #{$posi}px !important;}
+  .bottom-#{$posi} {bottom: #{$posi}px !important;}
+  .left-#{$posi} {left: #{$posi}px !important;}
+  .right-#{$posi} {right: #{$posi}px !important;}
+}
+	// Del 100 al 200 de a 50 cada uno
+// @for $posi-cincuenta from 100 through 200 {
+//     @if $posi-cincuenta % 50 == 0 {
+//         .top-#{$posi-cincuenta} {top: #{$posi-cincuenta}px !important;}
+//         .bottom-#{$posi-cincuenta} {bottom: #{$posi-cincuenta}px !important;}
+//         .left-#{$posi-cincuenta} {left: #{$posi-cincuenta}px !important;}
+//         .right-#{$posi-cincuenta} {right: #{$posi-cincuenta}px !important;}
+//     }
+// }
+
+@for $posi-neg from 0 through 100 {
+  // Posi-negativos
+  .top-neg-#{$posi-neg} {top: -#{$posi-neg}px !important;}
+  .bottom-neg-#{$posi-neg} {bottom: -#{$posi-neg}px !important;}
+  .left-neg-#{$posi-neg} {left: -#{$posi-neg}px !important;}
+  .right-neg-#{$posi-neg} {right: -#{$posi-neg}px !important;}
+}
+//Del 100 al 200 de a 50 cada uno
+// @for $posi-cincuenta-neg from 100 through 200 {
+//     @if $posi-cincuenta-neg % 50 == 0 {
+//         .top-neg-#{$posi-cincuenta-neg} {top: -#{$posi-cincuenta-neg}px !important;}
+//         .bottom-neg-#{$posi-cincuenta-neg} {bottom: -#{$posi-cincuenta-neg}px !important;}
+//         .left-neg-#{$posi-cincuenta-neg} {left: -#{$posi-cincuenta-neg}px !important;}
+//         .right-neg-#{$posi-cincuenta-neg} {right: -#{$posi-cincuenta-neg}px !important;}
+//     }
+// }
 
 a {text-decoration: none;}
 
@@ -168,44 +206,34 @@ main {
 					right: 27px;
 				}
 			}
-			// & > .botonera-depositos {
-			// 	position: relative;
-			// 	top: 30px;
-			// 	width: 100%;
-			// 	height: auto;
-			// 	display: flex;
-			// 	display: -webkit-flex;
-			// 	justify-content: center;
-			// 	-webkit-justify-content: center;
-			// 	flex-wrap: wrap;
-			// 	-webkit-flex-wrap: wrap;
-			// }
 		}
 		&.submenu-deposito,
-		&.submenu-claves {
+		&.submenu-claves,
+		&.submenu-pagos {
 			background-color: $blanco;
 			position: relative;
 			top: 300px;
 			width: 400px;
-			height: 480px;
+			height: auto;
+			min-height: 225px;
+			padding-bottom: 25px;
 			flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
-			& > p.encabezado {
-				font-size: 26px;
-				position: relative;
-				top: 75px;
-				left: 300px;
-				font-family: $font-regular;
-				& > img.deposito {
-					width: 72px;
-					position: relative;
-					top: 0px;
-					right: 27px;
+			& > div {
+				justify-content: center;
+				-webkit-justify-content: center;
+				img {
+					margin: 25px 25px 25px 0;
+					width: 80px;
+				}
+				p {
+					font-size: 26px;
+					font-family: $font-regular;
 				}
 			}
 			& > .botonera {
 				position: relative;
-				top: 60px;
+				// top: 60px;
 				width: 100%;
 				height: auto;
 				display: flex;
@@ -218,23 +246,6 @@ main {
 					margin: 0;
 					text-align: center;
 				}
-			}
-		}
-		&.submenu-claves {
-			top: 310px;
-			height: 370px;
-			& > p.encabezado {
-				left: 310px;
-				top: 60px;
-				& > img.clave {
-					width: 90px;
-					position: relative;
-					top: 0px;
-					right: 27px;
-				}
-			}
-			& > .botonera {
-				top: 45px;
 			}
 		}
 		&.cuerpo {
@@ -336,6 +347,65 @@ main {
 										width: 60px;
 									}
 								}
+							}
+						}
+					}
+					.mascara {
+						position: absolute;
+						bottom: 0px;
+						left: 215px;
+						width: 58%;
+						height: 55px;
+						background: rgba(255, 255, 255, 0.50);
+					}
+					.check.tarjeta {
+						top: 197px;
+						left: 180px
+					}
+					.check.ctaRes {
+						top: 197px;
+						left: 555px
+					}
+					// label.radio {
+					// 	top: -10px;
+					// }
+				}
+				.tabcontent-falsa {
+					color: $gris-oscuro;
+					padding: 35px 100px 0 100px;
+					.row {
+						max-height: 70px;
+					}
+					.check.cta {
+						top: 50px;
+					}
+					.check.cbu {
+						top: 192px;
+					}
+					.check.tarjeta {
+						top: 112px;
+						left: 180px
+					}
+					.check.ctaRes {
+						top: 112px;
+						left: 555px
+					}
+					label.radio {
+						top: -10px;
+					}
+					.pesosDolares {
+						justify-content: space-around;
+						-webkit-justify-content: space-around;
+						.check {
+							&.pesos {
+								position: absolute;
+								left: 220px;
+								top: 233px;
+							}
+							&.dolares {
+								position: absolute;
+								left: 560px;
+								top: 233px;
 							}
 						}
 					}
@@ -517,6 +587,42 @@ main {
 						width: 470px;
 					}
 				}
+				.pesosDolares {
+					// margin-top: 55px;
+					p {
+						font-size: 29px;
+					}
+					.check {
+						&.pesos, &.dolares {
+							position: relative;
+							left: -255px;
+							top: 5px;
+						}
+					}
+					label.radio {
+						position: relative;
+						top: 0px;
+						padding-left: 45px;
+						margin: 0;
+						font-size: 35px;
+						&.moneda {
+							text-align: left;
+							width: 215px;
+						}
+					}
+				}
+				.stopDebit {
+					margin: -10px 20px;
+					font-size: 20px;
+					b {
+						font-size: 20px;
+					}
+				}
+			}
+			.iniciar-sesion {
+				margin: 30px 40px;
+				justify-content: space-evenly;
+				-webkit-justify-content: space-evenly;
 			}
 			.extraccion {
 				width: 590px;
@@ -611,6 +717,11 @@ main {
 				}
 			}
 		}
+	}
+	.iniciar-sesion {
+		margin: 30px 150px;
+		justify-content: space-evenly;
+		-webkit-justify-content: space-evenly;
 	}
 	img.tilde {
 		margin-top: 100px;

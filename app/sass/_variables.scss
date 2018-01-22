@@ -55,6 +55,11 @@ $tabla_de_colores: (
   .mg-b-#{$mg} {margin-bottom: #{$mg}px !important;}
 }
 
+// TABLA DE FONTSIZES
+@for $font from 10 through 40 {
+  .font-#{$font} {font-size: #{$font}px !important;}
+}
+
 //TIPOGRAFIAS
 $font-regular: "Lato-Regular";
 $font-light: "Lato-Light";
@@ -72,6 +77,10 @@ $font-black: "Lato-Black";
 
 .invisible {
   visibility: hidden;
+}
+
+.none {
+  display: none !important;
 }
 
 .deshabilitado {
@@ -97,3 +106,5 @@ $font-black: "Lato-Black";
   -ms-flex-align: center;
   align-items: center;
 }
+
+.inline {display: inline !important;}

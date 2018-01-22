@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container">
+<body class="container" id="pagos">
 	<!-- <img src="../../img/menu-depositos.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 		<img src="../../img/logo.svg" alt="">
@@ -15,17 +15,14 @@
 	</div>
 	</header>
 	<main class="gris-mas-claro">
-		<section class="encabezado">
-			<h1 class="titulo gris-oscuro-text">Elegí la clave que querés modificar.</h1>
-		</section>
 		<section class="submenu-claves centrado">
 			<div class="valign-wrapper">
-				<img src="../../img/claves.svg" alt="">
-				<p class="verde-comafi-text espaciado-1">CLAVES</p>
+				<img src="../../img/pesos.svg" alt="">
+				<p class="verde-comafi-text espaciado-1">PAGOS</p>
 			</div>
 			<div class="botonera">
-				<a href="clave-banelco-cambio.html" class="btn btn-submenu blanco-text"><p>Pin Banelco</p></a>
-				<a href="clave-tas-cambio.html" class="btn btn-submenu blanco-text"><p>Clave Terminal Autoservicio</p></a>
+				<a href="pagar-tarjetas.html?menu={menu}" class="btn btn-submenu blanco-text"><p>Tarjetas de Crédito</p></a>
+				<a href="pagar-servicios.html?menu={menu}" class="btn btn-submenu blanco-text deshabilitado"><p>Servicios</p></a>
 			</div>
 		</section>
 	</main>

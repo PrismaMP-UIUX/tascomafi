@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container">
+<body class="container" id="depositos">
 	<!-- <img src="../../img/depositar-tutorial-cheques.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 		<img src="../../img/logo.svg" alt="">
@@ -33,11 +33,11 @@
 		</section>
 	</main>
 	<footer>
-		<a href="login.html" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
+		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
 	</footer>
+	<a href="depositar-importe-a-depositar.html?menu={menu}" class="link"># Siguiente</a>
+	<a href="javascript:history.go(-1)" class="link"># Volver</a>
 	@@include('../../_partials/modals.html')
 	@@include('../../_partials/script.html')
-	<a href="depositar-importe-a-depositar.html" class="link"># Siguiente</a>
-	<a href="javascript:history.go(-1)" class="link"># Volver</a>
 </body>
 </html>

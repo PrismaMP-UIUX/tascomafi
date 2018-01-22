@@ -123,17 +123,23 @@ $(document).ready(function(){
         $('.btn-footer.tercero').removeClass('deshabilitado');
     });
 
+    $('.btn-tarjeta-propia').on('click', function() {
+        $('.btn-tarjeta-propia').removeClass('seleccionado');
+        $(this).addClass('seleccionado');
+        $('.btn-footer.tercero').removeClass('deshabilitado');
+    });
+
 
     //SELECT NUEVO//
     $("ul").on("click", ".init", function(evt) {
-        console.log("primerisimoooo");
+        // console.log("primerisimoooo");
         $(this).closest("ul").children('li:not(.init)').toggle();
         evt.stopPropagation();
     });
 
     var allOptions = $("ul").children('li:not(.init)');
     $("ul").on("click", "li:not(.init)", function(evt) {
-        console.log("primero");
+        // console.log("primero");
         allOptions.removeClass('selected');
         $(this).addClass('selected');
         $("ul").children('.init').html($(this).html());
@@ -142,7 +148,7 @@ $(document).ready(function(){
     });
 
     $(".cuerpo-container").on("click", function() {
-        console.log("segundo");
+        // console.log("segundo");
         if ($('li[style="display: list-item;"]').length > 0) {
             allOptions.hide();
         }
@@ -159,5 +165,90 @@ $(document).ready(function(){
          $(".slide").animate({top: '0px'});
         evt.preventDefault(); //para que no se cierre el modal
     });
+
+    //Para que el menu con 4 botones vayan 2 arriba y 2 abajo
+    if ($('.btn-menu').length == 4) {
+        $('section.menu').css("width", "914px");
+    }
+
+    var queries = {};
+        $.each(window.location.search.substr(1).split('&'),function(c,q){
+        var i = q.split('=');
+        queries[i[0].toString()] = i[1].toString();
+        });
+        console.log(queries);
+
+    ///////////////////////////////////////////////////////////////////
+    /////////////////////////  MENU EXTRACCION ////////////////////////
+    ///////////////////////////////////////////////////////////////////
+    if (queries.menu == "extraccion"){
+        $('#login footer a.btn-footer.tercero.login2').attr("href", "../extraer/extraer.html?menu=extraccion");
+        //Para cambiar el texto y url del botón ingresar en el LOGIN de EXTRACCION
+        $('#login button.tablinks').on("click", function(){
+            if ($(this).hasClass("tarjeta")) {
+                $('#login footer a.btn-footer.tercero p').text("Introducir tarjeta");
+                $('#login footer a.btn-footer.tercero').attr("href", "login-tarjeta.html?menu={menu}");
+
+            } else {
+                $('#login footer a.btn-footer.tercero p').text("Ingresar");
+                $('#login footer a.btn-footer.tercero').attr("href", "../extraer/extraer.html?menu={menu}");
+            }
+        });
+    ///////////////////////////////////////////////////////////////////
+    /////////////////////////  MENU DEPOSITOS /////////////////////////
+    ///////////////////////////////////////////////////////////////////
+    } else if (queries.menu == "depositos"){
+        $('#login footer a.btn-footer.tercero.login2').attr("href", "../depositar/depositar-seleccionar-cuenta-propia.html?menu=depositos&flujo=propia");
+        //Para cambiar el texto y url del botón ingresar en el LOGIN de DEPOSITOS
+        $('#login button.tablinks').on("click", function(){
+            if ($(this).hasClass("tarjeta")) {
+                $('#login footer a.btn-footer.tercero p').text("Introducir tarjeta");
+                $('#login footer a.btn-footer.tercero').attr("href", "login-tarjeta.html?menu=depositos");
+
+            } else {
+                $('#login footer a.btn-footer.tercero p').text("Ingresar");
+                $('#login footer a.btn-footer.tercero').attr("href", "../depositar/depositar-seleccionar-cuenta-propia.html?menu=depositos&flujo=propia");
+            }
+        });
+        //Para que si quiere seguir depositando y elegir otra cuenta, vaya a  las cuentas propias si ya se habia logueado. Si no que vaya por el camino de no logueado.
+        if (queries.flujo == "propia"){
+                $('a.btn-cuerpo[href="depositar-efectivo.html?menu=depositos&flujo=propia"]').attr("href", "depositar-seleccionar-cuenta-propia.html?menu=depositos&flujo=propia");
+            } else {
+                $('a.btn-cuerpo[href="depositar-efectivo.html?menu=depositos&flujo=propia"]').attr("href", "depositar-efectivo.html?menu=depositos");
+            }
+    }
+    ///////////////////////////////////////////////////////////////////
+    ///////////////////////////  MENU PAGOS ///////////////////////////
+    ///////////////////////////////////////////////////////////////////
+    else if (queries.menu == "pagos"){
+        $('#login footer a.btn-footer.tercero.login2').attr("href", "../pagar/pagar-seleccionar-tarjeta-propia.html?menu=pagos&flujo=propia");
+        //Para cambiar el texto y url del botón ingresar en el LOGIN de PAGOS
+        $('#login button.tablinks').on("click", function(){
+            if ($(this).hasClass("tarjeta")) {
+                $('#login footer a.btn-footer.tercero p').text("Introducir tarjeta");
+                $('#login footer a.btn-footer.tercero').attr("href", "login-tarjeta.html?menu=pagos");
+            } else {
+                $('#login footer a.btn-footer.tercero p').text("Ingresar");
+                $('#login footer a.btn-footer.tercero').attr("href", "../pagar/pagar-seleccionar-tarjeta-propia.html?menu=pagos&flujo=propia");
+            }
+        });
+        //Para que si quiere seguir pagando TC y elegir otra tarjeta, vaya a  las tarjetas propias si ya se habia logueado. Si no que vaya por el camino de no logueado.
+        if (queries.flujo == "propia"){
+                $('a.btn-cuerpo[href="pagar-tarjetas.html?menu=pagos&flujo=propia"]').attr("href", "pagar-seleccionar-tarjeta-propia.html?menu=pagos&flujo=propia");
+            } else {
+                $('a.btn-cuerpo[href="pagar-tarjetas.html?menu=pagos&flujo=propia"]').attr("href", "pagar-tarjetas.html?menu=pagos");
+            }
+        //Para elegir la moneda del pago d ela tarjeta si es que va a pagar una propia o una de terceros (ingresada manualmente)
+        if (queries.datos == "manual"){
+                $('input#pesos ~ label.radio.moneda').text("Pesos");
+                $('input#dolares ~ label.radio.moneda').text("Dólares");
+            } else {
+                $('input#pesos ~ label.radio.moneda').text("$1.000");
+                $('input#dolares ~ label.radio.moneda').text("U$S150");
+            }
+    } else {
+        return
+    }
+
 
 });

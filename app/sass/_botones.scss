@@ -153,6 +153,35 @@
 	}
 }
 
+// BOTON DE TARJETAS PROPIAS //
+.btn-tarjeta-propia {
+	width: 275px;
+	height: 130px;
+	border: $gris 1px solid;
+	display: inline-flex;
+	display: -webkit-inline-flex;
+	margin: 10px;
+	line-height: 0.9;
+	border-radius: 10px;
+	background-color: $verde-comafi-claro;
+	color: $blanco;
+	p.emp-tarjeta {
+		position: absolute;
+		top: -15px;
+		left: 15px;
+	}
+	p.nro-tarjeta {
+		position: absolute;
+		top: 50px;
+		left: 15px;
+		font-size: 22px;
+	}
+	&.seleccionado {
+		background-color: $verde-comafi;
+		color: $blanco;
+	}
+}
+
 // BOTONES DE IMPORTES SUGERIDOS //
 .btn-importe {
 	align-items: center;
@@ -207,15 +236,15 @@
 
 // Botón para activar modal, SOLO PARA MAQUETA NAVEGABLE!
 .btn-prueba {
-	height: 50px;
+	height: 40px;
 	display: inline-flex;
 	display: -webkit-inline-flex;
 	border: 1px solid $gris-mas-oscuro;
 	text-transform: none;
-	margin: 10px;
+	margin: 5px;
 	background-color: $transparente;
 	p {
-		font-size: 21px;
+		font-size: 15px;
 		margin: 0;
 		padding: 0 10px;
 	}

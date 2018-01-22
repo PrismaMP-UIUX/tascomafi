@@ -1,8 +1,8 @@
 @@include('../../_partials/header.html')
-<body class="container" id="login">
-	<!-- <img src="../../img/11-Login con tarjeta-2.jpg" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+<body class="container">
+	<!-- <img src="../../img/login.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
-	<img src="../../img/logo.svg" alt="">
+		<img src="../../img/logo.svg" alt="">
 	</header>
 	<main>
 		<section class="encabezado">
@@ -11,18 +11,14 @@
 		<section class="cuerpo">
 			<div class="cuerpo-container">
 				<div class="tab login">
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" id="defaultOpen"  >TARJETA Y CLAVE</button>
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')"  >CLAVE TERMINAL AUTOSERVICIO</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" id="defaultOpen" >TARJETA Y CLAVE</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')"   >CLAVE TERMINAL AUTOSERVICIO</button>
 				</div>
 				<div id="tarjeta" class="tabcontent">
-					<div class="row center-align mg-t-40">
-						<label class="">Pin <span class="espaciado-neg-1 mg-l-10"><i>(Usá el teclado de la terminal)</i></span></label>
-					</div>
-					<div class="row center-align">
-						<div class="inputs clave">
-							<input class="clave" type="password" placeholder="4 dígitos">
-						</div>
-					</div>
+					<a class="link" href="login-tarjProp2.html">
+						<img src="../../img/ingresetarjeta.svg" alt="" class="centrado ingreseTarjeta">
+						<p class="center-align espaciado-1 mg-t-180">Ingresá la tarjeta de débito</p>
+					</a>
 				</div>
 				<div id="clave" class="tabcontent">
 					<div class="row">
@@ -58,13 +54,13 @@
 		</section>
 	</main>
 	<footer>
-		<a href="../../menu-principal.html" class="btn btn-footer tercero"><p>Ingresar</p><i class="material-icons right">arrow_forward</i></a>
+		<a href="../pagar/pagar-seleccionar-tarjeta-propia.html" class="btn btn-footer tercero"><p>Ingresar</p><i class="material-icons right">arrow_forward</i></a>
 	</footer>
 	@@include('../../_partials/modals.html')
 	@@include('../../_partials/script.html')
 	<script>
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();
-	</script>
+</script>
 </body>
 </html>

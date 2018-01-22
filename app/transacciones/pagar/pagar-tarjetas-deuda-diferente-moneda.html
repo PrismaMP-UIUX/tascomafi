@@ -1,0 +1,54 @@
+@@include('../../_partials/header.html')
+<body class="container" id="pagos">
+	<!-- <img src="../../img/deposito-sin-loguear.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+	<img src="../../img/logo.svg" alt="">
+	</header>
+	<main class="gris-mas-claro">
+		<section class="encabezado">
+			<div class="breadcrumb">
+				<img src="../../img/pesos.svg" alt="">
+				<p><span class="verde-comafi-text">pagos /</span> tarjeta / ingresar de datos / confirmar datos</p>
+			</div>
+			<h1 class="titulo gris-oscuro-text">Seleccioná el saldo a pagar:</h1>
+		</section>
+		<section class="cuerpo">
+			<div class="cuerpo-container">
+				<div class="tabcontent-falsa">
+					<p class="center-align gris-oscuro-text font-28">Detectamos que tenés deudas en diferentes monedas:</p>
+					<p class="center-align mg-50"><b class="font-30">¿Qué querés pagar?</b></p>
+					<div class="pesosDolares valign-wrapper mg-t-20">
+						<div class="">
+							<input type="radio" id="pesos" name="comprobante" checked>
+							<label class="radio moneda" for="pesos">$14.405,87</label>
+							<div class="check pesos"></div>
+						</div>
+						<div class="">
+							<input type="radio" id="dolares" name="comprobante">
+							<label class="radio moneda" for="dolares">U$S650</label>
+							<div class="check dolares"></div>
+						</div>
+					</div>
+					<p class="stopDebit center-align font-light font-20 mg-t-70">Si la tarjeta está adherida al débito directo,<br>recordá solicitar el <b>stop debit</b> antes de la fecha de vencimiento.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a href="../../menu-principal.html" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>cancelar</p></a>
+		<a href="pagar-tutorial-efectivo.html?menu={menu}&flujo={flujo}&datos={datos}" class="btn btn-footer tercero"><p>Ingresar billetes</p><i class="material-icons right">keyboard_arrow_right</i></a>
+	</footer>
+	<a href="../mensajes-error/loading-pago-en-curso.html" class="link"># Pago en curso</a>
+	<a href="../mensajes-error/loading-esperar-validacion.html" class="link"># Esperar validación</a>
+	<a href="../mensajes-error/mensaje-billetes-cheques-no-reconocidos.html" class="link"># Billetes/Cheques no reconocidos</a>
+	<a href="../mensajes-error/mensaje-muchos-billetes-cheques-no-reconocidos.html" class="link"># Muchos billetes/cheques no reconocidos</a>
+	<a href="../mensajes-error/mensaje-operacion-cancelada-retirar-billetes-cheques.html" class="link"># Operación cancelada</a>
+	<a href="../mensajes-error/mensaje-retirar-billetes.html" class="link"># Retirar billetes</a>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+	<script>
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+	</script>
+</body>
+</html>

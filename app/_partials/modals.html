@@ -79,6 +79,23 @@
   </div>
 </div>
 
+<!-- Modal TARJETA NO HABILITADA PARA PAGOS -->
+<div id="modal-tarjeta-no-habilitada-pagos" class="modal">
+  <div class="grande">
+    <img src="../../img/cruzroja.svg" alt="" class="cruzroja">
+    <p>La tarjeta que elegiste no está habilitada<br>para recibir pagos.</p>
+    <div class="cuenta-no-habilitada center-align">
+      <p class="font-bold">Tarjeta de crédito Visa</p>
+      <p class="gris-text">Número de tarjeta: <span class="gris-mas-oscuro-text font-bold"> xxxx xxxx xxxx xxxx</span></p>
+      <p class="gris-text">Titular: <span class="gris-mas-oscuro-text font-bold"> Juan Palot</span></p>
+    </div>
+    <div class="modal-action">
+      <a href="../general/salir-CT.html" class="btn btn-modal rojo-border"><i class="material-icons left rojo-text">close</i><p class="rojo-text">Cancelar operación</p></a>
+      <a href="#" class="btn btn-modal"><i class="material-icons left">undo</i><p>Elegir otra tarjeta</p></a>
+    </div>
+  </div>
+</div>
+
 <!-- Modal CUENTA/CBU INCORRECTO -->
 <div id="modal-cuenta-cbu-incorrecto" class="modal">
   <div class="chico">
@@ -86,7 +103,7 @@
     <p>El número de cuenta/CBU que ingresaste es incorrecto.<br>Por favor, volvé a intentar con un número válido.</p>
     <div class="modal-action">
       <a href="../general/salir-CT.html" class="btn btn-modal rojo-border"><i class="material-icons left rojo-text">close</i><p class="rojo-text">Cancelar operación</p></a>
-      <a href="#" class="btn btn-modal"><i class="material-icons left">undo</i><p>Volver a ingresar</p></a>
+      <a href="#" class="btn btn-modal"><i class="material-icons left">undo</i><p>Volver a intentar</p></a>
     </div>
   </div>
 </div>
@@ -197,7 +214,7 @@
   </div>
 </div>
 
-<!-- Modal NO SE PUDO COMPLETAR LA OPERACION -->
+<!-- Modal NO SE PUDO COMPLETAR LA OPERACION - TIMEOUT -->
 <div id="modal-operacion-incompleta" class="modal">
   <div class="chico">
     <img src="../../img/cruzroja.svg" alt="" class="cruzroja">
@@ -230,10 +247,62 @@
     <p>¿Querés realizar otra operación?</p>
     <div class="modal-action">
       <a href="../general/salir-CT.html" class="btn btn-modal rojo-border"><i class="material-icons left rojo-text">close</i><p class="rojo-text">Cancelar operación</p></a>
-      <a href="#" class="btn btn-modal"><p>Realizar otra operación</p><i class="material-icons right">check</i></a>
+      <a href="#" class="btn btn-modal"><p>Realizar otra operación</p><i class="material-icons right">arrow_forward</i></a>
     </div>
   </div>
 </div>
+
+<!-- Modal PAGAR LOS CON LOS BILLETES INGRESADOS -->
+<div id="modal-pagar-con-lo-ingresado" class="modal">
+  <div class="mediano">
+    <img src="../../img/pesos.svg" alt="" class="cruzroja">
+    <p>¿Querés pagar lo reconocido hasta el momento?</p>
+    <p><b>$120.000</b></p>
+    <div class="modal-action">
+      <a href="#modal-cancelar-operacion" class="btn btn-modal rojo-border rojo-text"><i class="material-icons left">close</i><p class="">cancelar pago</p></a>
+      <a href="#" class="btn btn-modal"><p>Continuar pago</p><i class="material-icons right">arrow_forward</i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal TARJETA NO ENCONTRADA -->
+<div id="modal-tarjeta-no-encontrada" class="modal">
+  <div class="mediano">
+    <img src="../../img/cruzroja.svg" alt="" class="cruzroja">
+    <p>El número de cuenta resúmen/tarjeta que ingresaste no es válido.</p>
+    <p>Por favor, verificá los datos y volvé a intentarlo.</p>
+    <div class="modal-action">
+      <a href="#modal-cancelar-operacion" class="btn btn-modal rojo-border rojo-text"><i class="material-icons left">close</i><p class="">cancelar operación</p></a>
+      <a href="#" class="btn btn-modal"><i class="material-icons left">undo</i><p>Volver a intentar</p></a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal TRANSACCION NO HABILITADA -->
+<div id="modal-transaccion-no-habilitada" class="modal">
+  <div class="mediano">
+    <img src="../../img/cruzroja.svg" alt="" class="cruzroja">
+    <p>En este equipo solo se pueden realizar pagos de <br>tarjetas del Banco Comafi.</p>
+    <!-- <p>Por favor, verificá los datos y volvé a intentarlo.</p> -->
+    <div class="modal-action">
+      <a href="#modal-cancelar-operacion" class="btn btn-modal rojo-border rojo-text"><i class="material-icons left">close</i><p class="">cancelar operación</p></a>
+      <a href="#" class="btn btn-modal"><i class="material-icons left">undo</i><p>Volver a intentar</p></a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal DEUDA EN DIFERENTES MONEDAS -->
+<!-- <div id="modal-deuda-diferente-moneda" class="modal">
+  <div class="mediano">
+    <img src="../../img/pesos.svg" alt="" class="cruzroja">
+    <p>Detectamos que tenés deudas en diferentes monedas.</p>
+    <p>¿Qué querés pagar?</p>
+    <div class="modal-action">
+      <a href="#" class="btn btn-modal"><p class="">$1.000,49</p></a>
+      <a href="#" class="btn btn-modal"><p>U$S150</p></a>
+    </div>
+  </div>
+</div> -->
 
 <!-- Modal ELEGIR CUENTA EXTRACCION -->
 <div id="modal-elegir-cuenta" class="modal">
@@ -289,7 +358,9 @@
 </div>
 
 
+
 <!-- Modal LOGIN -->
+<!-- ESTE MODAL NO SE SI VA AL FINAL -->
 <div id="modal-login" class="modal">
   <a href="#close" title="Close" class="close"><i class="material-icons blanco-text">close</i></a>
   <div class="modal-login mediano">
@@ -320,7 +391,7 @@
     <div class="row mg-b-30">
       <div class="inputs clave">
         <input class="clave" type="password" placeholder="4 dígitos">
-        <!-- <a href="#!" class="btn"><span class="typcn typcn-backspace"></span></a> -->
+
       </div>
     </div>
     <!-- <div class="modal-action">

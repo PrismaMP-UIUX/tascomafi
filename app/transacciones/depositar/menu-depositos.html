@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container">
+<body class="container" id="depositos">
 	<!-- <img src="../../img/menu-depositos.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 		<img src="../../img/logo.svg" alt="">
@@ -16,11 +16,14 @@
 	</header>
 	<main class="gris-mas-claro">
 		<section class="submenu-deposito centrado">
-			<p class="centrado encabezado valign-wrapper verde-comafi-text espaciado-1"><img src="../../img/deposito.svg" alt="" class="deposito">DEPÓSITOS</p>
+			<div class="valign-wrapper">
+				<img src="../../img/deposito.svg" alt="">
+				<p class="verde-comafi-text espaciado-1">DEPÓSITOS</p>
+			</div>
 			<div class="botonera">
-				<a href="depositar-efectivo.html" class="btn btn-submenu blanco-text"><p>Efectivo en pesos</p></a>
-				<a href="depositar-efectivo.html" class="btn btn-submenu blanco-text"><p>Efectivo en dólares</p></a>
-				<a href="depositar-cheques.html" class="btn btn-submenu blanco-text"><p>Cheques</p></a>
+				<a href="depositar-efectivo.html?menu={menu}" class="btn btn-submenu blanco-text"><p>Efectivo en pesos</p></a>
+				<a href="depositar-efectivo.html?menu={menu}" class="btn btn-submenu blanco-text"><p>Efectivo en dólares</p></a>
+				<a href="depositar-cheques.html?menu={menu}" class="btn btn-submenu blanco-text"><p>Cheques</p></a>
 			</div>
 		</section>
 	</main>

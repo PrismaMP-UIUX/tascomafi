@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container">
+<body class="container" id="login">
 	<!-- <img src="../../img/login.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 		<img src="../../img/logo.svg" alt="">
@@ -11,8 +11,12 @@
 		<section class="cuerpo">
 			<div class="cuerpo-container">
 				<div class="tab login">
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')" id="defaultOpen" >CLAVE TERMINAL AUTOSERVICIO</button>
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')"   >TARJETA Y CLAVE</button>
+					<button class="tablinks espaciado-neg-05 tarjeta" onclick="openTab(event, 'tarjeta')" id="defaultOpen" >TARJETA Y CLAVE</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')"   >CLAVE TERMINAL AUTOSERVICIO</button>
+				</div>
+				<div id="tarjeta" class="tabcontent">
+					<img src="../../img/ingresetarjeta.svg" alt="" class="centrado ingreseTarjeta">
+					<p class="center-align espaciado-1 mg-t-180">Para continuar operando<br>tenés que introducir tu tarjeta de débito.</p>
 				</div>
 				<div id="clave" class="tabcontent">
 					<div class="row">
@@ -41,27 +45,21 @@
 					<div class="row">
 						<div class="inputs clave">
 							<input class="clave" type="password" placeholder="4 dígitos">
-							<!-- <a href="#!" class="btn"><span class="typcn typcn-backspace"></span></a> -->
 						</div>
 					</div>
-				</div>
-				<div id="tarjeta" class="tabcontent">
-					<a class="link" href="login2.html">
-						<img src="../../img/ingresetarjeta.svg" alt="" class="centrado ingreseTarjeta">
-						<p class="center-align espaciado-1 mg-t-180">Ingresá la tarjeta de débito</p>
-					</a>
 				</div>
 			</div>
 		</section>
 	</main>
 	<footer>
-		<a href="menu-principal.html" class="btn btn-footer tercero"><p>Ingresar</p><i class="material-icons right">arrow_forward</i></a>
+		<a href="login-tarjeta.html?menu={menu}" class="btn btn-footer tercero"><p>Introducir tarjeta</p><i class="material-icons right">arrow_forward</i></a>
 	</footer>
 	@@include('../../_partials/modals.html')
 	@@include('../../_partials/script.html')
 	<script>
 	// Get the element with id="defaultOpen" and click on it
 	document.getElementById("defaultOpen").click();
+
 </script>
 </body>
 </html>

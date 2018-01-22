@@ -6,10 +6,6 @@
   position: relative;
   height: 70px;
 	&.tipoDoc {
-    //position: relative;
-    //bottom: 30px;
-    //height: 70px;
-		//margin: 9px 4px 0 8px;
 		.flecha {
       background: transparent;
       position: relative;
@@ -21,9 +17,6 @@
 		}
 	}
 	&.tipoCta {
-    //position: relative;
-    //left: 7px;
-    //bottom: 90px;
 		.flecha {
 			background: transparent;
 			position: absolute;
@@ -36,10 +29,6 @@
 		}
 	}
   &.numCta {
-    //height: 70px;
-    //position: relative;
-    //bottom: 22px;
-    //left: 13px;
     a.btn {
       position: absolute;
       bottom: -12px;
@@ -51,18 +40,12 @@
       border: 0;
       justify-content: center;
       -webkit-justify-content: center;
-      // font-size: 19px;
-      // text-transform: uppercase;
-      // -webkit-appearance: none;
       i {
         font-size: 40px;
       }
     }
   }
 	&.numDoc {
-    //position: relative;
-    //top: 13px;
-    //height: 70px;
   	a.btn {
       position: absolute;
       bottom: -13px;
@@ -74,19 +57,12 @@
       border: 0;
       justify-content: center;
       -webkit-justify-content: center;
-      // font-size: 19px;
-      // text-transform: uppercase;
-      // -webkit-appearance: none;
       i {
         font-size: 40px;
       }
     }
 	}
   &.numCbu {
-    //height: 70px;
-    //position: relative;
-    //bottom: 28px;
-    //left: 8px;
     a.btn {
       position: relative;
       bottom: 62px;
@@ -98,9 +74,6 @@
       border: 0;
       justify-content: center;
       -webkit-justify-content: center;
-      // font-size: 19px;
-      // text-transform: uppercase;
-      // -webkit-appearance: none;
       i {
         font-size: 40px;
       }
@@ -108,9 +81,6 @@
   }
 	//input CLAVE COMAFI
 	&.clave {
-    //position: relative;
-    //top: 5px;
-    //height: 70px;
 		margin: 0px 4px 0 8px;
 		a.btn {
 			position: relative;
@@ -131,6 +101,35 @@
 			}
 		}
 	}
+  &.empresaTarjeta {
+    .flecha {
+      background: transparent;
+      position: absolute;
+      //bottom: 20px;
+      left: 235px;
+      top: 5px;
+      font-size: 12px;
+      pointer-events: none;
+      color: $gris-oscuro;
+    }
+  }
+  &.ctaRes {
+    a.btn {
+      position: absolute;
+      bottom: -12px;
+      left: 330px;
+      height: 54px;
+      width: 60px;
+      background: $verde-comafi;
+      color: $blanco;
+      border: 0;
+      justify-content: center;
+      -webkit-justify-content: center;
+      i {
+        font-size: 40px;
+      }
+    }
+  }
 	select {
     padding-left: 20px;
     outline: none;
@@ -158,9 +157,6 @@
 		&.tipoCta {
 			height: 70px;
 			width: 287px;
-			// position: relative;
-			// left: 7px;
-			// bottom: 23px;
 			&:focus {
 				border-color: $verde-comafi;
 			}
@@ -190,12 +186,12 @@
 		&.clave {
 			width: 260px;
 			height: 64px;
-			font-size: 65px;
+			font-size: 52px;
 			color: $gris-oscuro;
 			&::-webkit-input-placeholder {
 				position: relative;
         left: -5px;
-				bottom: 17px;
+				bottom: 10px;
 				color: $gris;
 				font-size: 26px;
 			}
@@ -217,13 +213,17 @@
 		&.numCta {
 			width: 265px;
 			height: 64px;
-			// position: relative;
-			// bottom: 24px;
-			// left: 13px;
 			&:focus {
 				border-color: $verde-comafi;
 			}
 		}
+    &.ctaRes {
+      width: 375px;
+      height: 64px;
+      &:focus {
+        border-color: $verde-comafi;
+      }
+    }
 		&.modal-teclado {
 			margin-top: 25px;
 			width: 500px;
@@ -486,6 +486,62 @@ input[type=radio]:checked + label {
       &.init {
         color: $gris;
         width: 365px;
+        display: inline-flex;
+        display: -webkit-inline-flex;
+        cursor: pointer;
+        height: 50px;
+        align-items: center;
+        -webkit-align-items: center;
+      }
+    }
+  }
+}
+
+.empresaTarjeta {
+  ul.select {
+    z-index: 9;
+    padding-left: 0;
+    min-height: 66px;
+    max-height: 241px;
+    overflow: auto;
+    width: 270px;
+    border: 2px solid $gris-oscuro;
+    border-radius: 5px;
+    margin: 0;
+    position: relative;
+    top: -3px;
+    left: 0px;
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* make scrollbar transparent */
+    }
+    li {
+      position: relative;
+      height: 40px;
+      padding: 5px 10px;
+      z-index: 2;
+      list-style: none;
+      &:not(.init) {
+        padding: 15px 0 5px 10px;
+        position: relative;
+        //float: left;
+        color: $gris;
+        width: 270px;
+        display: none;
+        background: $blanco;
+        border: 0.1px solid $blanco;
+      }
+      &:not(.init):hover,
+      &.selected:not(.init) {
+        background: $gris-mas-claro;
+      }
+      &.init {
+        color: $gris;
+        width: 270px;
         display: inline-flex;
         display: -webkit-inline-flex;
         cursor: pointer;

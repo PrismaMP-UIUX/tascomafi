@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container">
+<body class="container" id="login">
 	<!-- <img src="../../img/login-tarjeta.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 	<img src="../../img/logo.svg" alt="">
@@ -14,7 +14,7 @@
 					<button style="width: 100%;" class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" id="defaultOpen">TARJETA Y CLAVE</button>
 				</div>
 				<div id="tarjeta" class="tabcontent">
-					<a href="login-tarjeta2.html" class="link">
+					<a href="login-tarjeta2.html?menu={menu}" class="link">
 						<img src="../../img/ingresetarjeta.svg" alt="" class="centrado ingreseTarjeta">
 						<p class="center-align espaciado-1 mg-t-180">Ingresá la tarjeta de débito</p>
 					</a>

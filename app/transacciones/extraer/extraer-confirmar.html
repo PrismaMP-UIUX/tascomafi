@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container">
+<body class="container" id="extraccion">
 	<!-- <img src="../../img/Extracción-4.jpg" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 		<img src="../../img/logo.svg" alt="">
@@ -28,15 +28,15 @@
 				<div class="extraccion">
 					<div class="extraer valign-wrapper">
 						<p>Monto a<br>Extraer</p>
-						<span>$3.000</span>
-						<a href="extraer.html" class="btn btn-cuerpo verde-comafi-border verde-comafi-text mg-r-0"><i class="material-icons left">edit</i><p class="">Modificar</p></a>
+						<span class="dinamico">${importe}</span>
+						<a href="extraer.html?menu={menu}" class="btn btn-cuerpo verde-comafi-border verde-comafi-text mg-r-0"><i class="material-icons left">edit</i><p class="">Modificar</p></a>
 					</div>
 					<div class="cuenta valign-wrapper">
 						<p>De la cuenta</p>
 						<!-- Si SOLO TIENE UNA CUENTA -->
 						<!-- <a href="#modal-elegir-cuenta" class="btn btn-cuerpo gris-mas-oscuro-text blanco-border mayus mg-r-0 no-click"><p>CA en Pesos 0000-000000-0</p></a> -->
 						<!-- Si TIENE MÁS DE UNA CUENTA -->
-						<a href="#modal-elegir-cuenta" class="btn btn-cuerpo verde-comafi blanco-text mayus mg-r-0"><p>CA en Pesos 0000-000000-0</p></a>
+						<a href="#modal-elegir-cuenta" class="btn btn-cuerpo verde-comafi blanco-text mayus mg-r-0"><p>CA en Pesos 0000-000000-0</p><i class="material-icons right">edit</i></a>
 					</div>
 					<div class="comprobante valign-wrapper">
 						<p>¿Imprimir comprobante?</p>
@@ -57,23 +57,23 @@
 	</main>
 	<footer>
 		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
-		<a href="extraer-comprobante.html" class="btn btn-footer tercero verde-text"><i class="material-icons left">check</i><p>Confirmar</p></a>
+		<a href="extraer-comprobante.html" class="btn btn-footer tercero verde-text"><i class="material-icons left">check</i><p>Extraer</p></a>
 	</footer>
-	@@include('../../_partials/modals.html')
-	@@include('../../_partials/script.html')
 	<a href="../mensajes-error/loading-operacion-en-curso.html" class="link"># Operación en curso</a>
 	<a href="../mensajes-error/loading-esperar-extraccion.html" class="link"># Esperar extracción</a>
 	<a href="../mensajes-error/mensaje-retirar-billetes.html" class="link"># Retirar billetes</a>
 	<a href="../mensajes-error/mensaje-cambiar-clave.html" class="link"># Cambiar ID+ alfa</a>
 	<a href="../identificacion/id-alfa-solicitud.html" class="link"># Solicitud ID+ alfa</a>
 	<a href="../identificacion/id-alfa-generacion.html" class="link"># Generar ID+ alfa</a>
-	<a href="../identificacion/id-alfa-generacion-error.html" class="link"># Generar ID+ alfa Error</a>
-	<a href="../identificacion/id-alfa-confirmacion.html" class="link"># Generar ID+ alfa Ok</a>
+	<a href="../mensajes-error/mensaje-id-alfa-generacion-error.html" class="link"># Generar ID+ alfa Error</a>
+	<a href="../mensajes-error/mensaje-id-alfa-confirmacion.html" class="link"># Generar ID+ alfa Ok</a>
 	<a href="../identificacion/id-alfa-seleccion.html" class="link"># Seleccion ID+ alfa</a>
 	<a href="../identificacion/id-alfa-opcion-incorrecta.html" class="link"># Seleccion ID+ alfa Error</a>
 	<a href="../identificacion/id-alfa-ultimo-error.html" class="link"># Seleccion ID+ alfa Último error</a>
 	<a href="../identificacion/id-numerica-seleccion.html" class="link"># Seleccion ID+ numérica</a>
 	<a href="../identificacion/id-numerica-seleccion.html" class="link"># Seleccion ID+ numérica Error</a>
 	<a href="../identificacion/id-numerica-seleccion.html" class="link"># Seleccion ID+ numérica Último error</a>
-	<a href="../identificacion/id-opcion-incorrecta-bloqueo.html" class="link"># Seleccion ID+ Bloqueo</a></body>
+	<a href="../mensajes-error/mensaje-id-opcion-incorrecta-bloqueo.html" class="link"># Seleccion ID+ Bloqueo</a></body>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
 </html>

@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container">
+<body class="container" id="extraccion">
 	<!-- <img src="../../img/extraccion.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 		<img src="../../img/logo.svg" alt="">
@@ -28,14 +28,14 @@
 					<div class="sugeridos">
 						<p class="center-align mg-10 mg-t-25 espaciado-neg-05 font-bold verde-comafi-text">IMPORTES SUGERIDOS</p>
 						<div class="importes">
-							<a href="extraer-confirmar.html" class="btn btn-importe"><p>$500</p></a>
-							<a href="extraer-confirmar.html" class="btn btn-importe"><p>$1000</p></a>
-							<a href="extraer-confirmar.html" class="btn btn-importe"><p>$1500</p></a>
-							<a href="extraer-confirmar.html" class="btn btn-importe"><p>$2500</p></a>
-							<a href="extraer-confirmar.html" class="btn btn-importe"><p>$2500</p></a>
-							<a href="extraer-confirmar.html" class="btn btn-importe"><p>$3000</p></a>
-							<a href="extraer-confirmar.html" class="btn btn-importe"><p>$4000</p></a>
-							<a href="extraer-confirmar.html" class="btn btn-importe"><p>$5000</p></a>
+							<a href="extraer-confirmar.html?importe=500" class="btn btn-importe"><p>$500</p></a>
+							<a href="extraer-confirmar.html?importe=1.000" class="btn btn-importe"><p>$1000</p></a>
+							<a href="extraer-confirmar.html?importe=1.500" class="btn btn-importe"><p>$1500</p></a>
+							<a href="extraer-confirmar.html?importe=2.000" class="btn btn-importe"><p>$2000</p></a>
+							<a href="extraer-confirmar.html?importe=2.500" class="btn btn-importe"><p>$2500</p></a>
+							<a href="extraer-confirmar.html?importe=3.000" class="btn btn-importe"><p>$3000</p></a>
+							<a href="extraer-confirmar.html?importe=4.000" class="btn btn-importe"><p>$4000</p></a>
+							<a href="extraer-confirmar.html?importe=5.000" class="btn btn-importe"><p>$5000</p></a>
 						</div>
 					</div>
 				</div>
@@ -47,11 +47,11 @@
 						</div>
 						<div class="numeros">
 							<a href="#" class="btn btn-numerico"><p>1</p></a>
-							<a href="#" class="btn btn-numerico"><p>1</p></a>
+							<a href="#" class="btn btn-numerico"><p>2</p></a>
 							<a href="#" class="btn btn-numerico"><p>3</p></a>
-							<a href="#" class="btn btn-numerico"><p>3</p></a>
+							<a href="#" class="btn btn-numerico"><p>4</p></a>
 							<a href="#" class="btn btn-numerico"><p>5</p></a>
-							<a href="#" class="btn btn-numerico"><p>5</p></a>
+							<a href="#" class="btn btn-numerico"><p>6</p></a>
 							<a href="#" class="btn btn-numerico"><p>7</p></a>
 							<a href="#" class="btn btn-numerico"><p>8</p></a>
 							<a href="#" class="btn btn-numerico"><p>9</p></a>
@@ -67,24 +67,24 @@
 	<footer>
 		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">exit_to_app</i><p>Salir</p></a>
 		<a href="../../menu-principal.html" class="btn btn-footer segundo"><i class="material-icons left">home</i><p>Ir a inicio</p></a>
-		<a href="extraer-confirmar.html" class="btn btn-footer tercero deshabilitado"><p>Siguiente</p><i class="material-icons right">keyboard_arrow_right</i></a>
+		<a href="extraer-confirmar.html?menu=extraccion&importe=1.250" class="btn btn-footer tercero"><p>Siguiente</p><i class="material-icons right">keyboard_arrow_right</i></a>
 	</footer>
-	@@include('../../_partials/modals.html')
-	@@include('../../_partials/script.html')
 	<a href="../mensajes-error/loading-operacion-en-curso.html" class="link"># Operación en curso</a>
 	<a href="../mensajes-error/loading-esperar-extraccion.html" class="link"># Esperar extracción</a>
 	<a href="../mensajes-error/mensaje-retirar-billetes.html" class="link"># Retirar billetes</a>
 	<a href="../mensajes-error/mensaje-cambiar-clave.html" class="link"># Cambiar ID+ alfa</a>
 	<a href="../identificacion/id-alfa-solicitud.html" class="link"># Solicitud ID+ alfa</a>
 	<a href="../identificacion/id-alfa-generacion.html" class="link"># Generar ID+ alfa</a>
-	<a href="../identificacion/id-alfa-generacion-error.html" class="link"># Generar ID+ alfa Error</a>
-	<a href="../identificacion/id-alfa-confirmacion.html" class="link"># Generar ID+ alfa Ok</a>
+	<a href="../mensajes-error/mensaje-id-alfa-generacion-error.html" class="link"># Generar ID+ alfa Error</a>
+	<a href="../mensajes-error/mensaje-id-alfa-confirmacion.html" class="link"># Generar ID+ alfa Ok</a>
 	<a href="../identificacion/id-alfa-seleccion.html" class="link"># Seleccion ID+ alfa</a>
 	<a href="../identificacion/id-alfa-opcion-incorrecta.html" class="link"># Seleccion ID+ alfa Error</a>
 	<a href="../identificacion/id-alfa-ultimo-error.html" class="link"># Seleccion ID+ alfa Último error</a>
 	<a href="../identificacion/id-numerica-seleccion.html" class="link"># Seleccion ID+ numérica</a>
 	<a href="../identificacion/id-numerica-seleccion.html" class="link"># Seleccion ID+ numérica Error</a>
 	<a href="../identificacion/id-numerica-seleccion.html" class="link"># Seleccion ID+ numérica Último error</a>
-	<a href="../identificacion/id-opcion-incorrecta-bloqueo.html" class="link"># Seleccion ID+ Bloqueo</a>
+	<a href="../mensajes-error/mensaje-id-opcion-incorrecta-bloqueo.html" class="link"># Seleccion ID+ Bloqueo</a>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
 </body>
 </html>

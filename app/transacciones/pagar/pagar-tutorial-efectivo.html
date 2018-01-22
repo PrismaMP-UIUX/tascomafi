@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container" id="depositos">
+<body class="container" id="pagos">
 	<!-- <img src="../../img/depositar-tutorial-efectivo.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 		<img src="../../img/logo.svg" alt="">
@@ -17,8 +17,8 @@
 	<main class="gris-mas-claro">
 		<section class="encabezado">
 			<div class="breadcrumb">
-				<img src="../../img/deposito.svg" alt="">
-				<p><span class="verde-comafi-text">depósitos /</span> elegir destino / ingresar billetes</p>
+				<img src="../../img/pesos.svg" alt="">
+				<p><span class="verde-comafi-text">pagos /</span> ingresar datos / confirmar / ingresar billetes</p>
 			</div>
 			<h1 class="titulo gris-oscuro-text">Ingresá los billetes en la posición indicada</h1>
 		</section>
@@ -27,14 +27,14 @@
 				<div class="img-contenedor centrado">
 					<img src="../../img/deposito-efectivo-sin-sobre.jpg" alt="" class="centrado">
 				</div>
-				<p class="msj-tutorial">Recordá que sólo podés ingresar hasta 200 billetes por depósito.<br>No acepta billetes de $2 ni de $5.</p>
+				<p class="msj-tutorial">Solamente podés ingresar hasta 200 billetes por vez.<br>No acepta billetes de $2 ni de $5.</p>
 			</div>
 		</section>
 	</main>
 	<footer>
 		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
 	</footer>
-	<a href="depositar-confirmar-deposito-efectivo.html?menu={menu}&flujo={flujo}" class="link"># Siguiente</a>
+	<a href="pagar-confirmar-pago-tarjeta-efectivo.html?menu={menu}&flujo={flujo}&datos={datos}" class="link"># Siguiente</a>
 	<a href="javascript:history.go(-1)" class="link"># Volver</a>
 	@@include('../../_partials/modals.html')
 	@@include('../../_partials/script.html')

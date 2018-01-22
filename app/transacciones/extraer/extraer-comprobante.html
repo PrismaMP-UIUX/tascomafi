@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container">
+<body class="container" id="extraccion">
 	<!-- <img src="../../img/extraccion-comprobante.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 	<img src="../../img/logo.svg" alt="">
@@ -26,8 +26,6 @@
 		<a href="../general/salir-CT.html" class="btn btn-footer primero rojo-text"><i class="material-icons left">exit_to_app</i><p>Salir</p></a>
 		<a href="../../menu-principal.html" class="btn btn-footer tercero"><i class="material-icons left">undo</i><p>Realizar otra operación</p></a>
 	</footer>
-	@@include('../../_partials/modals.html')
-	@@include('../../_partials/script.html')
 	<a href="../mensajer-error/mensaje-sin-dinero.html" class="link"># Sin dinero</a>
 	<a href="../mensajes-error/loading-operacion-en-curso.html" class="link"># Operación en curso</a>
 	<a href="../mensajes-error/loading-esperar-extraccion.html" class="link"># Esperar extracción</a>
@@ -35,16 +33,18 @@
 	<a href="../mensajes-error/mensaje-cambiar-clave.html" class="link"># Cambiar ID+ alfa</a>
 	<a href="../identificacion/id-alfa-solicitud.html" class="link"># Solicitud ID+ alfa</a>
 	<a href="../identificacion/id-alfa-generacion.html" class="link"># Generar ID+ alfa</a>
-	<a href="../identificacion/id-alfa-generacion-error.html" class="link"># Generar ID+ alfa Error</a>
-	<a href="../identificacion/id-alfa-confirmacion.html" class="link"># Generar ID+ alfa Ok</a>
+	<a href="../mensajes-error/mensaje-id-alfa-generacion-error.html" class="link"># Generar ID+ alfa Error</a>
+	<a href="../mensajes-error/mensaje-id-alfa-confirmacion.html" class="link"># Generar ID+ alfa Ok</a>
 	<a href="../identificacion/id-alfa-seleccion.html" class="link"># Seleccion ID+ alfa</a>
 	<a href="../identificacion/id-alfa-opcion-incorrecta.html" class="link"># Seleccion ID+ alfa Error</a>
 	<a href="../identificacion/id-alfa-ultimo-error.html" class="link"># Seleccion ID+ alfa Último error</a>
 	<a href="../identificacion/id-numerica-seleccion.html" class="link"># Seleccion ID+ numérica</a>
 	<a href="../identificacion/id-numerica-seleccion.html" class="link"># Seleccion ID+ numérica Error</a>
 	<a href="../identificacion/id-numerica-seleccion.html" class="link"># Seleccion ID+ numérica Último error</a>
-	<a href="../identificacion/id-opcion-incorrecta-bloqueo.html" class="link"># Seleccion ID+ Bloqueo</a>
+	<a href="../mensajes-error/mensaje-id-opcion-incorrecta-bloqueo.html" class="link"># Seleccion ID+ Bloqueo</a>
 	<a href="../../menu-principal.html" class="link"># Inicio</a>
 	<a href="javascript:history.go(-1)" class="link"># Volver</a>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
 </body>
 </html>

@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container" id="depositos">
+<body class="container" id="pagos">
 	<!-- <img src="../../img/depositar-confirmar-deposito-efectivo.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 		<img src="../../img/logo.svg" alt="">
@@ -18,17 +18,16 @@
 	<main class="gris-mas-claro">
 		<section class="encabezado">
 			<div class="breadcrumb">
-				<img src="../../img/deposito.svg" alt="">
-				<p><span class="verde-comafi-text">depósitos /</span> elegir destino / ingresar billetes / confirmar</p>
+				<img src="../../img/pesos.svg" alt="">
+				<p><span class="verde-comafi-text">pagos /</span> ingresar datos / confirmar / ingresar billetes / pagar</p>
 			</div>
-			<h1 class="titulo gris-oscuro-text mg-t-35">Por favor, verificá los datos:</h1>
+			<h1 class="titulo gris-oscuro-text mg-t-35">Por favor, verificá los datos del pago:</h1>
 		</section>
 		<section class="cuerpo">
 			<div class="cuerpo-container">
 				<div class="lista-deposito">
 					<div class="col-left">
-						<h3 class="verde-comafi-text mayus espaciado-1 mg-l-65 mg-t-10 mg-b-15">Total ingresado</h3>
-
+						<h3 class="verde-comafi-text mayus espaciado-1 mg-l-65 mg-t-10 mg-b-15">Ingresaste:</h3>
 						<div class="col-1 left">
 							<p class="gris-mas-oscuro-text valign-wrapper"><i class="material-icons diezpe mg-r-5">local_atm</i> $10</p>
 							<p class="gris-mas-oscuro-text valign-wrapper"><i class="material-icons veintepe mg-r-5">local_atm</i> $20</p>
@@ -47,14 +46,16 @@
 							<p class="gris-oscuro-text">1 billete</p>
 							<p class="gris-oscuro-text">2 billetes</p>
 						</div>
-						<h3 class="verde-comafi-text espaciado-2 clear center-align mg-15">Total <span class="mg-l-40 espaciado-2">$120.212,50</span></h3>
-						<a href="depositar-tutorial-efectivo.html?menu={menu}&flujo={flujo}" class="btn btn-cuerpo verde-comafi-border verde-comafi-text mg-l-65"><i class="material-icons left ">add</i><p class="verde-comafi-text">Ingresar más billetes</p></a>
+						<p class="absolute bottom-90 verde-comafi-text espaciado-1 clear center-align mg-0 mg-l-65 font-24 font-bold">TOTAL: <span class="font-24 font-bold">$120.212,00</span></p>
+						<a href="pagar-tutorial-efectivo.html?menu={menu}&flujo={flujo}&datos={datos}" class="btn btn-cuerpo verde-comafi-border verde-comafi-text mg-l-65 absolute bottom-20"><i class="material-icons left ">add</i><p class="verde-comafi-text">Ingresar más billetes</p></a>
 					</div>
 					<div class="col-right">
-						<h3 class="verde-comafi-text mayus espaciado-1 mg-l-65 mg-t-10 mg-b-15">Depósito en</h3>
-						<h4 class="gris-oscuro-text mg-b-0 mg-t-10 mg-l-65">Caja de Ahorro en pesos</h4>
-						<p class="gris-text mg-t-15 mg-l-65">Cuenta<br><span><b class="gris-oscuro-text">0000-000000-0</b></span></p>
-						<p class="gris-text mg-t-15 mg-l-65">Titular<br><span><b class="espaciado-1 gris-oscuro-text">Juan Palot</b></span></p>
+						<h3 class="verde-comafi-text mayus espaciado-1 mg-l-65 mg-t-10 mg-b-15">Pago de tarjeta</h3>
+						<h4 class="gris-oscuro-text mg-b-0 mg-t-15 mg-l-65">VISA en pesos</h4>
+						<p class="gris-text mg-20 mg-l-65">Titular<br><span><b class="espaciado-1 gris-oscuro-text">Juan Palot</b></span></p>
+						<p class="gris-text mg-20 mg-l-65">Tarjeta<br><span><b class="gris-oscuro-text">xxxx xxxx xxxx xxxx</b></span></p>
+						<p class="gris-text mg-20 mg-l-65">Cuenta<br><span><b class="gris-oscuro-text">0000-000000-0</b></span></p>
+						<p class="gris-text mg-20 mg-l-65">Total a pagar<br><span><b class="rojo-text">$150.346,38</b></span></p>
 					</div>
 				</div>
 			</div>
@@ -62,13 +63,13 @@
 	</main>
 	<footer>
 		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
-		<a href="depositar-comprobante.html?menu={menu}&flujo={flujo}" class="btn btn-footer tercero verde-text"><i class="material-icons left">check</i><p>Depositar</p></a>
+		<a href="pagar-tarjetas-comprobante.html?menu={menu}&flujo={flujo}&datos={datos}" class="btn btn-footer tercero verde-text"><i class="material-icons left">check</i><p>Pagar</p></a>
 	</footer>
-	<a href="../mensajes-error/loading-deposito-en-curso.html" class="link"># Depósito en curso</a>
+	<a href="../mensajes-error/loading-pago-en-curso.html" class="link"># Pago en curso</a>
 	<a href="../mensajes-error/loading-esperar-validacion.html" class="link"># Esperar validación</a>
 	<a href="../mensajes-error/mensaje-billetes-cheques-no-reconocidos.html" class="link"># Billetes/Cheques no reconocidos</a>
 	<a href="../mensajes-error/mensaje-muchos-billetes-cheques-no-reconocidos.html" class="link"># Muchos billetes/cheques no reconocidos</a>
-	<a href="../mensajes-error/mensaje-operacion-cancelada-retirar-billetes.html" class="link"># Operación cancelada</a>
+	<a href="../mensajes-error/mensaje-operacion-cancelada-retirar-billetes-cheques.html" class="link"># Operación cancelada</a>
 	<a href="../mensajes-error/mensaje-retirar-billetes.html" class="link"># Retirar billetes</a>
 	@@include('../../_partials/modals.html')
 	@@include('../../_partials/script.html')

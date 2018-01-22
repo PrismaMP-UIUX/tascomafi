@@ -18,14 +18,22 @@
 		<section class="encabezado">
 			<div class="breadcrumb">
 				<img src="../../img/claves.svg" alt="">
-				<p><span class="verde-comafi-text">claves /</span> cambio de clave banelco</p>
+				<p><span class="verde-comafi-text">claves /</span> cambio de pin banelco</p>
 			</div>
 			<h1 class="titulo gris-oscuro-text">Ingresá una clave nueva diferente a la anterior</h1>
 		</section>
 		<section class="cuerpo">
 			<div class="cuerpo-container">
 				<div class="col-left center-align">
-					<div class="row left-align mg-t-40 mg-l-60">
+					<div class="row left-align mg-l-60">
+						<label class="">Clave actual</label>
+					</div>
+					<div class="row left-align mg-l-60">
+						<div class="inputs clave">
+							<input class="clave" type="password" placeholder="4 dígitos">
+						</div>
+					</div>
+					<div class="row left-align mg-l-60">
 						<label class="">Nueva clave</label>
 					</div>
 					<div class="row left-align mg-l-60">
@@ -52,14 +60,14 @@
 		</section>
 	</main>
 	<footer>
-		<a href="clave-banelco-cambio-exitoso.html" class="btn btn-footer tercero verde-text"><i class="material-icons left">check</i><p>Confirmar</p></a>
+		<a href="../mensajes-error/mensaje-clave-banelco-cambio-exitoso.html" class="btn btn-footer tercero verde-text"><i class="material-icons left">check</i><p>Confirmar</p></a>
 	</footer>
 	@@include('../../_partials/modals.html')
 	@@include('../../_partials/script.html')
 	<a href="../../menu-principal.html" class="link"># Inicio</a>
 	<a href="javascript:history.go(-1)" class="link"># Volver</a>
-	<a href="clave-banelco-cambio-error.html" class="link"># Error</a>
-	<a href="clave-banelco-incorrecta-tarjeta-inhabilitada.html" class="link"># Tarjeta inhabilitada</a>
+	<a href="../mensajes-error/mensaje-clave-banelco-cambio-error.html" class="link"># Error</a>
+	<a href="../mensajes-error/mensaje-clave-banelco-incorrecta-tarjeta-inhabilitada.html" class="link"># Tarjeta inhabilitada</a>
 	<a href="clave-banelco-cambio-forzado.html" class="link"># Cambio forzado</a>
 </body>
 </html>

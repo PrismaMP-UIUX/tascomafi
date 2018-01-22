@@ -1,0 +1,72 @@
+@@include('../../_partials/header.html')
+<body class="container" id="pagos">
+	<!-- <img src="../../img/deposito-sin-loguear.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+	<img src="../../img/logo.svg" alt="">
+	</header>
+	<main class="gris-mas-claro">
+		<section class="encabezado">
+			<div class="breadcrumb">
+				<img src="../../img/pesos.svg" alt="">
+				<p><span class="verde-comafi-text">pagos /</span> tarjeta / ingresar de datos</p>
+			</div>
+			<h1 class="titulo gris-oscuro-text">Ingresá los datos de la tarjeta a pagar</h1>
+		</section>
+		<section class="cuerpo">
+			<div class="cuerpo-container">
+				<div class="tabcontent-falsa">
+					<p class="mg-0 mg-b-55">Elegí cómo queres pagar:</p>
+					<div class="inline">
+						<input type="radio" id="tarjeta" name="selector">
+						<div class="check tarjeta"></div>
+						<label class="radio mg-r-50" for="tarjeta">Por número de tarjeta</label>
+					</div>
+					<div class="inline">
+						<input type="radio" id="ctares" name="selector">
+						<div class="check ctaRes"></div>
+						<label class="radio" for="ctares">Por cuenta resumen</label>
+					</div>
+					<div class="row mg-t-20">
+						<div class="inputs empresaTarjeta">
+							<span class="flecha"><i class="material-icons">keyboard_arrow_down</i></span>
+							<ul class="select list-unstyled">
+								<li class="init">Visa</li>
+								<li data-value="value 0">Visa</li>
+								<li data-value="value 1">MasterCard</li>
+								<li data-value="value 2">Diners</li>
+							</ul>
+						</div>
+						<div class="inputs ctaRes mg-l-5">
+							<input class="ctaRes" type="text" placeholder="Número">
+							<a href="#modal-teclado" class="btn"><i class="material-icons">keyboard</i></a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="iniciar-sesion valign-wrapper mg-t-60">
+					<p>Para acceder a tus tarjetas:</p>
+					<a href="../identificacion/login.html?menu={menu}" class="btn btn-cuerpo verde-comafi blanco-text mayus mg-0"><i class="material-icons left">exit_to_app</i><p>Iniciar Sesión</p></a>
+				</div>
+
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a href="../../menu-principal.html" class="btn btn-footer primero"><i class="material-icons left">home</i><p>Ir a inicio</p></a>
+		<a href="pagar-tarjetas-confirmar-datos.html?menu={menu}&datos=manual" class="btn btn-footer tercero"><p>Siguiente</p><i class="material-icons right">keyboard_arrow_right</i></a>
+	</footer>
+	<a href="../mensajes-error/loading-pago-en-curso.html" class="link"># Pago en curso</a>
+	<a href="../mensajes-error/loading-esperar-validacion.html" class="link"># Esperar validación</a>
+	<a href="../mensajes-error/mensaje-billetes-cheques-no-reconocidos.html" class="link"># Billetes/Cheques no reconocidos</a>
+	<a href="../mensajes-error/mensaje-muchos-billetes-cheques-no-reconocidos.html" class="link"># Muchos billetes/cheques no reconocidos</a>
+	<a href="../mensajes-error/mensaje-operacion-cancelada-retirar-billetes-cheques.html" class="link"># Operación cancelada</a>
+	<a href="../mensajes-error/mensaje-retirar-billetes.html" class="link"># Retirar billetes</a>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+	<script>
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+	</script>
+</body>
+</html>

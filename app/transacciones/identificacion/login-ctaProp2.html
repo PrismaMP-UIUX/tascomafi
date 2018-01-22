@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container" id="login">
+<body class="container">
 	<!-- <img src="../../img/11-Login con tarjeta-2.jpg" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 	<img src="../../img/logo.svg" alt="">
@@ -11,8 +11,8 @@
 		<section class="cuerpo">
 			<div class="cuerpo-container">
 				<div class="tab login">
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')" id="defaultOpen"  >TARJETA Y CLAVE</button>
-					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')"  >CLAVE TERMINAL AUTOSERVICIO</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'tarjeta')"  id="defaultOpen"  >TARJETA Y CLAVE</button>
+					<button class="tablinks espaciado-neg-05" onclick="openTab(event, 'clave')" >CLAVE TERMINAL AUTOSERVICIO</button>
 				</div>
 				<div id="tarjeta" class="tabcontent">
 					<div class="row center-align mg-t-40">
@@ -51,6 +51,7 @@
 					<div class="row">
 						<div class="inputs clave">
 							<input class="clave" type="password" placeholder="4 dígitos">
+
 						</div>
 					</div>
 				</div>
@@ -58,7 +59,7 @@
 		</section>
 	</main>
 	<footer>
-		<a href="../../menu-principal.html" class="btn btn-footer tercero"><p>Ingresar</p><i class="material-icons right">arrow_forward</i></a>
+		<a href="../depositar/depositar-seleccionar-cuenta-propia.html" class="btn btn-footer tercero"><p>Ingresar</p><i class="material-icons right">arrow_forward</i></a>
 	</footer>
 	@@include('../../_partials/modals.html')
 	@@include('../../_partials/script.html')

@@ -1,5 +1,5 @@
 @@include('../../_partials/header.html')
-<body class="container">
+<body class="container" id="depositos">
 	<!-- <img src="../../img/depositar-confirmar-deposito-cheques.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 		<img src="../../img/logo.svg" alt="">
@@ -50,15 +50,15 @@
 	</main>
 	<footer>
 		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
-		<a href="depositar-comprobante.html" class="btn btn-footer tercero verde-text"><i class="material-icons left">check</i><p>Confirmar</p></a>
+		<a href="depositar-comprobante.html?menu={menu}" class="btn btn-footer tercero verde-text"><i class="material-icons left">check</i><p>Depositar</p></a>
 	</footer>
-	@@include('../../_partials/modals.html')
-	@@include('../../_partials/script.html')
 	<a href="../mensajes-error/loading-deposito-en-curso.html" class="link"># Depósito en curso</a>
 	<a href="../mensajes-error/loading-esperar-validacion.html" class="link"># Esperar validación</a>
 	<a href="../mensajes-error/mensaje-billetes-cheques-no-reconocidos.html" class="link"># Billetes/Cheques no reconocidos</a>
 	<a href="../mensajes-error/mensaje-muchos-billetes-cheques-no-reconocidos.html" class="link"># Muchos billetes/cheques no reconocidos</a>
 	<a href="../mensajes-error/mensaje-operacion-cancelada-retirar-billetes.html" class="link"># Operación cancelada</a>
 	<a href="../mensajes-error/mensaje-retirar-billetes.html" class="link"># Retirar billetes</a>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
 </body>
 </html>
