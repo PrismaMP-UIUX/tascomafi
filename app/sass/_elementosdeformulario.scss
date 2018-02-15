@@ -172,12 +172,12 @@
 		border: 2px solid $gris-oscuro;
 		border-radius: 5px;
 		background: transparent;
-		color: $gris;
+		color: $gris-mas-oscuro;
 		&.numDoc {
 			width: 320px;
 			height: 64px;
 			&::-webkit-input-placeholder {
-				color: $gris;
+				color: $gris-mas-oscuro;
 			}
       &:focus {
         border-color: #6B8012;
@@ -187,12 +187,12 @@
 			width: 260px;
 			height: 64px;
 			font-size: 52px;
-			color: $gris-oscuro;
+			color: $gris-mas-oscuro;
 			&::-webkit-input-placeholder {
 				position: relative;
         left: -5px;
 				bottom: 10px;
-				color: $gris;
+				color: $gris-mas-oscuro;
 				font-size: 26px;
 			}
 			&:focus {
@@ -206,6 +206,9 @@
 		&.numCbu {
 			width: 645px;
 			height: 64px;
+      &::-webkit-input-placeholder {
+        color: $gris-mas-oscuro;
+      }
 			&:focus {
 				border-color: $verde-comafi;
 			}
@@ -213,6 +216,9 @@
 		&.numCta {
 			width: 265px;
 			height: 64px;
+      &::-webkit-input-placeholder {
+        color: $gris-mas-oscuro;
+      }
 			&:focus {
 				border-color: $verde-comafi;
 			}
@@ -220,6 +226,9 @@
     &.ctaRes {
       width: 375px;
       height: 64px;
+      &::-webkit-input-placeholder {
+        color: $gris-mas-oscuro;
+      }
       &:focus {
         border-color: $verde-comafi;
       }
@@ -229,7 +238,7 @@
 			width: 500px;
 			height: 64px;
 			font-size: 30px;
-			color: $gris-oscuro;
+			color: $gris-mas-oscuro;
 			border-color: $verde-comafi;
 			&~.btn {
 				width: 74px;
@@ -418,7 +427,7 @@ input[type=radio]:checked + label {
         padding: 15px 0 5px 10px;
         position: relative;
         //float: left;
-        color: $gris;
+        color: $gris-mas-oscuro;
         width: 200px;
         display: none;
         background: $blanco;
@@ -429,7 +438,7 @@ input[type=radio]:checked + label {
         background: $gris-mas-claro;
       }
       &.init {
-        color: $gris;
+        color: $gris-mas-oscuro;
         width: 200px;
         display: inline-flex;
         display: -webkit-inline-flex;
@@ -473,7 +482,7 @@ input[type=radio]:checked + label {
         padding: 15px 0 5px 10px;
         position: relative;
         //float: left;
-        color: $gris;
+        color: $gris-mas-oscuro;
         width: 365px;
         display: none;
         background: $blanco;
@@ -484,7 +493,7 @@ input[type=radio]:checked + label {
         background: $gris-mas-claro;
       }
       &.init {
-        color: $gris;
+        color: $gris-mas-oscuro;
         width: 365px;
         display: inline-flex;
         display: -webkit-inline-flex;
@@ -529,7 +538,7 @@ input[type=radio]:checked + label {
         padding: 15px 0 5px 10px;
         position: relative;
         //float: left;
-        color: $gris;
+        color: $gris-mas-oscuro;
         width: 270px;
         display: none;
         background: $blanco;
@@ -540,7 +549,7 @@ input[type=radio]:checked + label {
         background: $gris-mas-claro;
       }
       &.init {
-        color: $gris;
+        color: $gris-mas-oscuro;
         width: 270px;
         display: inline-flex;
         display: -webkit-inline-flex;

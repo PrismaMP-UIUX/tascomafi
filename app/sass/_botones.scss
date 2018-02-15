@@ -166,13 +166,14 @@
 	background-color: $verde-comafi-claro;
 	color: $blanco;
 	p.emp-tarjeta {
+		text-transform: uppercase;
 		position: absolute;
 		top: -15px;
 		left: 15px;
 	}
 	p.nro-tarjeta {
 		position: absolute;
-		top: 50px;
+		top: 55px;
 		left: 15px;
 		font-size: 22px;
 	}
