@@ -1,0 +1,47 @@
+@@include('../../_partials/header.html')
+<body class="container" id="depositos">
+	<!-- <img src="../../img/depositar-tutorial-cheques.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+		<img src="../../img/logo.svg" alt="">
+		<div class="logueado valign-wrapper">
+			<div>
+				<p class="nombre-logueado">José Diaz</p>
+				<p class="conexion">Tu última conexión fue el: 5/11/2016</p>
+				<p class="vto-clave">Tu clave vence el: 5/12/2017</p>
+			</div>
+			<div>
+				<i class="material-icons">person</i>
+			</div>
+		</div>
+	</header>
+	<main class="gris-mas-claro">
+		<section class="encabezado">
+			<div class="breadcrumb">
+				<img src="../../img/deposito.svg" alt="">
+				<p><span class="verde-comafi-text">depósitos /</span> elegir destino / ingresar cheques</p>
+			</div>
+			<h1 class="titulo gris-oscuro-text">Ingresá hasta 15 cheques.</h1>
+		</section>
+		<section class="cuerpo">
+			<div class="cuerpo-container">
+				<!-- <div class="img-contenedor centrado"> -->
+					<img src="../../img/deposito-cheque-sin-sobre.png" alt="" class="centrado" width="65%">
+				<!-- </div> -->
+				<!-- <p class="msj-tutorial">Contabilizá el monto total de los cheques a depositar.<br>Recordá que sólo podés ingresar hasta 15 cheques por depósito.</p> -->
+				<div class="msj-tutorial-cheques gris-mas-oscuro-text">
+					<p>Registrá al dorso: sucursal,<br>cuenta, firma y aclaración.</p>
+					<p>No insertes clips<br>o ganchos.</p>
+					<p>Ingresá el cheque<br>como muestra la imagen.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
+	</footer>
+	<a href="depositar-verificar-deposito-cheques.html?menu=depositos" class="link"># Siguiente</a>
+	<a href="javascript:history.go(-1)" class="link"># Volver</a>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+</body>
+</html>

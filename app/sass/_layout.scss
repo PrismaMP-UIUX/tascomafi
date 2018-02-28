@@ -220,9 +220,13 @@ main {
 			width: 400px;
 			height: auto;
 			min-height: 225px;
-			padding-bottom: 25px;
+			padding: 35px 0 10px 0;
 			flex-wrap: wrap;
 			-webkit-flex-wrap: wrap;
+			& > div.valign-wrapper {
+				position: relative;
+				top: -20px;
+			}
 			& > div {
 				justify-content: center;
 				-webkit-justify-content: center;
@@ -627,6 +631,14 @@ main {
 						font-size: 20px;
 					}
 				}
+			}
+			.cheque-por-cheque {
+				width: 444px;
+				height: 435px;
+				float: left;
+				margin-top: 15px;
+				margin-right: 10px;
+				background: $blanco;
 			}
 			.iniciar-sesion {
 				margin: 30px 40px;

@@ -19,9 +19,9 @@
 		<section class="encabezado">
 			<div class="breadcrumb">
 				<img src="../../img/deposito.svg" alt="">
-				<p><span class="verde-comafi-text">depósitos /</span> elegir destino / ingresar cheques / verificar / ingresar monto / confirmar</p>
+				<p><span class="verde-comafi-text">depósitos /</span> elegir destino / ingresar cheques / verificar</p>
 			</div>
-			<h1 class="titulo gris-oscuro-text">Por favor, confirmá los datos:</h1>
+			<h1 class="titulo gris-oscuro-text">Por favor, verificá los datos:</h1>
 		</section>
 		<section class="cuerpo">
 			<div class="cuerpo-container">
@@ -32,7 +32,8 @@
 							<p class="gris-text valign-wrapper"><i class="material-icons gris-text mg-r-5">local_atm</i></p>
 						</div>
 						<div class="col-2 left mg-l-0 mg-t-10"><p class="gris-oscuro-text">15 cheques</p></div>
-						<h3 class="verde-comafi-text espaciado-2 clear center-align mg-t-300">TOTAL <span class="mg-l-40 espaciado-2">$120.212,50</span></h3>
+						<!-- <h3 class="verde-comafi-text espaciado-2 clear center-align mg-t-75">Total <span class="mg-l-40 espaciado-2">$120.212,50</span></h3> -->
+						<a href="depositar-tutorial-cheques2.html?menu={menu}" class="btn btn-cuerpo mg-l-65 mg-t-300"><i class="material-icons left verde-comafi-text">undo</i><p class="verde-comafi-text">Ingresar más cheques</p></a>
 					</div>
 					<div class="col-right">
 						<h3 class="verde-comafi-text mayus espaciado-1 mg-l-65 mg-t-10 mg-b-15">Depósito en</h3>
@@ -46,14 +47,14 @@
 	</main>
 	<footer>
 		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
-		<a href="depositar-comprobante.html?menu={menu}" class="btn btn-footer tercero verde-comafi-text"><i class="material-icons left">check</i><p>Depositar</p></a>
+		<a href="menu-depositos-cheques.html?menu={menu}" class="btn btn-footer tercero"><p>Siguiente</p><i class="material-icons right">keyboard_arrow_right</i></a>
 	</footer>
 	<a href="../mensajes-error/loading-deposito-en-curso.html" class="link"># Depósito en curso</a>
 	<a href="../mensajes-error/loading-esperar-validacion.html" class="link"># Esperar validación</a>
 	<a href="../mensajes-error/mensaje-billetes-cheques-no-reconocidos.html" class="link"># Billetes/Cheques no reconocidos</a>
 	<a href="../mensajes-error/mensaje-muchos-billetes-cheques-no-reconocidos.html" class="link"># Muchos billetes/cheques no reconocidos</a>
 	<a href="../mensajes-error/mensaje-operacion-cancelada-retirar-billetes-cheques.html" class="link"># Operación cancelada</a>
-	<a href="../mensajes-error/mensaje-retirar-billetes.html" class="link"># Retirar billetes</a>
+	<!-- <a href="../mensajes-error/mensaje-retirar-billetes.html" class="link"># Retirar billetes</a> -->
 	@@include('../../_partials/modals.html')
 	@@include('../../_partials/script.html')
 </body>

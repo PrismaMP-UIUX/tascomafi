@@ -1,0 +1,44 @@
+@@include('../../_partials/header.html')
+<body class="container" id="depositos">
+	<!-- <img src="../../img/menu-depositos.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+		<img src="../../img/logo.svg" alt="">
+		<div class="logueado valign-wrapper">
+		<div>
+			<p class="nombre-logueado">José Diaz</p>
+			<p class="conexion">Tu última conexión fue el: 5/11/2016</p>
+			<p class="vto-clave">Tu clave vence el: 5/12/2017</p>
+		</div>
+		<div>
+			<i class="material-icons">person</i>
+		</div>
+	</div>
+	</header>
+	<main class="gris-mas-claro">
+		<section class="encabezado">
+			<div class="breadcrumb">
+				<img src="../../img/deposito.svg" alt="">
+				<p><span class="verde-comafi-text">depósitos /</span> elegir destino / ingresar cheques / verificar / ingresar monto</p>
+			</div>
+			<h1 class="titulo gris-oscuro-text">¿Cómo querés ingresar el monto en cheques a depositar?</h1>
+		</section>
+		<section class="submenu-deposito centrado">
+			<!-- <div class="valign-wrapper">
+				<img src="../../img/deposito.svg" alt="">
+				<p class="verde-comafi-text espaciado-1">DEPÓSITOS</p>
+			</div> -->
+			<div class="botonera">
+				<a href="depositar-importe-a-depositar.html?menu={menu}" class="btn btn-submenu blanco-text"><p>Monto total</p></a>
+				<a href="depositar-efectivo.html?menu={menu}" class="btn btn-submenu blanco-text"><p>Cehque por cheque</p></a>
+				<!-- <a href="depositar-cheques.html?menu={menu}" class="btn btn-submenu blanco-text"><p>Cheques</p></a> -->
+			</div>
+		</section>
+	</main>
+	<footer>
+		<a href="../general/salir-CT.html" class="btn btn-footer primero rojo-text"><i class="material-icons left">exit_to_app</i><p>Salir</p></a>
+		<a href="../../menu-principal.html" class="btn btn-footer segundo"><i class="material-icons left">home</i><p>Ir a inicio</p></a>
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+</body>
+</html>

@@ -20,6 +20,26 @@
   color: $gris-oscuro;
 }
 
+.msj-tutorial-cheques {
+  position: relative;
+  top: 325px;
+  p {
+    position: absolute;
+    display: inline;
+    font-size: 17px;
+    text-align: center;
+    &:nth-of-type(1) {
+      left: 120px;
+    }
+    &:nth-of-type(2) {
+      left: 357px;
+    }
+    &:nth-of-type(3) {
+      left: 555px;
+    }
+  }
+}
+
 /* Depósito Efectivo */
 input[type=radio]:checked ~ .inputs.numCbu > input.numCbu {
   border-color: $verde-comafi;
