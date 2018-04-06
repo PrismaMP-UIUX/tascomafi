@@ -815,6 +815,10 @@ footer {
 			font-size: 3em;
 		}
 	}
+	&.modal-auto {
+		opacity:1;
+		pointer-events: auto;
+	}
 	& > div {
 		position: relative;
 		padding: 20px;
