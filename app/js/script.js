@@ -154,22 +154,64 @@ $(document).ready(function(){
         }
     });
 
+    //SLIDER DE MODAL ELEGIR CUENTA
     $('#modal-elegir-cuenta a.abajo').on('click', function(evt){
         console.log('abajo');
          $(".slide").animate({top: '-305px'});
         evt.preventDefault(); //para que no se cierre el modal
     });
-
     $('#modal-elegir-cuenta a.arriba').on('click', function(evt){
         console.log('arriba');
          $(".slide").animate({top: '0px'});
         evt.preventDefault(); //para que no se cierre el modal
     });
 
+    //SLIDER DE LISTADO DE CHEQUES
+    $('#depositos .lista-deposito .cuerpo-slider a.bajar').on('click', function(evt){
+        console.log('abajo');
+         $(".slide").animate({top: '-220px'});
+    });
+    $('#depositos .lista-deposito .cuerpo-slider a.subir').on('click', function(evt){
+        console.log('arriba');
+         $(".slide").animate({top: '0px'});
+    });
+
     //Para que el menu con 4 botones vayan 2 arriba y 2 abajo
     if ($('.btn-menu').length == 4) {
         $('section.menu').css("width", "914px");
     }
+
+    //MOSTRAR CHEQUE POR CHEQUE
+    // OJO!! Está hardcodeado para 4 cheques
+    var total_cheques = 4;
+    var cheque_actual = 1;
+    $("body" ).on("click", ".tercero", function() {
+        if (cheque_actual < total_cheques){
+            $(".anterior").removeClass('invisible');
+            cheque_actual++;
+            $('.ch-actual').html(cheque_actual);
+            $(".clip").attr("src", "../../img/cheque"+cheque_actual+".bmp");
+            if (cheque_actual == total_cheques){
+                $(".tercero").replaceWith("<a href='depositar-confirmar-deposito-cheque-por-cheque.html?menu=depositos' class='btn btn-footer tercero'><p>Siguiente</p><i class='material-icons right'>keyboard_arrow_right</i></a>");
+                $(".anterior").css("right", "-235px");
+            }
+        }
+    });
+    $("body" ).on("click", ".anterior", function() {
+        if (cheque_actual <= total_cheques){
+            $(".anterior").removeClass('invisible');
+            cheque_actual--;
+            $('.ch-actual').html(cheque_actual);
+            $(".clip").attr("src", "../../img/cheque"+cheque_actual+".bmp");
+            if (cheque_actual == 1){
+                $(".anterior").addClass('invisible');
+            }
+            if (cheque_actual < total_cheques){
+                $(".tercero").replaceWith("<a href='#' class='btn btn-footer tercero'><p>Siguiente cheque</p><i class='material-icons right'>keyboard_arrow_right</i></a>");
+                $(".anterior").css("right", "-135px");
+            }
+        }
+    });
 
     var queries = {};
         $.each(window.location.search.substr(1).split('&'),function(c,q){

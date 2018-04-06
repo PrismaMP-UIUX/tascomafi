@@ -29,6 +29,10 @@
 			position: absolute;
 			right: 70px;
 		}
+		&.anterior {
+			position: relative;
+			right: -135px;
+		}
 		& > p {
 			margin: 0;
 			font-size: 24px;
