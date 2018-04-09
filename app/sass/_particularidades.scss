@@ -40,6 +40,12 @@
   }
 }
 
+.video-loop {
+  z-index: 9999999;
+  position: absolute;
+  top: 0;
+}
+
 /* Depósito Efectivo */
 input[type=radio]:checked ~ .inputs.numCbu > input.numCbu {
   border-color: $verde-comafi;
