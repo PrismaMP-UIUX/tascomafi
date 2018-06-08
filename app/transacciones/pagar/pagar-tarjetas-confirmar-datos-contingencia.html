@@ -1,0 +1,42 @@
+@@include('../../_partials/header.html')
+<body class="container" id="depositos">
+  <!-- <img src="../../img/depositar-confirmar-datos.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+  <header>
+  <img src="../../img/logo.svg" alt="">
+  </header>
+  <main class="gris-mas-claro">
+    <section class="encabezado">
+      <div class="breadcrumb">
+        <img src="../../img/pesos.svg" alt="">
+        <p><span class="verde-comafi-text">pagos /</span> pagar tarjetas / ingresar datos / ingresar monto / <span>confirmar</span></p>
+      </div>
+      <h1 class="titulo gris-oscuro-text">Confirmá los datos de la cuenta y el monto a pagar</h1>
+    </section>
+    <section class="cuerpo">
+      <div class="cuerpo-container center-align">
+        <!-- <h3 class="mayus verde-comafi-text espaciado-1">Pagar</h3> -->
+        <p class="titulo font-bold gris-mas-oscuro-text espaciado-1 mg-40">Tarjeta de Crédito en pesos</p>
+        <p class="gris-text espaciado-1 nowrap mg-20 font-20">Titular: <span class="gris-mas-oscuro-text espaciado-2 font-20">Juan Palot</span></p>
+        <p class="gris-text espaciado-1 nowrap mg-20 font-20">Visa N°: <span class="gris-mas-oscuro-text espaciado-2 font-20">XXXX XXXX XXXX XXXX</span></p>
+        <p class="gris-text espaciado-1 nowrap mg-20 font-20">Cuenta: <span class="gris-mas-oscuro-text espaciado-2 font-20">0000-000000-0</span></p>
+        <p class="gris-text espaciado-1 nowrap mg-20 font-20">Fecha de vencimiento: <span class="gris-mas-oscuro-text espaciado-2 font-20">XX/XX/XXXX</span></p>
+
+        <p class="titulo-grande gris-mas-oscuro-text espaciado-1 mg-0 mg-t-75">Monto a pagar: $<span class="font-32">20.000,00</span></p>
+
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="../../menu-principal.html" class="btn btn-footer primero"><i class="material-icons left">home</i><p>Ir a inicio</p></a>
+    <a href="pagar-tarjetas-expende-sobre-contingencia.html?menu={menu}" class="btn btn-footer tercero"><p>Siguiente</p><i class="material-icons right">keyboard_arrow_right</i></a>
+  </footer>
+  <a href="../mensajes-error/loading-pago-en-curso.html" class="link"># Pago en curso</a>
+  <a href="../mensajes-error/loading-esperar-validacion.html" class="link"># Esperar validación</a>
+  <a href="../mensajes-error/mensaje-billetes-cheques-no-reconocidos.html" class="link"># Billetes/Cheques no reconocidos</a>
+  <a href="../mensajes-error/mensaje-muchos-billetes-cheques-no-reconocidos.html" class="link"># Muchos billetes/cheques no reconocidos</a>
+  <a href="../mensajes-error/mensaje-operacion-cancelada-retirar-billetes-cheques.html" class="link"># Operación cancelada</a>
+  <a href="../mensajes-error/mensaje-retirar-billetes.html" class="link"># Retirar billetes</a>
+  @@include('../../_partials/modals.html')
+  @@include('../../_partials/script.html')
+</body>
+</html>

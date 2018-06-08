@@ -1,0 +1,53 @@
+@@include('../../_partials/header.html')
+<body class="container" id="depositos">
+  <!-- <img src="../../img/depositar-tutorial-efectivo.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+  <header>
+    <img src="../../img/logo.svg" alt="">
+    <div class="logueado valign-wrapper">
+      <div>
+        <p class="nombre-logueado">José Diaz</p>
+        <p class="conexion">Tu última conexión fue el: 5/11/2016</p>
+        <p class="vto-clave">Tu clave vence el: 5/12/2017</p>
+      </div>
+      <div>
+        <i class="material-icons">person</i>
+      </div>
+    </div>
+  </header>
+  <main class="gris-mas-claro">
+    <section class="encabezado">
+      <div class="breadcrumb">
+        <img src="../../img/pesos.svg" alt="">
+        <p><span class="verde-comafi-text">pagos /</span> pagar tarjetas / elegir destino / ingresar monto / confirmar / <span>ingresar sobre</span></p>
+      </div>
+      <h1 class="titulo gris-oscuro-text">Ingresá el ticket en el sobre e introducilo en la posición indicada</h1>
+    </section>
+    <section class="cuerpo">
+      <div class="cuerpo-container">
+        <div class="img-contenedor centrado">
+          <div class="col-1">
+            <img src="../../img/billete-y-ticket-en-sobre.png" width="100%">
+            <span class="font-18">Ingresá el ticket en el sobre.</span>
+          </div>
+          <div class="col-2">
+            <img src="../../img/clips.png" width="100%">
+            <span class="font-18">No insertes clips o ganchos.</span>
+          </div>
+          <div class="col-3">
+            <img src="../../img/ingresa-sobre.png" width="100%">
+            <span class="font-18">Ingresá el sobre como muestra la imagen.</span>
+          </div>
+        </div>
+        <p class="msj-tutorial">El límite de billetes aceptados por sobre es de 50.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
+  </footer>
+  <a href="pagar-tarjetas-comprobante.html?menu={menu}&flujo={flujo}" class="link"># Siguiente</a>
+  <a href="javascript:history.go(-1)" class="link"># Volver</a>
+  @@include('../../_partials/modals.html')
+  @@include('../../_partials/script.html')
+</body>
+</html>

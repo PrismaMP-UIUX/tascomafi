@@ -1,6 +1,6 @@
 @@include('../../_partials/header.html')
 <body class="container" id="depositos">
-	<!-- <img src="../../img/depositar-tutorial-cheques.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<!-- <img src="../../img/depositar-tutorial-efectivo.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
 	<header>
 		<img src="../../img/logo.svg" alt="">
 		<div class="logueado valign-wrapper">
@@ -17,34 +17,36 @@
 	<main class="gris-mas-claro">
 		<section class="encabezado">
 			<div class="breadcrumb">
-				<img src="../../img/deposito.svg" alt="">
-				<p><span class="verde-comafi-text">depósitos /</span> elegir destino / <span>ingresar cheques</span></p>
-			</div>
-			<h1 class="titulo gris-oscuro-text">Podés ingresar hasta 15 cheques.</h1>
+        <img src="../../img/pesos.svg" alt="">
+        <p><span class="verde-comafi-text">pagos /</span> pagar tarjetas / ingresar datos / ingresar monto / confirmar / <span>preparar sobre</span></p>
+      </div>
+			<h1 class="titulo gris-oscuro-text">Retirá el sobre e ingresá el dinero en el mismo</h1>
 		</section>
 		<section class="cuerpo">
 			<div class="cuerpo-container">
 				<div class="img-contenedor centrado">
 					<div class="col-1">
-						<img src="../../img/endoso.png" width="100%">
-						<span class="font-18">Registrá al dorso: sucursal, cuenta, firma y aclaración.</span>
+						<img src="../../img/extrae-sobre.png" width="100%">
+						<span class="font-18">Retirá el sobre del cajero.</span>
 					</div>
 					<div class="col-2">
 						<img src="../../img/clips.png" width="100%">
 						<span class="font-18">No insertes clips o ganchos.</span>
 					</div>
 					<div class="col-3">
-						<img src="../../img/ingresa-cheque.png" width="100%">
-						<span class="font-18">Ingresá los cheques como muestra la imagen.</span>
+						<img src="../../img/billete-en-sobre.png" width="100%">
+						<span class="font-18">Ingresá los billetes en el sobre.</span>
 					</div>
 				</div>
+				<p class="msj-tutorial">El límite de billetes aceptados por sobre es de 50.</p>
 			</div>
 		</section>
 	</main>
 	<footer>
 		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">close</i><p>Cancelar</p></a>
+		<a href="pagar-tutorial-contingencia.html?menu={menu}" class="btn btn-footer tercero"><p>Pagar</p><i class="material-icons right">keyboard_arrow_right</i></a>
 	</footer>
-	<a href="depositar-verificar-deposito-cheques.html?menu=depositos" class="link"># Siguiente</a>
+	<a href="../mensajes-error/mensaje-no-hay-sobre-contingencia.html" class="link"># No hay sobre</a>
 	<a href="javascript:history.go(-1)" class="link"># Volver</a>
 	@@include('../../_partials/modals.html')
 	@@include('../../_partials/script.html')

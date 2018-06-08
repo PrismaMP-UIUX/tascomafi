@@ -55,6 +55,10 @@ $tabla_de_colores: (
   .mg-b-#{$mg} {margin-bottom: #{$mg}px !important;}
 }
 
+.margin-cero-auto {
+  margin: 0 auto;
+}
+
 // TABLA DE FONTSIZES
 @for $font from 10 through 40 {
   .font-#{$font} {font-size: #{$font}px !important;}
@@ -73,6 +77,16 @@ $font-black: "Lato-Black";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.centrado-horizontal {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+
+.width-100 {
+  width: 100%;
 }
 
 .invisible {

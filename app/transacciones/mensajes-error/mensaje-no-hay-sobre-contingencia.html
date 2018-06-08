@@ -1,0 +1,23 @@
+@@include('../../_partials/header.html')
+<body class="container">
+	<!-- <img src="../../img/cambiar-clave.png" alt="" style="opacity: 0.5; position: absolute; z-index: 999;"> -->
+	<header>
+	<img src="../../img/logo.svg" alt="">
+	</header>
+	<main class="gris-mas-claro center-align">
+		<img src="../../img/warningama.svg" alt="" class="cruzroja">
+		<h1 class="mensaje">Disculpá, esta terminal se quedó sin sobres.</h1>
+		<h1 class="mensaje">Por favor, solicitá uno en la sucursal.<br>Para continuar presioná el botón "siguiente".</h1>
+		<section class="cuerpo">
+		</section>
+	</main>
+	<footer>
+		<a href="#modal-cancelar-operacion" class="btn btn-footer primero rojo-text"><i class="material-icons left">exit_to_app</i><p>Salir</p></a>
+		<a href="../depositar/depositar-tutorial-efectivo-contingencia.html?menu={menu}" class="btn btn-footer tercero"><p>Siguiente</p><i class="material-icons right">keyboard_arrow_right</i></a>
+	</footer>
+	@@include('../../_partials/modals.html')
+	@@include('../../_partials/script.html')
+	<a href="../../menu-principal.html" class="link"># Inicio</a>
+	<a href="javascript:history.go(-1)" class="link"># Volver</a>
+</body>
+</html>

@@ -25,23 +25,27 @@
 	position: absolute !important;
 }
 
+.relative {
+	position: relative !important;
+}
+
 // Position Absolute
 @for $posi from 0 through 100 {
-  // Del 0 al 50
+  // Del 0 al 100
   .top-#{$posi} {top: #{$posi}px !important;}
   .bottom-#{$posi} {bottom: #{$posi}px !important;}
   .left-#{$posi} {left: #{$posi}px !important;}
   .right-#{$posi} {right: #{$posi}px !important;}
 }
-	// Del 100 al 200 de a 50 cada uno
-// @for $posi-cincuenta from 100 through 200 {
-//     @if $posi-cincuenta % 50 == 0 {
-//         .top-#{$posi-cincuenta} {top: #{$posi-cincuenta}px !important;}
-//         .bottom-#{$posi-cincuenta} {bottom: #{$posi-cincuenta}px !important;}
-//         .left-#{$posi-cincuenta} {left: #{$posi-cincuenta}px !important;}
-//         .right-#{$posi-cincuenta} {right: #{$posi-cincuenta}px !important;}
-//     }
-// }
+	// Del 100 al 200 de a 10 cada uno
+@for $posi-cincuenta from 100 through 200 {
+    @if $posi-cincuenta % 10 == 0 {
+        .top-#{$posi-cincuenta} {top: #{$posi-cincuenta}px !important;}
+        .bottom-#{$posi-cincuenta} {bottom: #{$posi-cincuenta}px !important;}
+        .left-#{$posi-cincuenta} {left: #{$posi-cincuenta}px !important;}
+        .right-#{$posi-cincuenta} {right: #{$posi-cincuenta}px !important;}
+    }
+}
 
 @for $posi-neg from 0 through 100 {
   // Posi-negativos
@@ -404,18 +408,18 @@ main {
 					.pesosDolares {
 						justify-content: space-around;
 						-webkit-justify-content: space-around;
-						.check {
-							&.pesos {
-								position: absolute;
-								left: 220px;
-								top: 233px;
-							}
-							&.dolares {
-								position: absolute;
-								left: 560px;
-								top: 233px;
-							}
-						}
+						// .check {
+						// 	&.pesos {
+						// 		position: absolute;
+						// 		left: 220px;
+						// 		top: 233px;
+						// 	}
+						// 	&.dolares {
+						// 		position: absolute;
+						// 		left: 560px;
+						// 		top: 233px;
+						// 	}
+						// }
 					}
 				}
 				.col-left {
@@ -578,7 +582,7 @@ main {
 										position: relative;
 										&.cheques {
 											width: 10%;
-											margin-left: 20px;
+											// margin-left: 20px;
 										}
 										p {
 											margin: 0;
@@ -604,8 +608,10 @@ main {
 										}
 									}
 									& > .col-3.cheques {
-										position: absolute;
-										right: 65px;
+										// position: absolute;
+										position: relative;
+										// right: 65px;
+										margin-right: 20px;
 										// margin-left: 10px;
 										width: auto;
 										p {
@@ -685,12 +691,21 @@ main {
 					}
 				}
 				.img-contenedor {
-					width: 550px;
+					width: 750px;
 					height: 310px;
 					position: relative;
 					top: 190px;
 					& > img {
 						width: 470px;
+					}
+					& > .col-1,
+							.col-2,
+							.col-3 {
+						width: 30%;
+						padding-left: 1.5%;
+						padding-right: 1.5%;
+						float: left;
+						text-align: center;
 					}
 				}
 				.pesosDolares {
@@ -726,12 +741,12 @@ main {
 				}
 			}
 			.cheque-por-cheque {
-				width: 444px;
-				height: 435px;
-				float: left;
-				margin-top: 15px;
-				margin-right: 10px;
-				background: $blanco;
+				// width: 444px;
+				// height: 435px;
+				// float: left;
+				// margin-top: 15px;
+				// margin-right: 10px;
+				// background: $blanco;
 				.img-cheque {
 					position: relative;
 					left: 57px;
@@ -1018,7 +1033,8 @@ footer {
 			}
 			&.cruzroja,
 			&.reloj,
-			&.deposito {
+			&.deposito,
+			&.pesos {
 				left: calc(50% - 50px);
 				width: 100px;
 			}
@@ -1087,6 +1103,10 @@ footer {
 					margin-right: 15px;
 				}
 				&:nth-of-type(2) {
+					margin-left: 15px;
+					margin-right: 15px;
+				}
+				&:nth-of-type(3) {
 					margin-left: 15px;
 				}
 				p {
