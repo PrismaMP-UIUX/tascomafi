@@ -182,6 +182,19 @@
   </div>
 </div>
 
+<!-- Modal LIMITE POR TRANSACCION SUPERADO CONTINGENCIA -->
+<div id="modal-limite-superado-por-tx-contingencia" class="modal">
+  <div class="mediano">
+    <img src="../../img/cruzroja.svg" alt="" class="cruzroja">
+    <p>El monto ingresado supera el límite permitido por sobre.<br>Monto máximo: $500.000.</p>
+    <p>¿Cómo querés continuar?</p>
+    <div class="modal-action">
+      <a href="#modal-cancelar-operacion" class="btn btn-modal rojo-border rojo-text"><i class="material-icons left">close</i><p class="">cancelar operación</p></a>
+      <a href="#" class="btn btn-modal"><i class="material-icons left">undo</i><p>Volver a intentar</p></a>
+    </div>
+  </div>
+</div>
+
 <!-- Modal MONTO NO PERMITIDO Y MONTOS SUGERIDOS -->
 <div id="modal-montos-sugeridos" class="modal">
   <div class="grande">
@@ -357,8 +370,8 @@
   </div>
 </div>
 
-<!-- Modal CONTINGENCIA -->
-<div id="modal-contingencia" class="modal">
+<!-- Modal CONTINGENCIA DEPOSITO -->
+<div id="modal-contingencia-depositos" class="modal">
   <div class="mediano">
     <img src="../../img/deposito.svg" alt="" class="deposito">
     <p>Llegaste al máximo de intentos posibles de reconocimiento de billetes/cheques.<br>Lo reconocido hasta el momento son: $1000/6 cheques</p>
@@ -367,6 +380,20 @@
       <a href="#modal-cancelar-operacion" class="btn btn-modal rojo-border rojo-text"><i class="material-icons left">close</i><p class="">cancelar<br>depósito</p></a>
       <a href="#" class="btn btn-modal"><p class="center-align">depositar lo reconocido</p><i class="material-icons right">arrow_forward</i></a>
       <a href="#" class="btn btn-modal"><p class="center-align">depositar y agregar sobre</p><i class="material-icons right">arrow_forward</i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal CONTINGENCIA DEPOSITO -->
+<div id="modal-contingencia-pagos" class="modal">
+  <div class="mediano">
+    <img src="../../img/pesos.svg" alt="" class="deposito">
+    <p>Llegaste al máximo de intentos posibles de reconocimiento de billetes/cheques.<br>Lo reconocido hasta el momento son: $1000/6 cheques</p>
+    <p>¿Cómo querés continuar?</p>
+    <div class="modal-action">
+      <a href="#modal-cancelar-operacion" class="btn btn-modal rojo-border rojo-text"><i class="material-icons left">close</i><p class="">cancelar<br>pago</p></a>
+      <a href="#" class="btn btn-modal"><p class="center-align">pagar lo reconocido</p><i class="material-icons right">arrow_forward</i></a>
+      <a href="#" class="btn btn-modal"><p class="center-align">pagar y agregar sobre</p><i class="material-icons right">arrow_forward</i></a>
     </div>
   </div>
 </div>
